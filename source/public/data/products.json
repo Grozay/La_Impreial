@@ -1,0 +1,624 @@
+[
+    {
+        "id": 1,
+        "name" : "LG WT7405CV 5.3 Cu. Ft. Graphite Steel Top Load Washer",
+        "brand":"LG",
+        "type": "Washing machine",
+        "image": [],
+        "price": 284,
+        "quantity": 104,
+        "description": [
+            {
+                "Product Dimensions":"20'D x 20'W x 34'H",
+                "Capacity":"42 Liters",
+                "Color":"Graphite Steel",
+                "Access Location":"Top Load",
+                "Cycle Options":"Spin, Drain",
+                "Item Weight":"6 Kilograms",
+                "Material":"Stainless Steel",
+                "Controls Type": "Push Button",
+                "origin": "Made in china"
+            }
+        ]
+    },   
+    {
+        "id": 2,
+        "name" : "LG WM4000HBA 4.5 Cu. Ft. Capacity Smart Washer with TurboWash - Black Steel",
+        "brand":"LG",
+        "type": "Washing machine",
+        "image": [],
+        "price": 299,
+        "quantity": 259,
+        "description": [
+            {
+                "Product Dimensions":"31.5'D x 42'W x 29'H",
+                "Capacity":"4.5 Cubic Feet",
+                "Color":"Black Steel",
+                "Access Location":"Front Load",
+                "Cycle Options":"Spin, Drain",
+                "Item Weight":"200 Pounds",
+                "Material":"Stainless Steel",
+                "Controls Type": "Push Button",
+                "origin": "Made in Thailan"
+            }
+        ]
+    },    
+    {
+        "id": 3,
+        "name" : "LG QNED75 Series 50-Inch Class QNED Mini-LED Smart TV 50QNED75URA, 2023 - AI-Powered 4K TV, Alexa Built-in, Ashed Blue",
+        "brand":"LG",
+        "type": "Tivi",
+        "image": [],
+        "price": 499,
+        "quantity": 135,
+        "description": [
+            {   
+                "Product Dimensions":"10.1'D x 44.1'W x 28.3'H",
+                "Screen Size":"50 Inches",
+                "Supported Internet Services":"Netflix, HBO Max, Prime Video, Disney Plus and More, Apple TV",
+                "Display Technology":"QNED",
+                "Resolution":"4K",
+                "Refresh Rate":"60",
+                "Special Feature":"AI Picture, AI Upscaling, HDR, FILMMAKER MODE, Picture Processor, Dynamic Tone Mapping, Dimming Technology",
+                "Included Components": "Power Cable, Remote Control, Stand",
+                "origin": "Made in Korean"
+            }
+        ]
+    },   
+    {
+        "id": 4,
+        "name" : "LG C3 Series 65-Inch Class OLED evo 4K Processor Smart Flat Screen TV for Gaming with Magic Remote AI-Powered OLED65C3PUA, 2023 with Alexa Built-in",
+        "brand":"LG",
+        "type": "Tivi",
+        "image": [],
+        "price": 420,
+        "quantity": 345,
+        "description": [
+            {   
+                "Product Dimensions":"9.1'D x 56.7'W x 34.6'H",
+                "Screen Size":"65 Inches",
+                "Supported Internet Services":"Netflix, HBO Max, Disney Plus, Prime Video, Apple TV, Hulu, Paramount Plus, Peacock, Youtube TV, Spotify, iHeartRadio and more.Netflix, HBO Max, Disney Plus, Prime Video, Apple TV, Hulu, Paramount Plus, Peacock, Youtube TV, Spotify, iHeartRadio and more.",
+                "Display Technology":"OLED",
+                "Resolution":"4K",
+                "Refresh Rate":"120",
+                "Special Feature":"AI Picture, AI Upscaling, FILMMAKER MODE, Picture Processor, Dolby Vision, Dynamic Tone Mapping, Dimming Technology, HDR (High Dynamic Range)AI Picture, AI Upscaling, FILMMAKER MODE, Picture Processor, Dolby Vision, Dynamic Tone Mapping, Dimming Technology, HDR (High Dynamic Range)",
+                "Included Components": "Remote Control Battery (AA x 2EA), Power Cable, Magic Remote, Quick Start Guide",
+                "origin": "Made in Korean"
+            }
+        ]
+    },  
+    {
+        "id": 5,
+        "name" : "LG PuriCare 360-Degree Single Air Purifier with Clean Booster, ThinQ Wi-Fi and Voice Control (AS330DWR0), 310 sq. ft, White",
+        "brand":"LG",
+        "type": "Airless purifier",
+        "image": [],
+        "price": 546,
+        "quantity": 532,
+        "description": [
+            {
+                "Product Dimensions":"13.5'D x 13.5'W x 23.1'H",
+                "Color":"White",
+                "Noise Level":"normal",
+                "Controller Type":"Push Button"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name" :"LG PuriCare Mini Small Lightweight Ultra Quiet Portable Air Purifier for filtering ultra-fine dust and small particles in the Home Bedroom Office Airplane Train Car or On the Go, White (AP151MWA1)" ,
+        "brand":"LG",
+        "type": "Airless purifier",
+        "image": [],
+        "price": 199,
+        "quantity": 198,
+        "description": [
+            {
+                "Product Dimensions":"4.09'D x 4.29'W x 8.98'H",
+                "Color":"White",
+                "Noise Level":"Very good",
+                "Controller Type":"Remote"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name" : "LG LMXS28596S 28 Cu. Ft. Stainless French-Door Smart Wi-Fi Enabled Refrigerator",
+        "brand":"LG",
+        "type": "fridge",
+        "image": [],
+        "price": 200,
+        "quantity": 203,
+        "description": [
+            {
+                "Product Dimensions":"42'D x 74'W x 40'H",
+                "Capacity":"28 Cubic Feet",
+                "Energy Star":"4 Star",
+                "Color":"Silver",
+                "Number of Doors":"4",
+                "Defrost System":"Automatic",
+                "Voltage":"220V",
+                "Finish Type":"stainless steel",
+                "origin": "Made in Korean"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name" : "LG LMXS28626S 28 cu.ft. 4-Door French Door Refrigerator - Stainless Steel",
+        "brand":"LG",
+        "type": "fridge",
+        "image": [],
+        "price": 230,
+        "quantity": 80,
+        "description": [
+            {
+                "Product Dimensions":"39'D x 72'W x 38.5'H",
+                "Capacity":"27.8 Cubic Feet",
+                "Energy Star":"4 Star",
+                "Color":"Stainless Steel",
+                "Number of Doors":"4",
+                "Defrost System":"Automatic",
+                "Voltage":"220V",
+                "Finish Type":"Glossy",
+                "origin": "Made in Korean"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name" : "LG Inverter 1 HP V10WIN air conditioner",
+        "brand":"LG",
+        "type": "AC",
+        "image": [],
+        "price": 156,
+        "quantity": 30,
+        "description": [
+            {
+                "Cooling capacity":"Jet Cool",
+                "Cooling range":"under 15m² (from 30 to 45m³)",
+                "Power consumption":"0.92 kW/h5 stars (Efficiency 4.28)",
+                "Color":"White",
+                "origin": "Made in china"
+            }
+        ]
+    },   
+    {
+        "id": 10,
+        "name" : "",
+        "brand":"LG",
+        "type": "AC",
+        "image": [],
+        "price": 193,
+        "quantity": 23,
+        "description": [
+            {
+                "Cooling capacity":"Jet Cool",
+                "Cooling range":"Under 15m² (from 30 to 45m³)",
+                "Power consumption":"0.92 kW/h5 stars (Energy efficiency 4.28)",
+                "Color":"White",
+                "origin": "Made in Thailan"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name" : "COMFEE’ 1.6 Cu.ft Portable Washing Machine, 11lbs Capacity Fully Automatic Compact Washer with Wheels, 6 Wash Programs Laundry Drain Pump, Ideal for Apartments, RV, Camping, Magnetic Gray",
+        "brand":"Panasonic",
+        "type": "Washing machine",
+        "image": [],
+        "price": 329,
+        "quantity": 10,
+        "description": [
+            {
+                "Product Dimensions":"20.7'D x 20.3'W x 36.6'H",
+                "Capacity":"1.6 Cubic Feet",
+                "Color":"Grey",
+                "Access Location":"Top Load",
+                "Cycle Options":"Normal, Heavy,Delicate,Quick, Bulky, Spin only",
+                "Item Weight":"79.4 Pounds",
+                "Material":"Stainless Steel, Plastic",
+                "Controls Type": "Stainless Steel",
+                "origin": "VietNam"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name" : "COMFEE’ Portable Washing Machine, 0.9 Cu.ft Compact Washer With LED Display, 5 Wash Cycles, 2 Built-in Rollers, Space Saving Full-Automatic Washer, Ideal for RV/Dorm/Apartment, Ivory White",
+        "brand":"Panasonic",
+        "type": "Washing machine",
+        "image": [],
+        "price": 249,
+        "quantity": 10,
+        "description": [
+            {
+                "Product Dimensions":"17.7'D x 18.1'W x 31.5'H",
+                "Capacity":"0.9 Cubic Feet",
+                "Color":"Ivory White",
+                "Access Location":"Top Load",
+                "Cycle Options":"Soak, Gentle, Heavy Duty, Normal, Rapid",
+                "Item Weight":"44.1 Pounds",
+                "Material":"Stainless Steel, Plastic",
+                "Controls Type": "Push Button",
+                "origin": "VietNam or ThaiLand"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name" : "Panasonic 40-Inch Class A4 Series FHD 1080p Google Smart TV (40A4K, 2023 Model) - DTS Virtual: X, Game & Sports Modes, Chromecast Built-in, Alexa Compatibility, Black",
+        "brand":"Panasonic",
+        "type": "Tivi",
+        "image": [],
+        "price": 139,
+        "quantity": 10,
+        "description": [
+            {   
+                "Product Dimensions":"3.3'D x 35.4'W x 20.3'H",
+                "Screen Size":"40 Inches",
+                "Supported Internet Services":"Google TV",
+                "Display Technology":"LCD",
+                "Resolution":"1080p",
+                "Refresh Rate":"60 Hz",
+                "Special Feature":"Game Mode, Flat",
+                "Included Components": "Stand, TV, Remote Control, Power Cable",
+                "origin": "Malaysia"
+            }
+        ]
+    },
+
+    {
+        "id": 14,
+        "name" : "Panasinc 32-Inch Class QLED 4K Q60C Series Quantum HDR, Dual LED, Object Tracking Sound Lite, Q-Symphony, Motion Xcelerator, Gaming Hub, Smart TV with Alexa Built-in (QN32Q60C, 2023 Model),Titan Gray",
+        "brand":"Panasonic",
+        "type": "Tivi",
+        "image": [],
+        "price": 397,
+        "quantity": 10,
+        "description": [
+            {   
+                "Product Dimensions":"6.1'D x 28.6'W x 18.8'H",
+                "Screen Size":"32 Inches",
+                "Supported Internet Services":"Apple TV+, Samsung TV Plus, Netflix, YouTube, Prime Video, Disney+, Hulu, Xbox, Nvidia GeForce NOW, ESPN and MaxApple TV+, Samsung TV Plus, Netflix, YouTube, Prime Video, Disney+, Hulu, Xbox, Nvidia GeForce NOW, ESPN and Max",
+                "Display Technology":"QLED",
+                "Resolution":"4K",
+                "Refresh Rate":"60 Hz",
+                "Special Feature":"Alexa100% Color Volume with Quantum Dot; Quantum Processor Lite 4K; Dual LED; Quantum HDR, Motion Xcelerator; Contrast Enhancer; Filmmaker Mode; Works with Google Assistant and Alexa",
+                "Included Components": "User Manual, E-Manual,Power Cable",
+                "origin": "VietNam"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name" : "Panasonic F-GMU01-K Nanoe X 4.8 Trillion Generator Air Purifier USB Connection Usable in Cars Shipped from Japan Released in May 2022",
+        "brand":"Panasonic",
+        "type": "Airless purifier",
+        "image": [],
+        "price": 154,
+        "quantity":10 ,
+        "description": [
+            {
+                "Product Dimensions":"None",
+                "Color":"Black ",
+                "Noise Level":"45DB",
+                "Controller Type":"Button Control"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name" :"Air Purifier & Cleaner Panasonic NanoE generator White F-GMK01-W New Japan" ,
+        "brand":"Panasonic",
+        "type": "Airless purifier",
+        "image": [],
+        "price": 102,
+        "quantity": 10,
+        "description": [
+            {
+                "Product Dimensions":"",
+                "Color":"White",
+                "Noise Level":"55 dB",
+                "Controller Type":"Button Control"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name" : "Whirlpool WHR31TS4E 3.1 Cu. Ft. Compact Refrigerator Dual Door Fridge, Adjustable Mechanical Thermostat with True Freezer, Stainless Steel Look",
+        "brand":"Panasonic",
+        "type": "fridge",
+        "image": [],
+        "price": 199,
+        "quantity": 10,
+        "description": [
+            {
+                "Product Dimensions":"21.1'D x 19.1'W x 32.8'H",
+                "Capacity":"3.1 Cubic Feet",
+                "Energy Star":"ESTAR",
+                "Color":"Stainless Steel",
+                "Number of Doors":"12",
+                "Defrost System":"Manual",
+                "Voltage":"120 Volts",
+                "origin": "VietNam"
+            }
+        ]
+    },
+
+    {
+        "id": 18,
+        "name" : "Midea WHS-121LB1 Mini fridge Small Refrigerator 3.3 Cubic Feet Black for Bedroom Office or Dorm with Adjustable Remove",
+        "brand":"Panasonic",
+        "type": "fridge",
+        "image": [],
+        "price": 199,
+        "quantity": 10,
+        "description": [
+            {
+                "Product Dimensions":"17.72'D x 18.58'W x 33.86'H",
+                "Capacity":"3.3 Cubic Feet",
+                "Energy Star":"5 Star",
+                "Color":"Black",
+                "Number of Doors":"1",
+                "Defrost System":"Manual",
+                "Voltage":"120 Volts",
+                "origin": "ThaiLand"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name" : "Panasonic Inverter air conditioner 1 HP CU/CS-XU9ZKH-8",
+        "brand":"Panasonic",
+        "type": "AC",
+        "image": [],
+        "price": 576,
+        "quantity":10 ,
+        "description": [
+            {
+                "Cooling capacity":"iAuto-X",
+                "Cooling range":"under 15m² (from 30 to 45m³)",
+                "Power consumption":"0.65 kW/h5 stars (Energy efficiency 6.16)",
+                "Color":"White",
+                "origin": "VietNam"
+            }
+        ]
+    },
+
+    {
+        "id": 20,
+        "name" : "Panasonic Inverter air conditioner 1 HP CU/CS-XU9XKH-8",
+        "brand":"Panasonic",
+        "type": "AC",
+        "image": [],
+        "price":493, 
+        "quantity":10 ,
+        "description": [
+            {
+                "Cooling capacity":"iAuto-X",
+                "Cooling range":"Under 15m² (from 30 to 45m³)",
+                "Power consumption":"0.68 kW/h5 stars (Energy efficiency 5.85)",
+                "Color":"White",
+                "origin": "VietNam"
+            }
+        ]
+    },
+    {
+        "id":21,
+        "name" :"Toshiba 1.6 Cu.ft Portable Washing Machine, 11lbs Capacity Fully Automatic Compact Washer with Wheels, 6 Wash Programs Laundry Drain Pump, Ideal for Apartments, RV, Camping, Magnetic Gray",
+        "brand":"toshiba",
+        "category": "Washing machine",
+        "image": [],
+        "price": 329 ,
+        "quantity":20,
+        "description": [
+            {
+                "Product Dimensions":" 20.7'D x 20.3'W x 36.6'H ",
+                "Capacity":"1.6 Cubic Feet",
+                "Color":"Grey",
+                "Access Location":"Top Load",
+                "Cycle Options":"Normal, Heavy,Delicate,Quick, Bulky, Spin only",
+                "Item Weight":"79.4 Pounds",
+                "Material":"Stainless Steel, Plastic",
+                "Controls Type": "Stainless Steel",
+                "origin": "Viet Nam"
+            }
+        ]
+    },
+        {
+            "id":22,
+            "name" :"Toshiba Portable Washing Machine, 0.9 Cu.ft Compact Washer With LED Display, 5 Wash Cycles, 2 Built-in Rollers, Space Saving Full-Automatic Washer, Ideal for RV/Dorm/Apartment, Ivory White",
+            "brand":"toshiba",
+            "category": "Washing machine",
+            "image": [],
+            "price": 249 ,
+            "quantity":20,
+            "description": [
+                {
+                    "Product Dimensions":"17.7'D x 18.1'W x 31.5'H",
+                    "Capacity":"0.9 Cubic Feet",
+                    "Color":"Ivory White",
+                    "Access Location":"Top Load",
+                    "Cycle Options":"Soak, Gentle, Heavy Duty, Normal, Rapid",
+                    "Item Weight":"44.1 Pounds",
+                    "Material":"Stainless Steel, Plastic",
+                    "Controls Type": "Push Button",
+                    "origin": "ThaiLand"
+                }
+            ]
+        },
+        {
+            "id":23 ,
+            "name" : "Toshiba 55-inch Class C350 Series LED 4K UHD Smart Fire TV with Alexa Voice Remote (55C350LU, 2023 Model)",
+            "brand":"toshiba",
+            "type": "Tivi",
+            "image": [],
+            "price": 279,
+            "quantity": 20 ,
+            "description": [
+                {   
+                    "Product Dimensions":"9.7'D x 48.5'W x 30.6'H",
+                    "Screen Size":"55 Inches",
+                    "Supported Internet Services":"Browser",
+                    "Display Technology":"LED",
+                    "Resolution":"4K",
+                    "Special Feature":"Flat",
+                    "Included Components": "Stand, TV, Remote",
+                    "origin": "Viet Nam"
+                }
+            ]
+        },
+        {
+            "id":23 ,
+            "name" : "Toshiba 55-inch Class C350 Series LED 4K UHD Smart Fire TV with Alexa Voice Remote (55C350LU, 2023 Model)",
+            "brand":"toshiba",
+            "type": "Tivi",
+            "image": [],
+            "price": 279,
+            "quantity": 20 ,
+            "description": [
+                {   
+                    "Product Dimensions":"9.7'D x 48.5'W x 30.6'H",
+                    "Screen Size":"55 Inches",
+                    "Supported Internet Services":"Browser",
+                    "Display Technology":"LED",
+                    "Resolution":"4K",
+                    "Special Feature":"Flat",
+                    "Included Components": "Stand, TV, Remote",
+                    "origin": "Viet Nam"
+                }
+            ]
+        },
+        {
+            "id":24 ,
+            "name" : "Toshiba 55-inch Class C350 Series LED 4K UHD Smart Fire TV with Alexa Voice Remote (55C350LU, 2023 Model)",
+            "brand":"toshiba",
+            "type": "Tivi",
+            "image": [],
+            "price": 500,
+            "quantity": 20 ,
+            "description": [
+                {   
+                    "Product Dimensions":"3.3'D x 66'W x 37.8'H",
+                    "Screen Size":"75 Inches",
+                    "Supported Internet Services":"Apple TV+, Disney+, Hulu, Netflix, Prime Video, ESPN+, Sling TV, YouTube, HBO Max, Pandora, Paramount+Apple TV+, Disney+, Hulu, Netflix, Prime Video, ESPN+, Sling TV, YouTube, HBO Max, Pandora, Paramount+",
+                    "Display Technology":"LED",
+                    "Resolution":"4K",
+                    "Special Feature":"Screen Mirroring",
+                    "Included Components": "Stand Included,AC power cable",
+                    "origin": "Viet Nam"
+                }
+            ]
+        },
+        {
+            "id":25 ,
+            "name" :"Toshiba Air Purifier CAF-W36USW UV Light Sanitizer, Designed for Smoke, Dust, Odors, Pollen and Pet Hair for Home, Office, Bedroom, Black" ,
+            "brand":"toshiba",
+            "type": "Airless purifier",
+            "image": [],
+            "price":67,
+            "quantity":10,
+            "description": [
+                {
+                    "Product Dimensions":"6.9'D x 10'W x 26'H",
+                    "Color":"Black",
+                    "Floor Area":"222 Square Feet",
+                    "Noise Level":"32 dB"
+                }
+            ]
+        },
+        {
+            "id":26 ,
+            "name" :"Toshiba Beach TrueAir Air Purifier with Permanent HEPA Filter for Home or Office for Allergies and Pets, Whisper Quiet, 160 sq ft, Black" ,
+            "brand":"toshiba",
+            "type": "Airless purifier",
+            "image": [],
+            "price":64,
+            "quantity":10,
+            "description": [
+                {
+                    "Product Dimensions":"8.5'D x 6'W x 13.54'H",
+                    "Color":"Black",
+                    "Floor Area":"160 Square Feet",
+                    "Noise Level":"55 dB"
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "name" :"Toshiba Krib Bling FLS-80-Silver Mini Fridge, Silver",
+            "brand":"toshiba",
+            "type": "fridge",
+            "image": [],
+            "price":239,
+            "quantity":15,
+            "description": [
+                {
+                    "Product Dimensions":"16.7'D x 17.5'W x 34.2'H",
+                    "Capacity":"86 Liters",
+                    "Energy Star":"5 Star",
+                    "Color":"Silver",
+                    "Number of Doors":"2",
+                    "Defrost System":"Automatic",
+                    "origin": "Singapo"
+                }
+            ]
+        },
+        {
+            "id": 28,
+            "name" :"Toshiba FRQG1721AV 17.4 Cubic Foot Refrigerator, Silver",
+            "brand":"toshiba",
+            "type": "fridge",
+            "image": [],
+            "price":1275,
+            "quantity":15,
+            "description": [
+                {
+                    "Product Dimensions":"71'D x 42'W x 33'H",
+                    "Capacity":"17.4 Cubic Feet",
+                    "Energy Star":"1 Star",
+                    "Color":"Silver",
+                    "Number of Doors":"4",
+                    "Defrost System":"Automatic",
+                    "origin":"Malaysia"
+                }
+            ]
+        },
+        {
+            "id":29 ,
+            "name" :"Toshiba Inverter 1 HP RAS-H10Z1KCVG-V" ,
+            "brand":"toshiba",
+            "type": "AC",
+            "image": [],
+            "price":600,
+            "quantity":10 ,
+            "description": [
+                {
+                    "Cooling capacity":"Hi Power",
+                    "Cooling range":"<15m2",
+                    "Power consumption":"0.9 kW/h",
+                    "Color":"White",
+                    "origin": "ThaiLand"
+                }
+            ]
+        },
+        {
+            "id":30 ,
+            "name" :"Toshiba 2 HP Inverter RAS-H18C4KCVG-V" ,
+            "brand":"toshiba",
+            "type": "AC",
+            "image": [],
+            "price":807,
+            "quantity":10 ,
+            "description": [
+                {
+                    "Cooling capacity":"Hi Power",
+                    "Cooling range":"20 - 30m²",
+                    "Power consumption":"1.66 kW/h",
+                    "Color":"White",
+                    "origin": "ThaiLand"
+                }
+            ]
+        }
+]
