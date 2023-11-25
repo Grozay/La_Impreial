@@ -28,7 +28,9 @@
         "name" : "LG WM4000HBA 4.5 Cu. Ft. Capacity Smart Washer with TurboWash - Black Steel",
         "brand":"LG",
         "type": "Washing machine",
-        "image": [],
+        "image": [
+            "IMG_LG_WS_2-1","IMG_LG_WS_2-2","IMG_LG_WS_2-3"
+        ],
         "price": 299,
         "quantity": 259,
         "description": [
@@ -50,7 +52,9 @@
         "name" : "LG QNED75 Series 50-Inch Class QNED Mini-LED Smart TV 50QNED75URA, 2023 - AI-Powered 4K TV, Alexa Built-in, Ashed Blue",
         "brand":"LG",
         "type": "Tivi",
-        "image": [],
+        "image": [
+            "IMG_LG_TV_1-1","IMG_LG_TV_1-2","IMG_LG_TV_1-3"
+        ],
         "price": 499,
         "quantity": 135,
         "description": [
@@ -72,7 +76,9 @@
         "name" : "LG C3 Series 65-Inch Class OLED evo 4K Processor Smart Flat Screen TV for Gaming with Magic Remote AI-Powered OLED65C3PUA, 2023 with Alexa Built-in",
         "brand":"LG",
         "type": "Tivi",
-        "image": [],
+        "image": [
+            "IMG_LG_TV_2-1","IMG_LG_TV_2-2","IMG_LG_TV_2-3"
+        ],
         "price": 420,
         "quantity": 345,
         "description": [
@@ -94,7 +100,9 @@
         "name" : "LG PuriCare 360-Degree Single Air Purifier with Clean Booster, ThinQ Wi-Fi and Voice Control (AS330DWR0), 310 sq. ft, White",
         "brand":"LG",
         "type": "Airless purifier",
-        "image": [],
+        "image": [
+            "IMG_LG_AP_2-1","IMG_LG_AP_2-2","IMG_LG_AP_2-3"
+        ],
         "price": 546,
         "quantity": 532,
         "description": [
@@ -111,7 +119,9 @@
         "name" :"LG PuriCare Mini Small Lightweight Ultra Quiet Portable Air Purifier for filtering ultra-fine dust and small particles in the Home Bedroom Office Airplane Train Car or On the Go, White (AP151MWA1)" ,
         "brand":"LG",
         "type": "Airless purifier",
-        "image": [],
+        "image": [
+            "IMG_LG_AP_1-1","IMG_LG_AP_1-2","IMG_LG_AP_1-3"
+        ],
         "price": 199,
         "quantity": 198,
         "description": [
@@ -128,7 +138,9 @@
         "name" : "LG LMXS28596S 28 Cu. Ft. Stainless French-Door Smart Wi-Fi Enabled Refrigerator",
         "brand":"LG",
         "type": "fridge",
-        "image": [],
+        "image": [
+            "IMG_LG_F_2-1","IMG_LG_F_2-2","IMG_LG_F_2-3"
+        ],
         "price": 200,
         "quantity": 203,
         "description": [
@@ -150,7 +162,9 @@
         "name" : "LG LMXS28626S 28 cu.ft. 4-Door French Door Refrigerator - Stainless Steel",
         "brand":"LG",
         "type": "fridge",
-        "image": [],
+        "image": [
+            "IMG_LG_F_2-1","IMG_LG_F_2-2","IMG_LG_F_2-3"
+        ],
         "price": 230,
         "quantity": 80,
         "description": [
@@ -172,7 +186,9 @@
         "name" : "LG Inverter 1 HP V10WIN air conditioner",
         "brand":"LG",
         "type": "AC",
-        "image": [],
+        "image": [
+            "IMG_LG_AC_1-1","IMG_LG_AC_1-2","IMG_LG_AC_1-3"
+        ],
         "price": 156,
         "quantity": 30,
         "description": [
@@ -187,10 +203,12 @@
     },   
     {
         "id": 10,
-        "name" : "",
+        "name" : "LG Inverter 1.5 HP V13WIN air conditioner",
         "brand":"LG",
         "type": "AC",
-        "image": [],
+        "image": [
+            "IMG_LG_AC_2-1","IMG_LG_AC_2-2","IMG_LG_AC_2-3"
+        ],
         "price": 193,
         "quantity": 23,
         "description": [
