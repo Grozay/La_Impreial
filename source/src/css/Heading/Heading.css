@@ -1,0 +1,11 @@
+.heading{
+    display: flex;
+    justify-content: space-between;
+    margin: auto 20px;
+}
+.myAccount{
+    text-decoration: none;
+}
+.full{
+    background-color: rgb(255, 77, 0);
+}

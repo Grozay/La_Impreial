@@ -1,8 +1,10 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import ProductList from './components/Products/ProductList';
-import { Routes, Route, Link  } from "react-router-dom";
-import Nav from './components/AppBar/Nav'
+import { Routes, Route } from "react-router-dom";
+import NavBar from './components/AppBar/Nav'
+import HomePage from './Home/HomePage'
+import Heading from './components/Header/Heading';
 function App() {
   const [products, setProducts] = useState([]);
   const [filterProduct, setFilterProduct] = useState([]);
@@ -21,15 +23,15 @@ function App() {
 
   return (
     <div className="App">
+      <Heading />
       <nav>
-        <Link to='/'>Home</Link> <br/>
-        <Link to='/products'>Products</Link> <br/>
+        <NavBar />
       </nav>
 
 
       <Routes>
-        <Route path='/' element={<Nav/>} />
-        <Route path='/products' element={<ProductList products={products}/>} />
+        <Route path='/' element={<HomePage />} />
+        <Route path='/products' element={<ProductList products={products} />} />
       </Routes>
     </div>
   );
