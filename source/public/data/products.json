@@ -56,7 +56,9 @@
         "brand":"LG",
         "type": "Tivi",
         "image": [
-            "IMG_LG_TV_1-1","IMG_LG_TV_1-2","IMG_LG_TV_1-3"
+            "data/assets/lg/lg_TV/TiviLGOLEDA348inch20234KSmartTVGamingTVOLED48A3/IMG_LG_TV_1-1.jpg",
+            "data/assets/lg/lg_TV/TiviLGOLEDA348inch20234KSmartTVGamingTVOLED48A3/IMG_LG_TV_1-2.jpg",
+            "data/assets/lg/lg_TV/TiviLGOLEDA348inch20234KSmartTVGamingTVOLED48A3/IMG_LG_TV_1-3.jpg"
         ],
         "price": 499,
         "quantity": 135,
@@ -80,7 +82,9 @@
         "brand":"LG",
         "type": "Tivi",
         "image": [
-            "IMG_LG_TV_2-1","IMG_LG_TV_2-2","IMG_LG_TV_2-3"
+            "data/assets/lg/lg_TV/LGC3Series65-InchClassOLED/IMG_LG_TV_2-1.jpg",
+            "data/assets/lg/lg_TV/LGC3Series65-InchClassOLED/IMG_LG_TV_2-2.jpg",
+            "data/assets/lg/lg_TV/LGC3Series65-InchClassOLED/IMG_LG_TV_2-3.jpg"
         ],
         "price": 420,
         "quantity": 345,
@@ -104,7 +108,9 @@
         "brand":"LG",
         "type": "Airless purifier",
         "image": [
-            "IMG_LG_AP_2-1","IMG_LG_AP_2-2","IMG_LG_AP_2-3"
+            "data/assets/lg/lg_AP/LGPuriCare360-DegreeSingleAirPurifierwithClean/IMG_LG_AP_2-1.jpg",
+            "data/assets/lg/lg_AP/LGPuriCare360-DegreeSingleAirPurifierwithClean/IMG_LG_AP_2-2.jpg",
+            "data/assets/lg/lg_AP/LGPuriCare360-DegreeSingleAirPurifierwithClean/IMG_LG_AP_2-3.jpg"
         ],
         "price": 546,
         "quantity": 532,
@@ -123,7 +129,9 @@
         "brand":"LG",
         "type": "Airless purifier",
         "image": [
-            "IMG_LG_AP_1-1","IMG_LG_AP_1-2","IMG_LG_AP_1-3"
+            "data/assets/lg/lg_AP/LGPuriCareMini/IMG_LG_AP_1-1.jpg",
+            "data/assets/lg/lg_AP/LGPuriCareMini/IMG_LG_AP_1-2.jpg",
+            "data/assets/lg/lg_AP/LGPuriCareMini/IMG_LG_AP_1-3.jpg"
         ],
         "price": 199,
         "quantity": 198,
@@ -142,7 +150,9 @@
         "brand":"LG",
         "type": "fridge",
         "image": [
-            "IMG_LG_F_2-1","IMG_LG_F_2-2","IMG_LG_F_2-3"
+            "data/assets/lg/lg_fridge/LGLMXS28596S28Cu.Ft.Stainless/IMG_LG_F_2-1.jpg",
+            "data/assets/lg/lg_fridge/LGLMXS28596S28Cu.Ft.Stainless/IMG_LG_F_2-2.jpg",
+            "data/assets/lg/lg_fridge/LGLMXS28596S28Cu.Ft.Stainless/IMG_LG_F_2-3.jpg"
         ],
         "price": 200,
         "quantity": 203,
@@ -166,7 +176,9 @@
         "brand":"LG",
         "type": "fridge",
         "image": [
-            "IMG_LG_F_2-1","IMG_LG_F_2-2","IMG_LG_F_2-3"
+            "data/assets/lg/lg_fridge/LGLMXS28626S28cu.ft.4-DoorFrench/IMG_LG_F_1-1.jpg",
+            "data/assets/lg/lg_fridge/LGLMXS28626S28cu.ft.4-DoorFrench/IMG_LG_F_1-2.jpg",
+            "data/assets/lg/lg_fridge/LGLMXS28626S28cu.ft.4-DoorFrench/IMG_LG_F_1-3.jpg"
         ],
         "price": 230,
         "quantity": 80,
@@ -190,7 +202,9 @@
         "brand":"LG",
         "type": "AC",
         "image": [
-            "IMG_LG_AC_1-1","IMG_LG_AC_1-2","IMG_LG_AC_1-3"
+            "data/assets/lg/lg_AC/LGDUALCOOL™airconditioner1-wayinverter/IMG_LG_AC_1-1.jpg",
+            "data/assets/lg/lg_AC/LGDUALCOOL™airconditioner1-wayinverter/IMG_LG_AC_1-2.jpg",
+            "data/assets/lg/lg_AC/LGDUALCOOL™airconditioner1-wayinverter/IMG_LG_AC_1-3.jpg"
         ],
         "price": 156,
         "quantity": 30,
@@ -210,7 +224,9 @@
         "brand":"LG",
         "type": "AC",
         "image": [
-            "IMG_LG_AC_2-1","IMG_LG_AC_2-2","IMG_LG_AC_2-3"
+            "data/assets/lg/lg_AC/LGInverter1HPV10APFP/IMG_LG_AC_2-1.jpg",
+            "data/assets/lg/lg_AC/LGInverter1HPV10APFP/IMG_LG_AC_2-2.jpg",
+            "data/assets/lg/lg_AC/LGInverter1HPV10APFP/IMG_LG_AC_2-3.jpg"
         ],
         "price": 193,
         "quantity": 23,
@@ -248,7 +264,7 @@
     },
     {
         "id": 12,
-        "name" : "COMFEE’ Portable Washing Machine, 0.9 Cu.ft Compact Washer With LED Display, 5 Wash Cycles, 2 Built-in Rollers, Space Saving Full-Automatic Washer, Ideal for RV/Dorm/Apartment, Ivory White",
+        "name" : "COMFEE Portable Washing Machine, 0.9 Cu.ft Compact Washer With LED Display, 5 Wash Cycles, 2 Built-in Rollers, Space Saving Full-Automatic Washer, Ideal for RV/Dorm/Apartment, Ivory White",
         "brand":"Panasonic",
         "type": "Washing machine",
         "image": [],
@@ -432,7 +448,9 @@
         "name" :"Toshiba 1.6 Cu.ft Portable Washing Machine, 11lbs Capacity Fully Automatic Compact Washer with Wheels, 6 Wash Programs Laundry Drain Pump, Ideal for Apartments, RV, Camping, Magnetic Gray",
         "brand":"toshiba",
         "category": "Washing machine",
-        "image": [],
+        "image": ["data/assets/toshiba/Toshiba_WS/Toshiba1.6Cu.ftPortableWashingMachine/IMG_Toshiba_WS_1.jpg",
+                "data/assets/toshiba/Toshiba_WS/Toshiba1.6Cu.ftPortableWashingMachine/IMG_Toshiba_WS2.jpg",
+                "data/assets/toshiba/Toshiba_WS/Toshiba1.6Cu.ftPortableWashingMachine/IMG_Toshiba_WS3.jpg"],
         "price": 329 ,
         "quantity":20,
         "description": [
@@ -454,7 +472,9 @@
             "name" :"Toshiba Portable Washing Machine, 0.9 Cu.ft Compact Washer With LED Display, 5 Wash Cycles, 2 Built-in Rollers, Space Saving Full-Automatic Washer, Ideal for RV/Dorm/Apartment, Ivory White",
             "brand":"toshiba",
             "category": "Washing machine",
-            "image": [],
+            "image": ["data/assets/toshiba/Toshiba_WS/ToshibaPortableWashingMachine/IMG_Toshiba_WS_1.jpg",
+            "data/assets/toshiba/Toshiba_WS/ToshibaPortableWashingMachine/IMG_Toshiba_WS_2.jpg",
+            "data/assets/toshiba/Toshiba_WS/ToshibaPortableWashingMachine/IMG_Toshiba_WS_3.jpg"],
             "price": 249 ,
             "quantity":20,
             "description": [
@@ -476,28 +496,9 @@
             "name" : "Toshiba 55-inch Class C350 Series LED 4K UHD Smart Fire TV with Alexa Voice Remote (55C350LU, 2023 Model)",
             "brand":"toshiba",
             "type": "Tivi",
-            "image": [],
-            "price": 279,
-            "quantity": 20 ,
-            "description": [
-                {   
-                    "Product Dimensions":"9.7'D x 48.5'W x 30.6'H",
-                    "Screen Size":"55 Inches",
-                    "Supported Internet Services":"Browser",
-                    "Display Technology":"LED",
-                    "Resolution":"4K",
-                    "Special Feature":"Flat",
-                    "Included Components": "Stand, TV, Remote",
-                    "origin": "Viet Nam"
-                }
-            ]
-        },
-        {
-            "id":23 ,
-            "name" : "Toshiba 55-inch Class C350 Series LED 4K UHD Smart Fire TV with Alexa Voice Remote (55C350LU, 2023 Model)",
-            "brand":"toshiba",
-            "type": "Tivi",
-            "image": [],
+            "image": ["data/assets/toshiba/Toshiba_TV/Toshiba55-inchClassC350/IMG_Toshiba_TV_1.jpg",
+            "data/assets/toshiba/Toshiba_TV/Toshiba55-inchClassC350/IMG_Toshiba_TV_2.jpg",
+            "data/assets/toshiba/Toshiba_WS/Toshiba55-inchClassC350/IMG_Toshiba_TV_3.jpg"],
             "price": 279,
             "quantity": 20 ,
             "description": [
@@ -515,10 +516,12 @@
         },
         {
             "id":24 ,
-            "name" : "Toshiba 55-inch Class C350 Series LED 4K UHD Smart Fire TV with Alexa Voice Remote (55C350LU, 2023 Model)",
+            "name" : "Toshiba 75-inch Class C350 Series LED 4K UHD Smart Fire TV with Alexa Voice Remote (55C350LU, 2023 Model)",
             "brand":"toshiba",
             "type": "Tivi",
-            "image": [],
+            "image": ["data/assets/toshiba/Toshiba_TV/Toshiba75-inchClassC350/IMG_Toshiba_TV_1.jpg",
+            "data/assets/toshiba/Toshiba_TV/Toshiba75-inchClassC350/IMG_Toshiba_TV_2.jpg",
+            "data/assets/toshiba/Toshiba_WS/Toshiba75-inchClassC350/IMG_Toshiba_TV_3.jpg"],
             "price": 500,
             "quantity": 20 ,
             "description": [
@@ -539,7 +542,9 @@
             "name" :"Toshiba Air Purifier CAF-W36USW UV Light Sanitizer, Designed for Smoke, Dust, Odors, Pollen and Pet Hair for Home, Office, Bedroom, Black" ,
             "brand":"toshiba",
             "type": "Airless purifier",
-            "image": [],
+            "image": ["data/assets/toshiba/Toshiba_AP/ToshibaAirPurifierCAF-W36USWUVLightSanitizer/IMG_Toshiba_AP_1.jpg",
+            "data/assets/toshiba/Toshiba_AP/ToshibaAirPurifierCAF-W36USWUVLightSanitizer/IMG_Toshiba_AP_2.jpg",
+            "data/assets/toshiba/Toshiba_AP/ToshibaAirPurifierCAF-W36USWUVLightSanitizer/IMG_Toshiba_AP_3.jpg"],
             "price":67,
             "quantity":10,
             "description": [
@@ -556,7 +561,9 @@
             "name" :"Toshiba Beach TrueAir Air Purifier with Permanent HEPA Filter for Home or Office for Allergies and Pets, Whisper Quiet, 160 sq ft, Black" ,
             "brand":"toshiba",
             "type": "Airless purifier",
-            "image": [],
+            "image": ["data/assets/toshiba/Toshiba_AP/ToshibaBeachTrueAirAirPurifier/IMG_Toshiba_AP_1.jpg",
+            "data/assets/toshiba/Toshiba_AP/ToshibaBeachTrueAirAirPurifier/IMG_Toshiba_AP_2.jpg",
+            "data/assets/toshiba/Toshiba_AP/ToshibaBeachTrueAirAirPurifier/IMG_Toshiba_AP_3.jpg"],
             "price":64,
             "quantity":10,
             "description": [
@@ -573,7 +580,9 @@
             "name" :"Toshiba Krib Bling FLS-80-Silver Mini Fridge, Silver",
             "brand":"toshiba",
             "type": "fridge",
-            "image": [],
+            "image": ["data/assets/toshiba/Toshiba_Fridge/ToshibaKribBlingFLS-80-SilverMiniFridgeSilver/IMG_Toshiba_F_1.jpg",
+            "data/assets/toshiba/Toshiba_Fridge/ToshibaKribBlingFLS-80-SilverMiniFridgeSilver/IMG_Toshiba_F_2.jpg",
+            "data/assets/toshiba/Toshiba_Fridge/ToshibaKribBlingFLS-80-SilverMiniFridgeSilver/IMG_Toshiba_F_3.jpg"],
             "price":239,
             "quantity":15,
             "description": [
@@ -593,7 +602,9 @@
             "name" :"Toshiba FRQG1721AV 17.4 Cubic Foot Refrigerator, Silver",
             "brand":"toshiba",
             "type": "fridge",
-            "image": [],
+            "image": ["data/assets/toshiba/Toshiba_Fridge/FrigidaireFRQG1721AV17.4/IMG_Toshiba_F_1.jpg",
+            "data/assets/toshiba/Toshiba_Fridge/FrigidaireFRQG1721AV17.4/IMG_Toshiba_F_2.jpg",
+            "data/assets/toshiba/Toshiba_Fridge/FrigidaireFRQG1721AV17.4/IMG_Toshiba_F_3.jpg"],
             "price":1275,
             "quantity":15,
             "description": [
@@ -613,7 +624,9 @@
             "name" :"Toshiba Inverter 1 HP RAS-H10Z1KCVG-V" ,
             "brand":"toshiba",
             "type": "AC",
-            "image": [],
+            "image": ["data/assets/toshiba/Toshiba_AC/ToshibaInverter1HPRASH10Z1KCVG-V/IMG_Toshiba_AC_1.jpg",
+            "data/assets/toshiba/Toshiba_AC/ToshibaInverter1HPRASH10Z1KCVG-V/IMG_Toshiba_AC_2.jpg",
+            "data/assets/toshiba/Toshiba_AC/ToshibaInverter1HPRASH10Z1KCVG-V/IMG_Toshiba_AC_3.jpg"],
             "price":600,
             "quantity":10 ,
             "description": [
@@ -631,7 +644,9 @@
             "name" :"Toshiba 2 HP Inverter RAS-H18C4KCVG-V" ,
             "brand":"toshiba",
             "type": "AC",
-            "image": [],
+            "image": ["data/assets/toshiba/Toshiba_AC/Toshiba2HPInverterRASH18C4KCVG-V/IMG_Toshiba_AC_1.jpg",
+            "data/assets/toshiba/Toshiba_AC/Toshiba2HPInverterRASH18C4KCVG-V/IMG_Toshiba_AC_2.jpg",
+            "data/assets/toshiba/Toshiba_AC/Toshiba2HPInverterRASH18C4KCVG-V/IMG_Toshiba_AC_3.jpg"],
             "price":807,
             "quantity":10 ,
             "description": [
