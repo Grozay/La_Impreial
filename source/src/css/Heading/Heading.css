@@ -1,12 +1,10 @@
 .heading{
     display: flex;
     justify-content: space-between;
-    margin: auto 20px;
 }
 .myAccount{
     text-decoration: none;
-
 }
 .boxHeading{
-    background-color: rgb(255, 77, 0);
+    margin: auto 70px;
 }
