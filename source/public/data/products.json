@@ -5,9 +5,10 @@
         "brand":"LG",
         "type": "Washing machine",
         "image": [
-            "IMG_LG_WS_1-1","IMG_LG_WS_1-2","IMG_LG_WS_1-3"
+            "lg/lg_WS/LGWT7405CV5.3Cu.Ft.GraphiteSteelTopLoadWasher/IMG_LG_WS_1-1.jpg",
+            "lg/lg_WS/LGWT7405CV5.3Cu.Ft.GraphiteSteelTopLoadWasher/IMG_LG_WS_1-2.jpg",
+            "lg/lg_WS/LGWT7405CV5.3Cu.Ft.GraphiteSteelTopLoadWasher/IMG_LG_WS_1-3.jpg"
         ],
-        "price": 284,
         "quantity": 104,
         "description": [
             {
