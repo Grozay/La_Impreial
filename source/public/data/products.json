@@ -4,7 +4,9 @@
         "name" : "LG WT7405CV 5.3 Cu. Ft. Graphite Steel Top Load Washer",
         "brand":"LG",
         "type": "Washing machine",
-        "image": [],
+        "image": [
+            "IMG_LG_WS_1-1","IMG_LG_WS_1-2","IMG_LG_WS_1-3"
+        ],
         "price": 284,
         "quantity": 104,
         "description": [
@@ -203,7 +205,7 @@
     },
     {
         "id": 11,
-        "name" : "COMFEE’ 1.6 Cu.ft Portable Washing Machine, 11lbs Capacity Fully Automatic Compact Washer with Wheels, 6 Wash Programs Laundry Drain Pump, Ideal for Apartments, RV, Camping, Magnetic Gray",
+        "name" : "COMFEE 1.6 Cu.ft Portable Washing Machine, 11lbs Capacity Fully Automatic Compact Washer with Wheels, 6 Wash Programs Laundry Drain Pump, Ideal for Apartments, RV, Camping, Magnetic Gray",
         "brand":"Panasonic",
         "type": "Washing machine",
         "image": [],
