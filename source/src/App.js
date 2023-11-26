@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       <Heading />
       <Search />
-      <hr />
+      {/* <hr /> */}
       <nav>
         <NavBar />
       </nav>

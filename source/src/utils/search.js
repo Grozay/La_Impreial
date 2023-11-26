@@ -7,6 +7,7 @@ const Search = () => {
             <div className="search_bar_list">
                 <div className="search_bar_list_item search_item">
                     <Link to="/" className="name_shop">La Imperial</Link>
+                    <p className="name_shop_descripton">Online home appliance supplier</p>
                 </div>
 
             </div>
