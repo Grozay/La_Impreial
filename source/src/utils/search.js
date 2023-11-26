@@ -6,7 +6,7 @@ const Search = () => {
         <div className="search_bar">
             <div className="search_bar_list">
                 <div className="search_bar_list_item search_item">
-                    <Link to="/" className="name_shop">TÊN SHOP</Link>
+                    <Link to="/" className="name_shop">La Imperial</Link>
                 </div>
 
             </div>
@@ -38,8 +38,7 @@ const Search = () => {
                     <button className="btn_search"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
                 <div className="search_bar_list">
-
-                    <Link to="/cart" className="btn_cart_icon"><i class="fa-solid fa-cart-shopping fa-xl"></i></Link>
+                    <Link to="/cart" className="btn_cart_icon"><i class="fa-solid fa-cart-shopping fa-2xl"></i></Link>
                 </div>
             </div>
 
