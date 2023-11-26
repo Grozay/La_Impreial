@@ -1,7 +1,18 @@
 .nav{
     display: flex;
     justify-content: space-around;
+    /* box-shadow:  5px 0.7em  rgb(0, 0, 0);
+    height: 40px; */
+    /* min-height: 50px;
+    position: relative;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    -webkit-box-shadow: 0 17px 11px -21px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 17px 11px -21px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 17px 11px -21px rgba(0, 0, 0, 0.75);
+    background: #fff; */
 }
 .navbar{
+    margin-top: 7px;
     text-decoration: none;
 }

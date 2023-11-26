@@ -1,10 +1,23 @@
-.heading{
+.header_navbar{
     display: flex;
     justify-content: space-between;
+    margin: 3px auto;
+    margin-right: 35px;
 }
-.myAccount{
+
+.header_bavbar_item,
+.header_bavbar_item_link{
+    display: inline-block;
     text-decoration: none;
+    color: black;
 }
-.boxHeading{
-    margin: auto 70px;
+
+.header_bavbar_item{
+    margin: 0 20px;
 }
+.header_bavbar_item_link1:hover{
+    color: #f73838;
+    transition: 0.4s;
+}
+
+

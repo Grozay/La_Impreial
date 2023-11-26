@@ -10,7 +10,6 @@ function Nav() {
                 <Link to="contact" className="navbar">Contact Us</Link>
                 <Link to="about" className="navbar">About Us</Link>
             </nav>
-            <hr />
         </div>
 
     );

@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from './components/AppBar/Nav'
 import HomePage from './Home/HomePage'
 import Heading from './components/Header/Heading';
+import Search from './utils/search';
 function App() {
   const [products, setProducts] = useState([]);
   const [filterProduct, setFilterProduct] = useState([]);
@@ -24,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <Heading />
+      <Search />
       <nav>
         <NavBar />
       </nav>
