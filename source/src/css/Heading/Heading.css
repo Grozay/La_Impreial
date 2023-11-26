@@ -1,8 +1,9 @@
 .header_navbar{
     display: flex;
     justify-content: space-between;
-    margin: 3px auto;
-    margin-right: 35px;
+    margin: 0 60px;
+    margin-right: 130px;
+    
 }
 
 .header_bavbar_item,

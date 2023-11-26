@@ -1,0 +1,54 @@
+.search_bar{
+    display: flex;
+    justify-content: space-between;
+    margin: auto 140px;
+}
+
+.search_bar_list,
+.search_bar_list_item{
+    display: inline-block;
+    margin: 5px 5px;
+}
+
+.name_shop{
+    text-decoration: none;
+    font-size: 50px
+}
+
+.search_bar_form{
+    margin-top: 20px;
+}
+
+.input_search{
+    width: 300px;
+    height: 35px;
+}
+
+.btn_search{
+    margin-left: 2px;
+    height: 40.5px;
+    width: 45px;
+}
+.btn_cart{
+    height: 41.5px;
+    width: 45px;
+    background-color: #f73838;
+    border: none;
+}
+
+.btn_cart_icon{
+    color: #f73838;
+}
+.btn_cart_icon:hover{
+    color: #ff0000
+}
+
+
+.search_select{
+    height: 40px;
+    width: 250px;   
+}
+
+.search_option{
+    font-size: 14px;
+}

@@ -11,7 +11,6 @@ function Nav() {
                 <Link to="about" className="navbar">About Us</Link>
             </nav>
         </div>
-
     );
 }
 export default Nav;

@@ -20,13 +20,13 @@ const Heading = () => {
                 </ul>
                 <ul className='header_navbar_list'>
                     <li className='header_bavbar_item'>
-                        <Link to="/cart" className='header_bavbar_item_link header_bavbar_item_link1'><i class="fa-solid fa-cart-shopping"></i></Link>
+                        <Link to="/cart" className='header_bavbar_item_link header_bavbar_item_link1'>Cart</Link>
                     </li>
                     <li className='header_bavbar_item'>
                         <Link to="/account" className='header_bavbar_item_link header_bavbar_item_link1'>My Account</Link>
                     </li>
                 </ul>
-            </nav>
+            </nav >
 
 
         </>
