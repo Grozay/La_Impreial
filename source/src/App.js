@@ -9,6 +9,7 @@ import Search from './utils/search';
 import LG from './Home/Brand/Lg';
 import Panasonic from './Home/Brand/Panasonic';
 import Toshiba from './Home/Brand/Toshiba';
+import Contact from './components/Contact Us/Contact';
 function App() {
   const [products, setProducts] = useState([]);
   const [filterProduct, setFilterProduct] = useState([]);
@@ -51,6 +52,7 @@ function App() {
         <Route path='/lg' element={<LG lgProduct={lgProduct} />} />
         <Route path='/panasonic' element={<Panasonic panasonicProduct={panasonicProduct} />} />
         <Route path='/toshiba' element={<Toshiba toshibaProduct={toshibaProduct} />} />
+        <Route path='/contact' element={<Contact />}/>
       </Routes>
     </div>
   );
