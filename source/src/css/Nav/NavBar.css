@@ -1,8 +1,8 @@
 .nav{
     display: flex;
     justify-content: space-between;
-    margin: auto 120px;
-    margin-right: 147px;
+    margin: auto 160px;
+    margin-right: 155px;
     box-shadow: 0px 2px 10px ;
 }
 
@@ -41,7 +41,7 @@
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 200px;
+  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   transition: 0.5s;
