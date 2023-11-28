@@ -68,6 +68,7 @@
   /* Additional styling for the website-specific look */
   .container1 {
     background-color: rgb(255, 252, 248);
+    margin-top: 2px;
   }
   
   .container h2,
