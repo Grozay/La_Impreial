@@ -32,7 +32,10 @@ function App() {
       .catch(error => console.log('error reading json', error));
   }, []);
 
-
+  const handleAdd = (newProduct) => {
+    setProducts([...products, newProduct]);
+    setFilterProduct([...filterProduct, newProduct]);
+  }
 
 
 
@@ -52,7 +55,7 @@ function App() {
         <Route path='/lg' element={<LG lgProduct={lgProduct} />} />
         <Route path='/panasonic' element={<Panasonic panasonicProduct={panasonicProduct} />} />
         <Route path='/toshiba' element={<Toshiba toshibaProduct={toshibaProduct} />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/contact' element={<Contact onAdd={handleAdd}  />} />
       </Routes>
     </div>
   );
