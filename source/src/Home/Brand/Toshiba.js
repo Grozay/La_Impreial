@@ -1,7 +1,7 @@
 const Toshiba = ({ toshibaProduct }) => {
     return (
         <div>
-            <h1>LG</h1>
+            <h1>Toshiba</h1>
             {toshibaProduct.map(pro => (
                 <div>
                     {pro.name}
