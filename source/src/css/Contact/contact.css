@@ -3,7 +3,7 @@
 .container1 {
     display: grid;
    grid-template-columns: 40% 60%;
-   margin-left: auto;
+   margin-left: 5%;
     margin-right: auto;
     padding: 5%;
   }
@@ -47,9 +47,8 @@
   }
   
   .submit input {
-    background-color: #4caf50;
-    color: white;
-    border: none;
+    background-color: rgb(255, 255, 255);
+    color: red;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -62,7 +61,8 @@
   }
   
   .submit input:hover {
-    background-color: #45a049;
+    background-color: red;
+    color: white;
   }
   
   /* Additional styling for the website-specific look */
