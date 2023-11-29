@@ -1,19 +1,20 @@
-//item
-// import { useNavigate } from "react-router-dom";
+import '../../css/Product/Products.css';
 
-
-function ProductItem({ product }) {
+function ProductItem({ product, addCart }) {
+    const truncatedName = product.name.length > 10 ? product.name.slice(0, 50) + '...' : product.name;
 
     return (
-        <div >
+        <div className="product">
+            <img className="img" src={product.image[0]} alt="img" />
+            <div className="product-details">
+                <h3 className="name">{truncatedName}</h3>
+                <p className="price">{product.price}$</p>
+                <button onClick={() => addCart(product)}>AddCart</button>
 
-            <div>
-                <div> <img src={product.image[0]} width="10%" alt="img" /></div>
-                <h3>{product.name}</h3>
-                <p>{product.price}$</p>
-                <p>quantity:{product.quantity}</p>
+                {/* <p className="quantity">Quantity: {product.quantity}</p> */}
             </div>
         </div>
     );
 }
+
 export default ProductItem;
