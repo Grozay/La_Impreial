@@ -50,14 +50,14 @@ function App() {
       setFilterProduct(products);
     }
   }
-  const handleSearchType1 = (ProductType1) => {
-    if (ProductType1 !== '') {
-      const filterProductType = products.filter(searchSelect => ProductType1 === searchSelect.type);
-      setFilterProduct(filterProductType);
-    } else {
-      setFilterProduct(products);
-    }
-  }
+  // const handleSearchType1 = (ProductType1) => {
+  //   if (ProductType1 !== '') {
+  //     const filterProductType = products.filter(searchSelect => ProductType1 === searchSelect.type);
+  //     setFilterProduct(filterProductType);
+  //   } else {
+  //     setFilterProduct(products);
+  //   }
+  // }
 
   //search
   const MySearchProduct = (value) => {
@@ -72,7 +72,9 @@ function App() {
   return (
     <div className="App">
       <Heading />
-      <Search onSearch={MySearchProduct} searchValue={searchValue} ProductType={handleSearchType} />
+      <Search onSearch={MySearchProduct}
+        searchValue={searchValue}
+        ProductType={handleSearchType} />
       <nav>
         <NavBar />
       </nav>
