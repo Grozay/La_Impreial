@@ -1,7 +1,19 @@
-import { Link } from "react-router-dom"
+
+
+import { Link, useNavigate } from "react-router-dom"
 import '../css/Search/Search.css'
 //search
-const Search = () => {
+const Search = ({ onSearch, searchValue, ProductType }) => {
+    const navigate = useNavigate();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onSearch(searchValue);
+        navigate('/products');
+    };
+    const searchProductType = (event) => {
+        const productType = event.target.value;
+        ProductType(productType);
+    }
     return (
         <div className="search_bar">
             <div className="search_bar_list">
@@ -15,29 +27,29 @@ const Search = () => {
             </div>
             <div className="search_bar_list">
                 <div className="search_bar_list_item">
-                    <select className="search_select">
-                        <option className="search_option">
+                    <select className="search_select" onChange={searchProductType}>
+                        <option className="search_option" value="">
                             All Categories
                         </option>
-                        <option className="search_option">
-                            ws
+                        <option className="search_option" value="Washing machine">
+                            Washing machine
                         </option>
-                        <option className="search_option">
+                        <option className="search_option" value="fridge">
                             fridge
                         </option>
-                        <option className="search_option">
-                            ap
+                        <option className="search_option" value="Airless purifier">
+                            Airless purifier
                         </option>
-                        <option className="search_option">
-                            ac
+                        <option className="search_option" value="AC">
+                            air conditioner
                         </option>
-                        <option className="search_option">
-                            tv
+                        <option className="search_option" value="Tivi">
+                            Tivi
                         </option>
                     </select>
                 </div>
-                <form className="search_bar_list search_bar_form">
-                    <input placeholder="search by name" className="input_search" />
+                <form className="search_bar_list search_bar_form" onSubmit={handleSubmit}>
+                    <input className="input_search" type="text" value={searchValue} placeholder="Search By Name" onChange={(e) => onSearch(e.target.value)} />
                     <button className="btn_search"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
                 <div className="search_bar_list">
