@@ -1,3 +1,4 @@
+
 import './App.css';
 import { useState, useEffect } from 'react';
 import ProductList from './components/Products/ProductList';
@@ -11,11 +12,14 @@ import Panasonic from './Home/Brand/Panasonic';
 import Toshiba from './Home/Brand/Toshiba';
 import Contact from './components/ContactUs/Contact';
 function App() {
+  // const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [filterProduct, setFilterProduct] = useState([]);
   const [lgProduct, setlgProduct] = useState([])
   const [panasonicProduct, setpanasonicProduct] = useState([])
   const [toshibaProduct, setttoshibaProduct] = useState([])
+  const [searchValue, setsearchValue] = useState('');
+
   useEffect(() => {
     fetch('/data/products.json')
       .then(response => response.json())
@@ -37,25 +41,49 @@ function App() {
     setFilterProduct([...filterProduct, newProduct]);
   }
 
+  //search type
+  const handleSearchType = (ProductType) => {
+    if (ProductType !== '') {
+      const filterProductType = products.filter(searchSelect => ProductType === searchSelect.type);
+      setFilterProduct(filterProductType);
+    } else {
+      setFilterProduct(products);
+    }
+  }
+  const handleSearchType1 = (ProductType1) => {
+    if (ProductType1 !== '') {
+      const filterProductType = products.filter(searchSelect => ProductType1 === searchSelect.type);
+      setFilterProduct(filterProductType);
+    } else {
+      setFilterProduct(products);
+    }
+  }
+
+  //search
+  const MySearchProduct = (value) => {
+    // console.log('Search value:', value);
+    // console.log('All products:', products);
+    setsearchValue(value);
+    const productSearch = products.filter(p => p.name.toLowerCase().includes(value.toLowerCase()));
+    setFilterProduct(productSearch);
+  };
 
 
   return (
     <div className="App">
       <Heading />
-      <Search />
-
+      <Search onSearch={MySearchProduct} searchValue={searchValue} ProductType={handleSearchType} />
       <nav>
         <NavBar />
       </nav>
 
-
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/products' element={<ProductList products={products} />} />
+        <Route path='/products' element={<ProductList products={filterProduct} />} />
         <Route path='/lg' element={<LG lgProduct={lgProduct} />} />
         <Route path='/panasonic' element={<Panasonic panasonicProduct={panasonicProduct} />} />
         <Route path='/toshiba' element={<Toshiba toshibaProduct={toshibaProduct} />} />
-        <Route path='/contact' element={<Contact onAdd={handleAdd}  />} />
+        <Route path='/contact' element={<Contact onAdd={handleAdd} />} />
       </Routes>
     </div>
   );
