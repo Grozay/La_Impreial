@@ -94,11 +94,11 @@ function Contact({onAdd}){
                         </div>
                         <div class="input">
                           <h2>Subject</h2>
-                            <input type="text" placeholder="Subject" value={setSubject} onChange={(e) => setSubject(e.target.value)} />
+                            <input type="text" placeholder="Subject" value={subject} onChange={(e) => setSubject(e.target.value)} />
                         </div>
                         <div class="input">
                           <h2>Your message (optional)</h2>
-                          <textarea name="message"style={{ width: '100%', height: '200px' }} />
+                          <textarea name="message"style={{ width: '100%', height: '200px' }} onChange={(e) => setMessage(e.target.value)} />
                         </div>
                         {/* <div class="forget">
                             <label><input type="checkbox" />Ghi Nhớ Đăng Nhập</label>
