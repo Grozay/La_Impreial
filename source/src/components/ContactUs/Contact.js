@@ -66,7 +66,8 @@ function Contact({onAdd}){
                             Email
                             <a href="mailto:thieunu@gmail.com">thieunu@gmail.com</a>
                         </p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2375.302031394123!2d-2.2939150236934203!3d53.4630620659846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae72e7e47f69%3A0x6c930e96df4455fe!2zU8OibiB24bqtbiDEkeG7mW5nIE9sZCBUcmFmZm9yZA!5e0!3m2!1svi!2s!4v1701101284365!5m2!1svi!2s" width="400" height="300"   allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2375.302031394123!2d-2.2939150236934203!3d53.4630620659846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae72e7e47f69%3A0x6c930e96df4455fe!2zU8OibiB24bqtbiDEkeG7mW5nIE9sZCBUcmFmZm9yZA!5e0!3m2!1svi!2s!4v1701101284365!5m2!1svi!2s" width="400" height="300"   allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2375.302031394123!2d-2.2939150236934203!3d53.4630620659846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae72e7e47f69%3A0x6c930e96df4455fe!2zU8OibiB24bqtbiDEkeG7mW5nIE9sZCBUcmFmZm9yZA!5e0!3m2!1svi!2s!4v1701240441849!5m2!1svi!2s" width="550" height="400"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
       
@@ -85,7 +86,7 @@ function Contact({onAdd}){
                             <input type="text" placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
                         </div>
                         <div class="input">
-                          <h2>Your email</h2>
+                          <h2>Your Email</h2>
                             <input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                         </div>
                         <div class="input">
@@ -98,7 +99,7 @@ function Contact({onAdd}){
                         </div>
                         <div class="input">
                           <h2>Your message (optional)</h2>
-                          <textarea name="message"style={{ width: '100%', height: '200px' }} onChange={(e) => setMessage(e.target.value)} />
+                          <textarea name="message"style={{ width: '585px ', height: '100px' }} value={message} onChange={(e) => setMessage(e.target.value)} />
                         </div>
                         {/* <div class="forget">
                             <label><input type="checkbox" />Ghi Nhớ Đăng Nhập</label>
