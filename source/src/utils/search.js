@@ -3,13 +3,17 @@
 import { Link, useNavigate } from "react-router-dom"
 import '../css/Search/Search.css'
 //search
-const Search = ({ onSearch, searchValue }) => {
+const Search = ({ onSearch, searchValue, ProductType }) => {
     const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
         onSearch(searchValue);
         navigate('/products');
     };
+    const searchProductType = (event) => {
+        const productType = event.target.value;
+        ProductType(productType);
+    }
     return (
         <div className="search_bar">
             <div className="search_bar_list">
@@ -23,7 +27,7 @@ const Search = ({ onSearch, searchValue }) => {
             </div>
             <div className="search_bar_list">
                 <div className="search_bar_list_item">
-                    <select className="search_select">
+                    <select className="search_select" onChange={searchProductType}>
                         <option className="search_option" value="">
                             All Categories
                         </option>
