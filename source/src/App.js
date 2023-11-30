@@ -41,7 +41,39 @@ function App() {
     setFilterProduct([...filterProduct, newProduct]);
   }
 
-  //search type
+  // search type
+  // const handleSearchType = (ProductType) => {
+  //   if (ProductType !== '') {
+  //     const filterProductType = products.filter(searchSelect => ProductType === searchSelect.type);
+  //     setFilterProduct(filterProductType);
+  //   } else {
+  //     setFilterProduct(products);
+  //   }
+  // }
+  // const handleSearchType1 = (ProductType1) => {
+  //   if (ProductType1 !== '') {
+  //     const filterProductType = lgProduct.filter(searchSelect => ProductType1 === searchSelect.type);
+  //     setlgProduct(filterProductType);
+  //   } else {
+  //     setlgProduct(lgProduct);
+  //   }
+  // }
+
+  //search
+  const MySearchProduct = ({ name, type }) => {
+    setsearchValue(name);
+
+    let productSearch = products;
+
+    if (name) {
+      productSearch = productSearch.filter(p => p.name.toLowerCase().includes(name.toLowerCase()));
+    }
+    if (type) {
+      productSearch = productSearch.filter(p => p.type.toLowerCase().includes(type.toLowerCase()));
+    }
+
+    setFilterProduct(productSearch);
+  };
   const handleSearchType = (ProductType) => {
     if (ProductType !== '') {
       const filterProductType = products.filter(searchSelect => ProductType === searchSelect.type);
@@ -50,35 +82,15 @@ function App() {
       setFilterProduct(products);
     }
   }
-  // const handleSearchType1 = (ProductType1) => {
-  //   if (ProductType1 !== '') {
-  //     const filterProductType = products.filter(searchSelect => ProductType1 === searchSelect.type);
-  //     setFilterProduct(filterProductType);
-  //   } else {
-  //     setFilterProduct(products);
-  //   }
-  // }
-
-  //search
-  const MySearchProduct = (value) => {
-    // console.log('Search value:', value);
-    // console.log('All products:', products);
-    setsearchValue(value);
-    const productSearch = products.filter(p => p.name.toLowerCase().includes(value.toLowerCase()));
-    setFilterProduct(productSearch);
-  };
 
 
   return (
     <div className="App">
       <Heading />
-      <Search onSearch={MySearchProduct}
-        searchValue={searchValue}
-        ProductType={handleSearchType} />
+      <Search onSearch={MySearchProduct} ProductType={handleSearchType} />
       <nav>
         <NavBar />
       </nav>
-
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/products' element={<ProductList products={filterProduct} />} />
