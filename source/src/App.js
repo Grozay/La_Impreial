@@ -19,6 +19,7 @@ function App() {
   const [panasonicProduct, setpanasonicProduct] = useState([])
   const [toshibaProduct, setttoshibaProduct] = useState([])
   const [searchValue, setsearchValue] = useState('');
+  const [noResults, setNoResults] = useState(false);
 
   useEffect(() => {
     fetch('/data/products.json')
@@ -73,7 +74,9 @@ function App() {
     }
 
     setFilterProduct(productSearch);
+    setNoResults(productSearch.length === 0);
   };
+
   const handleSearchType = (ProductType) => {
     if (ProductType !== '') {
       const filterProductType = products.filter(searchSelect => ProductType === searchSelect.type);
@@ -93,7 +96,15 @@ function App() {
       </nav>
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/products' element={<ProductList products={filterProduct} />} />
+        <Route path='/products' element={
+          noResults ? (
+            <div className="no-results-message">No results found.</div>
+          ) : (
+            <ProductList
+              products={filterProduct}
+            />
+          )
+        } />
         <Route path='/lg' element={<LG lgProduct={lgProduct} />} />
         <Route path='/panasonic' element={<Panasonic panasonicProduct={panasonicProduct} />} />
         <Route path='/toshiba' element={<Toshiba toshibaProduct={toshibaProduct} />} />
