@@ -53,8 +53,9 @@ function App() {
     if (name) {
       productSearch = productSearch.filter(p => p.name.toLowerCase().includes(name.toLowerCase()));
     }
+
     if (type) {
-      productSearch = productSearch.filter(p => p.type.toLowerCase().includes(type.toLowerCase()));
+      productSearch = productSearch.filter(p => p.type.toLowerCase() === type.toLowerCase());
     }
 
     setFilterProduct(productSearch);
