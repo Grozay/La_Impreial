@@ -68,6 +68,36 @@
     width: 200px;
 }
 
+
+
+/* giỏ hàng */
+.cart-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .cart-label {
+    position: absolute;
+    top: -43px; /* Điều chỉnh khoảng cách từ chữ đến icon, tùy thuộc vào yêu cầu của bạn */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #454545; /* Màu nền của chữ */
+    color: #ffffff; /* Màu chữ */
+    padding: 5px 10px;
+    border-radius: 5px; /* Bo góc */
+    opacity: 0; /* Ban đầu ẩn đi */
+    white-space: nowrap;
+    transition: opacity 0.4s ease; /* Hiệu ứng hiển thị mượt mà */
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid black ;
+  }
+    
+
+  .cart-container:hover .cart-label {
+    opacity: 1; /* Hiển thị chữ khi hover vào container */
+  }
+  
+
 /* .search_select{
     display: inline-block;
 } */

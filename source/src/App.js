@@ -46,8 +46,7 @@ function App() {
 
   //search
   const MySearchProduct = ({ name, type }) => {
-    // Không cần cập nhật searchValue, vì nó đã được sử dụng dưới dạng name
-    // setsearchValue(name);
+    setsearchValue(name);
 
     let productSearch = products;
 
@@ -59,13 +58,8 @@ function App() {
       productSearch = productSearch.filter(p => p.type.toLowerCase() === type.toLowerCase());
     }
 
-    if (searchValue === '') {
-      setFilterProduct(products); // Cập nhật filterProduct thành toàn bộ danh sách sản phẩm
-    } else {
-      setFilterProduct(productSearch);
-    }
-
-    setNoResults(productSearch.length === 0 && searchValue !== ''); // Chỉ hiển thị thông báo nếu không có kết quả và searchValue không trống
+    setFilterProduct(productSearch);
+    setNoResults(productSearch.length === 0);
   };
 
   const handleSearchType = (ProductType) => {

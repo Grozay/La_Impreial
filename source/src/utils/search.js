@@ -8,6 +8,8 @@ const Search = ({ onSearch, ProductType }) => {
     const navigate = useNavigate();
     const [searchValue, setSearchValue] = useState('');
     const [selectedType, setSelectedType] = useState('');
+    const [showCartText, setShowCartText] = useState(false);
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -63,15 +65,27 @@ const Search = ({ onSearch, ProductType }) => {
                         className="input_search"
                         type="text"
                         value={searchValue}
-                        placeholder="Search By Name"
+                        placeholder="Search By Name "
                         onChange={handleInputChange}
                     />
-                    <button type="submit" className="btn_search">
-                        <i className="fa-solid fa-magnifying-glass"></i>
-                    </button>
                 </form>
                 <div className="search_bar_list">
-                    <Link to="/cart" className="btn_cart_icon"><i class="fa-solid fa-cart-shopping fa-2xl"></i></Link>
+                    <Link to="/cart" className="btn_cart_icon">
+                        <div
+                            onMouseEnter={() => setShowCartText(true)}
+                            onMouseLeave={() => setShowCartText(false)}
+                            className='cart-container'
+                        >
+                            <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+                            {/* Icon giỏ hàng ở đây */}
+                            {showCartText && <div className='cart-label'>
+                                <div className='text'>
+                                    Cart
+                                </div>
+                            </div>}
+                        </div>
+
+                    </Link>
                 </div>
             </div>
 
