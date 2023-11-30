@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import '../css/Search/Search.css';
+import SearchNoResults from './SearchNoResults';
 
 const Search = ({ onSearch, ProductType }) => {
     const navigate = useNavigate();

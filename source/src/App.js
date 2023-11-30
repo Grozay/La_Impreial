@@ -43,23 +43,7 @@ function App() {
     setFilterProduct([...filterProduct, newProduct]);
   }
 
-  // search type
-  // const handleSearchType = (ProductType) => {
-  //   if (ProductType !== '') {
-  //     const filterProductType = products.filter(searchSelect => ProductType === searchSelect.type);
-  //     setFilterProduct(filterProductType);
-  //   } else {
-  //     setFilterProduct(products);
-  //   }
-  // }
-  // const handleSearchType1 = (ProductType1) => {
-  //   if (ProductType1 !== '') {
-  //     const filterProductType = lgProduct.filter(searchSelect => ProductType1 === searchSelect.type);
-  //     setlgProduct(filterProductType);
-  //   } else {
-  //     setlgProduct(lgProduct);
-  //   }
-  // }
+  // search typ
 
   //search
   const MySearchProduct = ({ name, type }) => {
@@ -77,7 +61,6 @@ function App() {
     setFilterProduct(productSearch);
     setNoResults(productSearch.length === 0);
   };
-
   const handleSearchType = (ProductType) => {
     if (ProductType !== '') {
       const filterProductType = products.filter(searchSelect => ProductType === searchSelect.type);
@@ -86,7 +69,6 @@ function App() {
       setFilterProduct(products);
     }
   }
-
 
   return (
     <div className="App">
@@ -98,13 +80,8 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/products' element={
-          noResults ? (
-            <div>
-              <SearchNoResults
-                onSearch={MySearchProduct} ProductType={handleSearchType} />
-              <div className="no-results-message">No results found.</div>
-            </div>
-
+          filterProduct.length === 0 ? (
+            <SearchNoResults onSearch={MySearchProduct} resetCategory={() => handleSearchType('')} />
           ) : (
             <ProductList
               products={filterProduct}
