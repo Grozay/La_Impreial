@@ -11,6 +11,7 @@ import LG from './Home/Brand/Lg';
 import Panasonic from './Home/Brand/Panasonic';
 import Toshiba from './Home/Brand/Toshiba';
 import Contact from './components/ContactUs/Contact';
+import SearchNoResults from "./utils/SearchNoResults"
 function App() {
   // const navigate = useNavigate();
   const [products, setProducts] = useState([]);
@@ -98,7 +99,12 @@ function App() {
         <Route path='/' element={<HomePage />} />
         <Route path='/products' element={
           noResults ? (
-            <div className="no-results-message">No results found.</div>
+            <div>
+              <SearchNoResults
+                onSearch={MySearchProduct} ProductType={handleSearchType} />
+              <div className="no-results-message">No results found.</div>
+            </div>
+
           ) : (
             <ProductList
               products={filterProduct}
