@@ -1,19 +1,30 @@
 
 
-import { Link, useNavigate } from "react-router-dom"
-import '../css/Search/Search.css'
-//search
-const Search = ({ onSearch, searchValue, ProductType }) => {
+import React, { useState } from 'react';
+import { Link, useNavigate } from "react-router-dom";
+import '../css/Search/Search.css';
+
+const Search = ({ onSearch, ProductType }) => {
     const navigate = useNavigate();
+    const [searchValue, setSearchValue] = useState('');
+    const [selectedType, setSelectedType] = useState('');
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSearch(searchValue);
-        navigate('/products');
+        // Chỉ gọi hàm onSearch khi có ít nhất một tiêu chí được nhập
+        if (searchValue || selectedType) {
+            onSearch({ name: searchValue, type: selectedType });
+            navigate('/products');
+        }
     };
-    const searchProductType = (event) => {
-        const productType = event.target.value;
-        ProductType(productType);
-    }
+
+    const handleInputChange = (e) => {
+        setSearchValue(e.target.value);
+    };
+
+    const handleTypeChange = (e) => {
+        setSelectedType(e.target.value);
+    };
     return (
         <div className="search_bar">
             <div className="search_bar_list">
@@ -23,11 +34,10 @@ const Search = ({ onSearch, searchValue, ProductType }) => {
                     </Link>
                     <p className="name_shop_descripton">Online home appliance supplier</p>
                 </div>
-
             </div>
             <div className="search_bar_list">
                 <div className="search_bar_list_item">
-                    <select className="search_select" onChange={searchProductType}>
+                    <select className="search_select" value={selectedType} onChange={handleTypeChange}>
                         <option className="search_option" value="">
                             All Categories
                         </option>
@@ -49,15 +59,23 @@ const Search = ({ onSearch, searchValue, ProductType }) => {
                     </select>
                 </div>
                 <form className="search_bar_list search_bar_form" onSubmit={handleSubmit}>
-                    <input className="input_search" type="text" value={searchValue} placeholder="Search By Name" onChange={(e) => onSearch(e.target.value)} />
-                    <button className="btn_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input
+                        className="input_search"
+                        type="text"
+                        value={searchValue}
+                        placeholder="Search By Name"
+                        onChange={handleInputChange}
+                    />
+                    <button type="submit" className="btn_search">
+                        <i className="fa-solid fa-magnifying-glass"></i>
+                    </button>
                 </form>
                 <div className="search_bar_list">
                     <Link to="/cart" className="btn_cart_icon"><i class="fa-solid fa-cart-shopping fa-2xl"></i></Link>
                 </div>
             </div>
 
-        </div>
+        </div >
     )
 
 }
