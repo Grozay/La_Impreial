@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import '../css/Search/SearchNoResults.css';
+import './search'
 
-const SearchNoResults = ({ onSearch, resetCategory }) => {
+const SearchNoResults = ({ onSearch, ProductType }) => {
     const navigate = useNavigate();
     const [searchValue, setSearchValue] = useState('');
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Gọi hàm onSearch chỉ khi có ít nhất một tiêu chí được nhập
-        if (searchValue) {
-            onSearch({ name: searchValue });
-            resetCategory(""); // Đặt lại giá trị của selectedType
+        // Chỉ gọi hàm onSearch khi có ít nhất một tiêu chí được nhập
+        if (searchValue || ProductType) {
+            onSearch({ name: searchValue, type: ProductType });
             navigate('/products');
         }
     };
@@ -34,7 +35,7 @@ const SearchNoResults = ({ onSearch, resetCategory }) => {
                     placeholder="search by name"
                     onChange={handleInputChange}
                 />
-                <button type="submit" className="btn_search" onClick={resetCategory}>
+                <button type="submit" className="btn_search">
                     <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>
