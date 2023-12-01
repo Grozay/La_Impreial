@@ -1,38 +1,33 @@
-
-import './App.css';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProductList from './components/Products/ProductList';
-import { Routes, Route } from "react-router-dom";
-import NavBar from './components/AppBar/Nav'
-import HomePage from './Home/HomePage'
+import { Routes, Route } from 'react-router-dom';
+import NavBar from './components/AppBar/Nav';
+import HomePage from './Home/HomePage';
 import Heading from './components/Header/Heading';
 import Search from './utils/search';
 import LG from './Home/Brand/Lg';
 import Panasonic from './Home/Brand/Panasonic';
 import Toshiba from './Home/Brand/Toshiba';
 import Contact from './components/ContactUs/Contact';
+
 function App() {
-  // const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [filterProduct, setFilterProduct] = useState([]);
-  const [lgProduct, setlgProduct] = useState([])
-  const [panasonicProduct, setpanasonicProduct] = useState([])
-  const [toshibaProduct, setttoshibaProduct] = useState([])
-  const [searchValue, setsearchValue] = useState('');
+  const [lgProduct, setLgProduct] = useState([]);
+  const [panasonicProduct, setPanasonicProduct] = useState([]);
+  const [toshibaProduct, setToshibaProduct] = useState([]);
+  const [searchValue, setSearchValue] = useState('');
   const [noResults, setNoResults] = useState(false);
 
   useEffect(() => {
     fetch('/data/products.json')
       .then(response => response.json())
       .then(data => {
-        const productdata1 = data;
-        const productdata2 = data;
-        const productdata3 = data;
         setProducts(data);
         setFilterProduct(data);
-        setlgProduct(productdata1.filter(p => p.brand === "LG").slice(0, 20));
-        setpanasonicProduct(productdata2.filter(p => p.brand === "Panasonic").slice(0, 20));
-        setttoshibaProduct(productdata3.filter(p => p.brand === "toshiba").slice(0, 20));
+        setLgProduct(data.filter(p => p.brand === 'LG').slice(0, 20));
+        setPanasonicProduct(data.filter(p => p.brand === 'Panasonic').slice(0, 20));
+        setToshibaProduct(data.filter(p => p.brand === 'toshiba').slice(0, 20));
       })
       .catch(error => console.log('error reading json', error));
   }, []);
@@ -40,13 +35,10 @@ function App() {
   const handleAdd = (newProduct) => {
     setProducts([...products, newProduct]);
     setFilterProduct([...filterProduct, newProduct]);
-  }
+  };
 
-  // search typ
-
-  //search
   const MySearchProduct = ({ name, type }) => {
-    setsearchValue(name);
+    setSearchValue(name);
 
     let productSearch = products;
 
@@ -59,7 +51,7 @@ function App() {
     }
 
     setFilterProduct(productSearch);
-    setNoResults(productSearch.length === 0);
+    setNoResults(productSearch.length === 0 || name.trim() === ''); // Cập nhật điều kiện này
   };
 
   const handleSearchType = (ProductType) => {
@@ -69,28 +61,36 @@ function App() {
     } else {
       setFilterProduct(products);
     }
-  }
+  };
+
+  const handleSearch = (searchParams) => {
+    MySearchProduct(searchParams);
+  };
 
   return (
     <div className="App">
       <Heading />
-      <Search onSearch={MySearchProduct} ProductType={handleSearchType} />
+      <Search onSearch={handleSearch} ProductType={handleSearchType} />
       <nav>
         <NavBar />
       </nav>
       <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/products' element={
-          noResults ? (
-            <p className='no-results-message'>No Found Products</p>
-          ) : (
-            <ProductList products={filterProduct} />
-          )
-        } />
-        <Route path='/lg' element={<LG lgProduct={lgProduct} />} />
-        <Route path='/panasonic' element={<Panasonic panasonicProduct={panasonicProduct} />} />
-        <Route path='/toshiba' element={<Toshiba toshibaProduct={toshibaProduct} />} />
-        <Route path='/contact' element={<Contact onAdd={handleAdd} />} />
+        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/products"
+          element={
+
+            noResults ? (
+              <p className='no-results-message'>No Found Products</p>
+            ) : (
+              <ProductList products={filterProduct} />
+            )
+          }
+        />
+        <Route path="/lg" element={<LG lgProduct={lgProduct} />} />
+        <Route path="/panasonic" element={<Panasonic panasonicProduct={panasonicProduct} />} />
+        <Route path="/toshiba" element={<Toshiba toshibaProduct={toshibaProduct} />} />
+        <Route path="/contact" element={<Contact onAdd={handleAdd} />} />
       </Routes>
     </div>
   );
