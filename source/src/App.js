@@ -38,6 +38,7 @@ function App() {
     setFilterProduct([...filterProduct, newProduct]);
   };
 
+  //search đa tiêu chí
   const MySearchProduct = ({ name, type }) => {
     setSearchValue(name);
 
@@ -52,9 +53,10 @@ function App() {
     }
 
     setFilterProduct(productSearch);
-    setNoResults(productSearch.length === 0 || name.trim() === ''); // Cập nhật điều kiện này
+    setNoResults(productSearch.length === 0 || name.trim() === '');
   };
 
+  //search type
   const handleSearchType = (ProductType) => {
     if (ProductType !== '') {
       const filterProductType = products.filter(searchSelect => ProductType === searchSelect.type);
@@ -64,6 +66,7 @@ function App() {
     }
   };
 
+  //search ''
   const handleSearch = (searchParams) => {
     MySearchProduct(searchParams);
   };
