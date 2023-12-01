@@ -10,6 +10,7 @@ import LG from './Home/Brand/Lg';
 import Panasonic from './Home/Brand/Panasonic';
 import Toshiba from './Home/Brand/Toshiba';
 import Contact from './components/ContactUs/Contact';
+import ProductDentail from './components/Products/ProductDetail';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -95,6 +96,7 @@ function App() {
         <Route path="/panasonic" element={<Panasonic panasonicProduct={panasonicProduct} />} />
         <Route path="/toshiba" element={<Toshiba toshibaProduct={toshibaProduct} />} />
         <Route path="/contact" element={<Contact onAdd={handleAdd} />} />
+        <Route path='/products/:id' element={<ProductDentail productDentail={filterProduct} />}/>
       </Routes>
     </div>
   );
