@@ -1,9 +1,49 @@
-.footer{
-    background: #222;
-color: #ccc;
+/* Footer.css */
 
-height: 50px;;
+.footer {
+    background-color: #333; /* Choose a background color */
+    color: #fff;
+    padding: 20px;
+}
 
-width: 100%;
-text-align: center;
+.footer_main {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 200px;
+}
+
+.footer_location {
+    flex: 1;
+}
+
+.footer_link {
+    flex: 1;
+    margin-right: 55%;
+}
+
+.footer_link p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer_link div {
+    margin-bottom: 5px;
+}
+
+.footer_link div > div {
+    display: flex;
+    align-items: center;
+}
+
+.footer_link div > div > div {
+    margin-right: 5px;
+}
+
+.footer_link a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hr {
+    background-color: rgba(255, 255, 255, 0.2);
 }

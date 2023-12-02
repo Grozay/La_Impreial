@@ -1,0 +1,36 @@
+/* UnderFooter.css */
+
+.under_footer {
+    background-color: #222;
+    color: #fff;
+    padding: 5px;
+    /* margin-bottom: 10px; */
+    /* margin-bottom: 0; */
+}
+
+.under_footer_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.under_footer_item {
+    flex: 1;
+}
+
+.name_shop_footer {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 150px;
+}
+
+.logo_footer {
+    width: 200px; 
+    height: auto;
+}
+
+.under_footer_item2 {
+    text-align: right;
+    margin-right: 140px;
+}
+

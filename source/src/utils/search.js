@@ -18,7 +18,6 @@ const Search = ({ onSearch, ProductType, searchValue }) => {
         const selectedType = e.target.value;
         setSelectedType(selectedType);
         ProductType(selectedType);
-        // Kích hoạt tìm kiếm ngay khi chọn option
         onSearch(searchInput, selectedType);
     };
 
