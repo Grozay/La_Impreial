@@ -1,32 +1,28 @@
-
-
+// Trong component Search
 import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import '../css/Search/Search.css';
 
-const Search = ({ onSearch, ProductType }) => {
-    const navigate = useNavigate();
-    const [searchValue, setSearchValue] = useState('');
-    const [selectedType, setSelectedType] = useState('');
+const Search = ({ onSearch, ProductType, searchValue }) => {
+    const [searchInput, setSearchInput] = useState('');
     const [showCartText, setShowCartText] = useState(false);
-
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Chỉ gọi hàm onSearch khi có ít nhất một tiêu chí được nhập
-        if (searchValue || selectedType) {
-            onSearch({ name: searchValue, type: selectedType });
-            navigate('/products');
-        }
-    };
+    const navigate = useNavigate();
 
     const handleInputChange = (e) => {
-        setSearchValue(e.target.value);
+        setSearchInput(e.target.value);
+        onSearch(e.target.value);
     };
 
-    const handleTypeChange = (e) => {
-        setSelectedType(e.target.value);
+    const handleSelectChange = (e) => {
+        ProductType(e.target.value);
     };
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        navigate('/products');
+        onSearch(searchInput);
+    };
+
     return (
         <div className="search_bar">
             <div className="search_bar_list">
@@ -39,7 +35,7 @@ const Search = ({ onSearch, ProductType }) => {
             </div>
             <div className="search_bar_list">
                 <div className="search_bar_list_item">
-                    <select className="search_select" value={selectedType} onChange={handleTypeChange}>
+                    <select className="search_select" onChange={handleSelectChange}>
                         <option className="search_option" value="">
                             All Categories
                         </option>
@@ -60,13 +56,13 @@ const Search = ({ onSearch, ProductType }) => {
                         </option>
                     </select>
                 </div>
-                <form className="search_bar_list search_bar_form" onSubmit={handleSubmit}>
+                <form className="search_bar_list search_bar_form" onSubmit={handleSearch}>
                     <input
                         className="input_search"
                         type="text"
-                        value={searchValue}
-                        placeholder="Search By Name "
+                        value={searchInput}
                         onChange={handleInputChange}
+                        placeholder="Search By Name"
                     />
                 </form>
                 <div className="search_bar_list">
@@ -89,8 +85,8 @@ const Search = ({ onSearch, ProductType }) => {
                 </div>
             </div>
 
-        </div >
+        </div>
     )
-
 }
-export default Search
+
+export default Search;

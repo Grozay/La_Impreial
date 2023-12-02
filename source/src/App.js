@@ -15,9 +15,11 @@ import ProductDentail from './components/Products/ProductDetail';
 function App() {
   const [products, setProducts] = useState([]);
   const [filterProduct, setFilterProduct] = useState([]);
+  const [filterProducts, setFilterProducts] = useState([]);
   const [lgProduct, setLgProduct] = useState([]);
   const [panasonicProduct, setPanasonicProduct] = useState([]);
   const [toshibaProduct, setToshibaProduct] = useState([]);
+  const [search, setSearch] = useState({ value: '', type: '' });
   const [searchValue, setSearchValue] = useState('');
   const [noResults, setNoResults] = useState(false);
 
@@ -27,6 +29,7 @@ function App() {
       .then(data => {
         setProducts(data);
         setFilterProduct(data);
+        setFilterProducts(data);
         setLgProduct(data.filter(p => p.brand === 'LG').slice(0, 20));
         setPanasonicProduct(data.filter(p => p.brand === 'Panasonic').slice(0, 20));
         setToshibaProduct(data.filter(p => p.brand === 'toshiba').slice(0, 20));
@@ -37,45 +40,41 @@ function App() {
   const handleAdd = (newProduct) => {
     setProducts([...products, newProduct]);
     setFilterProduct([...filterProduct, newProduct]);
+    setFilterProducts([...filterProducts, newProduct]);
   };
 
-  //search đa tiêu chí
-  const MySearchProduct = ({ name, type }) => {
-    setSearchValue(name);
+  const MySearchProduct = (searchInput, productType) => {
+    setSearch({ value: searchInput, type: productType });
 
-    let productSearch = products;
-
-    if (name) {
-      productSearch = productSearch.filter(p => p.name.toLowerCase().includes(name.toLowerCase()));
-    }
-
-    if (type) {
-      productSearch = productSearch.filter(p => p.type.toLowerCase() === type.toLowerCase());
-    }
-
-    setFilterProduct(productSearch);
-    setNoResults(productSearch.length === 0 || name.trim() === '');
-  };
-
-  //search type
-  const handleSearchType = (ProductType) => {
-    if (ProductType !== '') {
-      const filterProductType = products.filter(searchSelect => ProductType === searchSelect.type);
-      setFilterProduct(filterProductType);
+    if (!searchInput) {
+      const productSearch = products.filter(
+        (p) => (!productType || p.type === productType)
+      );
+      setFilterProduct(productSearch);
+      setFilterProducts(productSearch);
+      setNoResults(productSearch.length === 0);
     } else {
-      setFilterProduct(products);
+      const productSearch = products.filter(
+        (p) =>
+          p.name.toLowerCase().includes(searchInput.toLowerCase()) &&
+          (!productType || p.type === productType)
+      );
+      setFilterProduct(productSearch);
+      setFilterProducts(productSearch);
+      setNoResults(productSearch.length === 0);
     }
   };
 
-  //search ''
-  const handleSearch = (searchParams) => {
-    MySearchProduct(searchParams);
+  const handleSearchType = (ProductType) => {
+    setSearch({ value: search.value, type: ProductType });
+    MySearchProduct(search.value, ProductType);
   };
+
 
   return (
     <div className="App">
       <Heading />
-      <Search onSearch={handleSearch} ProductType={handleSearchType} />
+      <Search onSearch={MySearchProduct} ProductType={handleSearchType} searchValue={search.value} />
       <nav>
         <NavBar />
       </nav>
@@ -96,7 +95,7 @@ function App() {
         <Route path="/panasonic" element={<Panasonic panasonicProduct={panasonicProduct} />} />
         <Route path="/toshiba" element={<Toshiba toshibaProduct={toshibaProduct} />} />
         <Route path="/contact" element={<Contact onAdd={handleAdd} />} />
-        <Route path='/products/:id' element={<ProductDentail productDentail={filterProduct} />}/>
+        <Route path='/products/:id' element={<ProductDentail productDentail={filterProduct} />} />
       </Routes>
     </div>
   );
