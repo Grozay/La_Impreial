@@ -5,6 +5,7 @@ import '../css/Search/Search.css';
 
 const Search = ({ onSearch, ProductType, searchValue }) => {
     const [searchInput, setSearchInput] = useState('');
+    const [selectedType, setSelectedType] = useState('');
     const [showCartText, setShowCartText] = useState(false);
     const navigate = useNavigate();
 
@@ -14,13 +15,17 @@ const Search = ({ onSearch, ProductType, searchValue }) => {
     };
 
     const handleSelectChange = (e) => {
-        ProductType(e.target.value);
+        const selectedType = e.target.value;
+        setSelectedType(selectedType);
+        ProductType(selectedType);
+        // Kích hoạt tìm kiếm ngay khi chọn option
+        onSearch(searchInput, selectedType);
     };
 
     const handleSearch = (e) => {
         e.preventDefault();
         navigate('/products');
-        onSearch(searchInput);
+        onSearch(searchInput, selectedType);
     };
 
     return (
@@ -35,7 +40,7 @@ const Search = ({ onSearch, ProductType, searchValue }) => {
             </div>
             <div className="search_bar_list">
                 <div className="search_bar_list_item">
-                    <select className="search_select" onChange={handleSelectChange}>
+                    <select className="search_select" value={selectedType} onChange={handleSelectChange}>
                         <option className="search_option" value="">
                             All Categories
                         </option>
@@ -73,20 +78,17 @@ const Search = ({ onSearch, ProductType, searchValue }) => {
                             className='cart-container'
                         >
                             <i class="fa-solid fa-cart-shopping fa-2xl"></i>
-                            {/* Icon giỏ hàng ở đây */}
                             {showCartText && <div className='cart-label'>
                                 <div className='text'>
                                     Cart
                                 </div>
                             </div>}
                         </div>
-
                     </Link>
                 </div>
             </div>
-
         </div>
-    )
+    );
 }
 
 export default Search;
