@@ -10,15 +10,15 @@ const Search = ({ onSearch, ProductType, searchValue }) => {
     const navigate = useNavigate();
 
     const handleInputChange = (e) => {
-        setSearchInput(e.target.value);
-        onSearch(e.target.value);
+        const inputVal = e.target.value;
+        setSearchInput(inputVal);
+        onSearch(inputVal, selectedType);
     };
 
     const handleSelectChange = (e) => {
-        const selectedType = e.target.value;
-        setSelectedType(selectedType);
-        ProductType(selectedType);
-        onSearch(searchInput, selectedType);
+        const typeVal = e.target.value;
+        setSelectedType(typeVal);
+        onSearch(searchInput, typeVal);
     };
 
     const handleSearch = (e) => {
