@@ -1,0 +1,84 @@
+/* Banner.css */
+
+.banner-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.banner-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.banner-image img {
+    width: 78%;
+    margin: 30px auto;
+    height: auto;
+    display: block;
+    transition: transform 1s ease;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 2em;
+    color: rgb(143, 143, 143);
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.arrow.left {
+    left: 200px;
+}
+
+.arrow.right {
+    right: 200px;
+    margin-top: -0.1px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #fff;
+}
+
+/* Animation */
+@keyframes slideImage {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.banner-image img.slide {
+    animation: slideImage 5s linear infinite;
+}
+
+.banner-image img.slide:hover {
+    animation-play-state: paused;
+}

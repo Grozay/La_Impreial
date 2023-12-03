@@ -3,7 +3,7 @@ import './App.css'
 import ProductList from './components/Products/ProductList';
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/AppBar/Nav';
-import HomePage from './Home/HomePage';
+import HomePage from './Home/HomePage/HomePage';
 import Heading from './components/Header/Heading';
 import Search from './utils/search';
 import LG from './Home/Brand/Lg';
