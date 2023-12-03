@@ -47,10 +47,8 @@ function App() {
     let productSearch;
 
     if (!searchInput && productType !== null && productType !== undefined) {
-      // Nếu searchInput trống và có productType, chỉ lọc theo productType
       productSearch = products.filter((p) => p.type === productType);
     } else {
-      // Ngược lại, thực hiện tìm kiếm theo tên và loại sản phẩm
       productSearch = products.filter(
         (p) =>
           p.name.toLowerCase().includes(searchInput.toLowerCase()) &&
