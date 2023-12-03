@@ -15,7 +15,6 @@ import ProductDentail from './components/Products/ProductDetail';
 function App() {
   const [products, setProducts] = useState([]);
   const [filterProduct, setFilterProduct] = useState([]);
-  // const [filterProducts, setFilterProducts] = useState([]);
   const [lgProduct, setLgProduct] = useState([]);
   const [panasonicProduct, setPanasonicProduct] = useState([]);
   const [toshibaProduct, setToshibaProduct] = useState([]);
@@ -29,7 +28,6 @@ function App() {
       .then(data => {
         setProducts(data);
         setFilterProduct(data);
-        // setFilterProducts(data);
         setLgProduct(data.filter(p => p.brand === 'LG').slice(0, 20));
         setPanasonicProduct(data.filter(p => p.brand === 'Panasonic').slice(0, 20));
         setToshibaProduct(data.filter(p => p.brand === 'toshiba').slice(0, 20));
@@ -40,32 +38,35 @@ function App() {
   const handleAdd = (newProduct) => {
     setProducts([...products, newProduct]);
     setFilterProduct([...filterProduct, newProduct]);
-    // setFilterProducts([...filterProducts, newProduct]);
   };
 
 
   //search name vs type
   const MySearchProduct = (searchInput, productType) => {
     setSearch({ value: searchInput, type: productType });
+    let productSearch;
 
-    if (!searchInput) {
-      const productSearch = products.filter(
-        (p) => (!productType || p.type === productType)
-      );
-      setFilterProduct(productSearch);
-      // setFilterProducts(productSearch);
-      setNoResults(productSearch.length === 0);
+    if (!searchInput && productType !== null && productType !== undefined) {
+      // Nếu searchInput trống và có productType, chỉ lọc theo productType
+      productSearch = products.filter((p) => p.type === productType);
     } else {
-      const productSearch = products.filter(
+      // Ngược lại, thực hiện tìm kiếm theo tên và loại sản phẩm
+      productSearch = products.filter(
         (p) =>
           p.name.toLowerCase().includes(searchInput.toLowerCase()) &&
           (!productType || p.type === productType)
       );
-      setFilterProduct(productSearch);
-      // setFilterProducts(productSearch);
-      setNoResults(productSearch.length === 0);
     }
+
+    setFilterProduct(productSearch);
+    setNoResults(productSearch.length === 0);
   };
+
+
+
+
+
+
   //search type
   const handleSearchType = (ProductType) => {
     setSearch({ value: search.value, type: ProductType });
