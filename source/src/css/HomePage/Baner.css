@@ -65,7 +65,6 @@
     background-color: #fff;
 }
 
-/* Animation */
 @keyframes slideImage {
     0% {
         transform: translateX(0%);
