@@ -15,6 +15,7 @@
   margin-left: 155px;
   z-index: 1000;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  transition: background-color ease, box-shadow 0.3s ease
 }
 
 .right{

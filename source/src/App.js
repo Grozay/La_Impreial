@@ -62,13 +62,6 @@ function App() {
     setNoResults(productSearch.length === 0);
   };
 
-
-
-
-
-
-
-
   //search type
   const handleSearchType = (ProductType) => {
     setSearch({ value: search.value, type: ProductType });

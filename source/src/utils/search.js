@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import '../css/Search/Search.css';
 
-const Search = ({ onSearch, ProductType, searchValue }) => {
+const Search = ({ onSearch }) => {
     const [searchInput, setSearchInput] = useState('');
     const [selectedType, setSelectedType] = useState('');
     const [showCartText, setShowCartText] = useState(false);
