@@ -18,28 +18,28 @@ const Footer = () => {
                     <div>
                         <div>
                             <div>></div>
-                            <div> <Link to="/">Home</Link></div>
+                            <div> <Link to="/" className='footer_link_item'>Home</Link></div>
                         </div>
                     </div>
                     <hr className='hr' />
                     <div>
                         <div>
                             <div>></div>
-                            <div> <Link to="/products">Products</Link></div>
+                            <div> <Link to="/products" className='footer_link_item'>Products</Link></div>
                         </div>
                     </div>
                     <hr className='hr' />
                     <div>
                         <div>
                             <div>></div>
-                            <div> <Link to="/about">About Us</Link></div>
+                            <div> <Link to="/about" className='footer_link_item'>About Us</Link></div>
                         </div>
                     </div>
                     <hr className='hr' />
                     <div>
                         <div>
                             <div>></div>
-                            <div> <Link to="/contact">Contact US</Link></div>
+                            <div> <Link to="/contact" className='footer_link_item'>Contact US</Link></div>
                         </div>
                     </div>
                 </div>
