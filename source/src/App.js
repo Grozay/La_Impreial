@@ -46,8 +46,10 @@ function App() {
     setSearch({ value: searchInput, type: productType });
     let productSearch;
 
-    if (!searchInput && productType !== null && productType !== undefined) {
+    if (!searchInput && productType !== null && productType !== undefined && productType !== '') {
       productSearch = products.filter((p) => p.type === productType);
+    } else if (!searchInput && (!productType || productType === '')) {
+      productSearch = products;
     } else {
       productSearch = products.filter(
         (p) =>
@@ -59,6 +61,8 @@ function App() {
     setFilterProduct(productSearch);
     setNoResults(productSearch.length === 0);
   };
+
+
 
 
 
