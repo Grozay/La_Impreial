@@ -1,7 +1,8 @@
 /* Footer.css */
 
 .footer {
-    background-color: #333; /* Choose a background color */
+    background-color: #333;
+    /* Choose a background color */
     color: #fff;
     padding: 20px;
 }
@@ -30,12 +31,12 @@
     margin-bottom: 5px;
 }
 
-.footer_link div > div {
+.footer_link div>div {
     display: flex;
     align-items: center;
 }
 
-.footer_link div > div > div {
+.footer_link div>div>div {
     margin-right: 5px;
 }
 

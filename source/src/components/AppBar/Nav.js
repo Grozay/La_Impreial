@@ -1,18 +1,31 @@
 //nav
 import '../../css/Nav/NavBar.css'
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-function Nav() {
-    // const searchProductBrand = (event) => {
-    //     const ProductBrand = event.target.value;
-    //     ProductBrands(ProductBrand);
-    // }
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    // };
+
+const Nav = () => {
+    useEffect(() => {
+        const navbar = document.getElementById("navbar");
+        const sticky = navbar.offsetTop;
+
+        const handleScroll = () => {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
         <div>
-            <nav className="nav">
+            <nav id="navbar" className="nav">
                 <div>
                     <div class="dropdown">
                         <button class="dropbtn">Selected Brand<i class="fa-solid fa-caret-down"></i></button>
@@ -20,11 +33,6 @@ function Nav() {
                             <Link to="panasonic">panasonic</Link>
                             <Link to="lg">LG</Link>
                             <Link to="toshiba">Toshiba</Link>
-                            {/* <div className='dropdown-content_btn' onChange={searchProductBrand} onSubmit={handleSubmit}>
-                                <button value="LG">LG</button>
-                                <button value="Panasonic">panasonic</button>
-                                <button value="toshiba">Toshiba</button>
-                            </div> */}
                         </div>
                     </div>
                     <Link to='/' className="navbar">Home</Link>
