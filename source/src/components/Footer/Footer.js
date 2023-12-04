@@ -10,7 +10,12 @@ const Footer = () => {
                     <p>La Imperial</p>
                     <p>location</p>
                     <p>tel:(84) 123456789</p>
-                    <p>email: thieunu@gmail.com</p>
+                    <p>
+                        email: <Link to="mailto:thieunu@gmail.com" className='contact_footer_link'>thieunu@gmail.com</Link>
+                    </p>
+                    <p>
+                        Facebook: <Link to="https://www.facebook.com/quyencutety" className='contact_footer_link'>Fan Page</Link>
+                    </p>
                 </div>
 
                 <div className='footer_link'>

@@ -2,7 +2,12 @@ import Banner from "./Baner"
 const HomePage = () => {
     return (
         <div>
-            <Banner />
+            <div>
+                <Banner />
+                <div>
+
+                </div>
+            </div>
         </div>
     )
 }
