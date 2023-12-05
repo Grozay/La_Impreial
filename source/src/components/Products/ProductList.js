@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ProductItem from './ProductItem';
 import Pagination from './Pagination';
-import '../../css/product/product.css'; // Import CSS file
+import '../../css/Product/Products.css'; // Import CSS file
 
 const ProductList = ({ products,addCart }) => {
   const [currentPage, setCurrentPage] = useState(1);
