@@ -74,8 +74,8 @@ function Contact({onAdd}){
 
 
 
-            <div class="container">
-            <div class="content">
+            <div class="container2">
+            <div class="content2">
                 <div class="form">
                     <form onSubmit={handleSubmit} >
                         <div class="top">
