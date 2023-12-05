@@ -12,7 +12,7 @@
     color: #333;
   }
   
-  .container {
+  .container2 {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
@@ -71,8 +71,8 @@
     margin-top: 2px;
   }
   
-  .container h2,
-  .container h5 {
+  .container2 h2,
+  .container2 h5 {
     color: #333;
   }
   
@@ -80,7 +80,7 @@
     color: #007bff;
   }
   
-  .container iframe {
+  .container2 iframe {
     border: 1px solid #dedddd;
     border-radius: 4px;
     margin-top: 10px;
