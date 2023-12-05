@@ -11,6 +11,7 @@ import Panasonic from './Home/Brand/Panasonic';
 import Toshiba from './Home/Brand/Toshiba';
 import Contact from './components/ContactUs/Contact';
 import ProductDentail from './components/Products/ProductDetail';
+// import Cursor from './components/Cursor/Cursor'
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -19,6 +20,9 @@ function App() {
   const [panasonicProduct, setPanasonicProduct] = useState([]);
   const [toshibaProduct, setToshibaProduct] = useState([]);
   const [search, setSearch] = useState({ value: '', type: '' });
+  const [productHot, setProductHot] = useState([])
+  const [productNew, setProductNew] = useState([])
+  const [productQuality, setProductQuality] = useState([])
   // const [searchValue, setSearchValue] = useState('');
   const [noResults, setNoResults] = useState(false);
 
@@ -31,9 +35,19 @@ function App() {
         setLgProduct(data.filter(p => p.brand === 'LG').slice(0, 20));
         setPanasonicProduct(data.filter(p => p.brand === 'Panasonic').slice(0, 20));
         setToshibaProduct(data.filter(p => p.brand === 'toshiba').slice(0, 20));
+        const evenIdProducts = data.filter(p => p.id % 2 === 0);
+        setProductHot(evenIdProducts)
+        const oddIdProducts = data.filter(p => p.id % 2 !== 0);
+        setProductNew(oddIdProducts)
+        const qualityIdProducts = data.filter(p => p.id <= 15);
+        setProductQuality(qualityIdProducts)  // Fix typo here
       })
       .catch(error => console.log('error reading json', error));
   }, []);
+
+
+
+
 
   const handleAdd = (newProduct) => {
     setProducts([...products, newProduct]);
@@ -77,7 +91,7 @@ function App() {
         <NavBar />
       </nav>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage productHot={productHot} productNew={productNew} productQuality={productQuality} />} />
         <Route
           path="/products"
           element={
@@ -95,6 +109,9 @@ function App() {
         <Route path="/contact" element={<Contact onAdd={handleAdd} />} />
         <Route path='/products/:id' element={<ProductDentail productDentail={filterProduct} />} />
       </Routes>
+      {/* <div>
+        <Cursor />
+      </div> */}
     </div>
   );
 }

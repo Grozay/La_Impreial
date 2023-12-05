@@ -19,6 +19,11 @@
     box-shadow: 0px 2px 5px ;
     color:black;
     align-items: center; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover{
+  transform: scale(1.05);
 }
 .product-details {
     flex: 1;
