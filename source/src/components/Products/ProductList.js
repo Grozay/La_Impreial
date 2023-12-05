@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import ProductItem from './ProductItem';
 import Pagination from './Pagination';
-import '../../css/product/product.css'; // Import CSS file
+import '../../css/Product/Products.css'; // Import CSS file
 
-const ProductList = ({ products,addCart }) => {
+const ProductList = ({ products, addCart }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(6); // Số lượng sản phẩm trên mỗi trang
 
@@ -28,7 +28,7 @@ const ProductList = ({ products,addCart }) => {
         paginate={paginate}
       />
     </div>
-    
+
   );
 };
 

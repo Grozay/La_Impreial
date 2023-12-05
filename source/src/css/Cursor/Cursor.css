@@ -1,0 +1,8 @@
+.customCursor {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+  
+    
+    cursor: url('/src/mouse.png'), auto;
+  }
