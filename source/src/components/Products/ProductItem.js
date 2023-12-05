@@ -5,7 +5,7 @@ function ProductItem({ product, addCart }) {
     const detail = useNavigate();
     return (
         <div className="product" onClick={() => detail(`/products/${product.id}`)} >
-            <img className="img" src={product.image[0]} alt="img" />
+            <img className="img" src={`../${product.image[0]}`} alt="img" />
             <div className="product-details">
                 <h3 className="name">{truncatedName}</h3>
                 <p className="price">{product.price}$</p>
