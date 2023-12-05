@@ -34,11 +34,36 @@ function App() {
   const [erroLogin, setErrorLogin] = useState('');
 
 
+  
+
+
+
+
+  useEffect(() => {
+    fetch('/data/products.json')
+      .then(response => response.json())
+      .then(data => {
+        setProducts(data);
+        setFilterProduct(data);
+        setLgProduct(data.filter(p => p.brand === 'LG').slice(0, 20));
+        setPanasonicProduct(data.filter(p => p.brand === 'Panasonic').slice(0, 20));
+        setToshibaProduct(data.filter(p => p.brand === 'toshiba').slice(0, 20));
+        const evenIdProducts = data.filter(p => p.id % 2 === 0);
+        setProductHot(evenIdProducts)
+        const oddIdProducts = data.filter(p => p.id % 2 !== 0);
+        setProductNew(oddIdProducts)
+        const qualityIdProducts = data.filter(p => p.id <= 15);
+        setProductQuality(qualityIdProducts)  // Fix typo here
+      })
+      .catch(error => console.log('error reading json', error));
+  }, []);
+
+
   useEffect(() => {
     fetch('/data/user.json')
       .then(response1 => response1.json())
       .then(data1 => {
-        const localUsers = getUsersFromLocal();
+        // const localUsers = getUsersFromLocal();
         setUser(data1);
       })
       .catch(error => console.log('error reading json', error));
@@ -82,7 +107,7 @@ const handleRegister = (newUser) => {
 //cach 2
 const saveUsersToLocal = (data) => {
   try {
-    localStorage.setItem('userData', JSON.stringify(data));
+    localStorage.setItem('userData', JSON.stringify(data)); //  là một phương thức trong JavaScript được sử dụng để chuyển đổi một đối tượng JavaScript thành một chuỗi JSON.
     console.log('User data saved successfully');
   } catch (error) {
     console.error('Error saving user data', error);
@@ -97,28 +122,6 @@ const getUsersFromLocal = () => {
     return [];
   }
 };
-
-
-
-
-  useEffect(() => {
-    fetch('/data/products.json')
-      .then(response => response.json())
-      .then(data => {
-        setProducts(data);
-        setFilterProduct(data);
-        setLgProduct(data.filter(p => p.brand === 'LG').slice(0, 20));
-        setPanasonicProduct(data.filter(p => p.brand === 'Panasonic').slice(0, 20));
-        setToshibaProduct(data.filter(p => p.brand === 'toshiba').slice(0, 20));
-        const evenIdProducts = data.filter(p => p.id % 2 === 0);
-        setProductHot(evenIdProducts)
-        const oddIdProducts = data.filter(p => p.id % 2 !== 0);
-        setProductNew(oddIdProducts)
-        const qualityIdProducts = data.filter(p => p.id <= 15);
-        setProductQuality(qualityIdProducts)  // Fix typo here
-      })
-      .catch(error => console.log('error reading json', error));
-  }, []);
 
 
 
