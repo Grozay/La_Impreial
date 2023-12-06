@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ProductItem from './ProductItem';
 import Pagination from './Pagination';
-import '../../css/product/Products.css';
+import '../../css/Product/Products.css';
 
 const ProductList = ({ products, addCart }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -24,7 +24,7 @@ const ProductList = ({ products, addCart }) => {
   return (
     <div className="product-container">
       {productsList}
-    <div className='Pagination'>  <Pagination
+      <div className='Pagination'>  <Pagination
         productsPerPage={productsPerPage}
         totalProducts={products.length}
         currentPage={currentPage}

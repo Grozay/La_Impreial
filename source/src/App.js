@@ -13,9 +13,9 @@ import Contact from './components/ContactUs/Contact';
 import ProductDentail from './components/Products/ProductDetail';
 import Login from './pages/Auth/Login';
 import Register from './pages/Auth/Register';
-import Swal from 'sweetalert2' ;
+import Swal from 'sweetalert2';
 import Carlist from './cart/CartList';
-import CompareProductsPage from './css/product/CompareProductsPage';
+import CompareProductsPage from './components/Products/CompareProductsPage';
 // import Cursor from './components/Cursor/Cursor'
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
   // const [searchValue, setSearchValue] = useState('');
   const [noResults, setNoResults] = useState(false);
 
-  const [cart,setcart]=useState([]);
+  const [cart, setcart] = useState([]);
   const [users, setUser] = useState([]);
   const homepage = useNavigate();
   const [erroLogin, setErrorLogin] = useState('');
@@ -61,15 +61,15 @@ function App() {
       })
       .catch(error => console.log('error reading json', error));
   }, []);
-  const deleteFormCart=(id)=>{
-    const deleteCarts= cart.filter(c=>c.id!==id);
+  const deleteFormCart = (id) => {
+    const deleteCarts = cart.filter(c => c.id !== id);
     setcart(deleteCarts);
   }
   const addToCart = (pro, quantity) => {
-   
+
     const itemsToAdd = Array.from({ length: quantity }, () => pro);
-  
-    
+
+
     setcart([...cart, ...itemsToAdd]);
   }
   useEffect(() => {
@@ -82,67 +82,67 @@ function App() {
       .catch(error => console.log('error reading json', error));
   }, []);
 
-//login 
-const checkLogin = (checkUser) => {
-  const findUser = users.find(u => u.username === checkUser.username && u.password === checkUser.password);
-  if (findUser != null) {
-    setErrorLogin('');
-    saveUsersToLocal([...users, checkUser]);
-    localStorage.setItem('username', checkUser.username);
-    MainAlert.fire({
-      icon: "success",
-      title: "Logging successfully"
-    });
-    homepage('/products/')
-  } else {
-    MainAlert.fire({
-      icon: "error",
-      title: "Invalid username or password"
-    });
-    // setErrorLogin('Invalid username or password')
+  //login 
+  const checkLogin = (checkUser) => {
+    const findUser = users.find(u => u.username === checkUser.username && u.password === checkUser.password);
+    if (findUser != null) {
+      setErrorLogin('');
+      saveUsersToLocal([...users, checkUser]);
+      localStorage.setItem('username', checkUser.username);
+      MainAlert.fire({
+        icon: "success",
+        title: "Logging successfully"
+      });
+      homepage('/products/')
+    } else {
+      MainAlert.fire({
+        icon: "error",
+        title: "Invalid username or password"
+      });
+      // setErrorLogin('Invalid username or password')
+    }
   }
-}
-//register
-const handleRegister = (newUser) => {
-  setUser([...users, newUser]);
-  // saveUsersToFile([...users, newUser]);
-  saveUsersToLocal([...users, newUser]);
-  console.log('User registered successfully');
-};
+  //register
+  const handleRegister = (newUser) => {
+    setUser([...users, newUser]);
+    // saveUsersToFile([...users, newUser]);
+    saveUsersToLocal([...users, newUser]);
+    console.log('User registered successfully');
+  };
 
-//Login = API
-// const saveUsersToFile = (data) => {
-//   // Save data to user.json or an API endpoint
-//   fetch('/data/user.json', {
-//     method: 'PUT', // or 'POST' if you prefer
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(data),
-//   })
-//     .then((response) => response.json())
-//     .then((result) => console.log('User data saved:', result))
-//     .catch((error) => console.error('Error saving user data', error));
-// };
+  //Login = API
+  // const saveUsersToFile = (data) => {
+  //   // Save data to user.json or an API endpoint
+  //   fetch('/data/user.json', {
+  //     method: 'PUT', // or 'POST' if you prefer
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify(data),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((result) => console.log('User data saved:', result))
+  //     .catch((error) => console.error('Error saving user data', error));
+  // };
 
-//cach 2
-const saveUsersToLocal = (data) => {
-  try {
-    localStorage.setItem('userData', JSON.stringify(data)); //  là một phương thức trong JavaScript được sử dụng để chuyển đổi một đối tượng JavaScript thành một chuỗi JSON.
-    console.log('User data saved successfully');
-  } catch (error) {
-    console.error('Error saving user data', error);
-  }
-};
+  //cach 2
+  const saveUsersToLocal = (data) => {
+    try {
+      localStorage.setItem('userData', JSON.stringify(data)); //  là một phương thức trong JavaScript được sử dụng để chuyển đổi một đối tượng JavaScript thành một chuỗi JSON.
+      console.log('User data saved successfully');
+    } catch (error) {
+      console.error('Error saving user data', error);
+    }
+  };
 
-const getUsersFromLocal = () => {
-  try {
-    return JSON.parse(localStorage.getItem('userData')) || [];
-  } catch (error) {
-    console.error('Error retrieving user data', error);
-    return [];
-  }
-};
+  const getUsersFromLocal = () => {
+    try {
+      return JSON.parse(localStorage.getItem('userData')) || [];
+    } catch (error) {
+      console.error('Error retrieving user data', error);
+      return [];
+    }
+  };
 
 
 
@@ -183,7 +183,7 @@ const getUsersFromLocal = () => {
 
 
 
-  
+
 
   return (
     <div className="App">
@@ -198,24 +198,24 @@ const getUsersFromLocal = () => {
           path="/products"
           element={
             localStorage.getItem('username') ? (
-            noResults ? (
-              <p className='no-results-message'>No Found Products</p>
-            ) : (
-              <ProductList products={filterProduct} addCart={addToCart} />
-            )
+              noResults ? (
+                <p className='no-results-message'>No Found Products</p>
+              ) : (
+                <ProductList products={filterProduct} addCart={addToCart} />
+              )
             ) : (
               <Navigate to='/account' />
             )
           }
         />
-       <Route path="/lg" element={<LG addCart={addToCart} lgProduct={lgProduct} />} />
-         <Route path="/panasonic" element={<Panasonic addCart={addToCart} panasonicProduct={panasonicProduct} />} />
+        <Route path="/lg" element={<LG addCart={addToCart} lgProduct={lgProduct} />} />
+        <Route path="/panasonic" element={<Panasonic addCart={addToCart} panasonicProduct={panasonicProduct} />} />
         <Route path="/toshiba" element={<Toshiba addCart={addToCart} toshibaProduct={toshibaProduct} />} />
-        <Route path="/contact" element={<Contact onAdd={handleAdd}  />} />
+        <Route path="/contact" element={<Contact onAdd={handleAdd} />} />
         <Route path='/products/:id' element={<ProductDentail productDentail={filterProduct} addCart={addToCart} />} />
         <Route path='/account' element={<Login checkLogin={checkLogin} erroLogin={erroLogin} />} />
         <Route path="/register" element={<Register onRegister={handleRegister} />} />
-        <Route path='/cart' element={<Carlist carts={cart} deleteCart={deleteFormCart} />}/>
+        <Route path='/cart' element={<Carlist carts={cart} deleteCart={deleteFormCart} />} />
         <Route path="/compare/:id*" element={<CompareProductsPage productDentail={products} addCart={addToCart} />} />
       </Routes>
       {/* <div>
