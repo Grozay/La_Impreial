@@ -25,7 +25,7 @@ const Register = ({ onRegister }) => {
     if (newPassword !== confirmPassword || newPassword === '' || confirmPassword === '') {
       MainAlert.fire({
         icon: "error",
-        timer: 500,
+        timer: 1500,
         title: "Password And Confirm Password Must Be Same"
       });
       return;
