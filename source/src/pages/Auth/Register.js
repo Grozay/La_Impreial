@@ -1,33 +1,51 @@
 // Register.js
 import React, { useState } from 'react';
+import Swal from 'sweetalert2' ;
 import '../../css/Register/register.css'
+import { useNavigate, Navigate } from 'react-router-dom';
 const Register = ({ onRegister }) => {
   const [newUsername, setNewUsername] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [email, setEmail] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const navigate = useNavigate('');
+  const MainAlert = Swal.mixin({
+    showConfirmButton: false,
+    timer: 2000,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    }
+  });
   const handleRegister = (e) => {
     e.preventDefault();
-
+    
     // Kiểm tra xác nhận mật khẩu
-    if (newPassword !== confirmPassword) {
-      alert('Mật khẩu xác nhận không khớp');
+    if (newPassword !== confirmPassword || newPassword === '' || confirmPassword === '') {
+      MainAlert.fire({
+        icon: "error",
+        timer: 500,
+        title: "Password And Confirm Password Must Be Same"
+      });
       return;
     }
-
+ 
     const newUser = { username: newUsername, password: newPassword, email };
     onRegister(newUser);
-
-    // Mở modal thành công
-    setIsModalOpen(true);
+    
+   
 
     // Reset trường
     setNewUsername('');
     setNewPassword('');
     setConfirmPassword('');
     setEmail('');
+    MainAlert.fire({
+      icon: "success",
+      title: "Signed in successfully"
+    });
+    navigate('/account/')
   };
 
   const closeModal = () => {
@@ -81,15 +99,7 @@ const Register = ({ onRegister }) => {
         </div>
       </div>
 
-      {/* Modal thành công */}
-      {isModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={closeModal}>&times;</span>
-            <p>Register Successfully</p>
-          </div>
-        </div>
-      )}
+     
     </div>
   );
 };
