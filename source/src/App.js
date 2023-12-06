@@ -13,6 +13,7 @@ import Contact from './components/ContactUs/Contact';
 import ProductDentail from './components/Products/ProductDetail';
 import Login from './pages/Auth/Login';
 import Register from './pages/Auth/Register';
+import Swal from 'sweetalert2' ;
 // import Cursor from './components/Cursor/Cursor'
 
 function App() {
@@ -32,7 +33,14 @@ function App() {
   const [users, setUser] = useState([]);
   const homepage = useNavigate();
   const [erroLogin, setErrorLogin] = useState('');
-
+  const MainAlert = Swal.mixin({
+    showConfirmButton: false,
+    timer: 1000,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    }
+  });
 
   
 
@@ -76,9 +84,17 @@ const checkLogin = (checkUser) => {
     setErrorLogin('');
     saveUsersToLocal([...users, checkUser]);
     localStorage.setItem('username', checkUser.username);
+    MainAlert.fire({
+      icon: "success",
+      title: "Logging successfully"
+    });
     homepage('/products/')
   } else {
-    setErrorLogin('Invalid username or password')
+    MainAlert.fire({
+      icon: "error",
+      title: "Invalid username or password"
+    });
+    // setErrorLogin('Invalid username or password')
   }
 }
 //register
