@@ -14,6 +14,8 @@ import ProductDentail from './components/Products/ProductDetail';
 import Login from './pages/Auth/Login';
 import Register from './pages/Auth/Register';
 import Swal from 'sweetalert2' ;
+import Carlist from './cart/CartList';
+import CompareProductsPage from './css/product/CompareProductsPage';
 // import Cursor from './components/Cursor/Cursor'
 
 function App() {
@@ -29,7 +31,7 @@ function App() {
   // const [searchValue, setSearchValue] = useState('');
   const [noResults, setNoResults] = useState(false);
 
-
+  const [cart,setcart]=useState([]);
   const [users, setUser] = useState([]);
   const homepage = useNavigate();
   const [erroLogin, setErrorLogin] = useState('');
@@ -41,12 +43,6 @@ function App() {
       toast.onmouseleave = Swal.resumeTimer;
     }
   });
-
-  
-
-
-
-
   useEffect(() => {
     fetch('/data/products.json')
       .then(response => response.json())
@@ -65,8 +61,17 @@ function App() {
       })
       .catch(error => console.log('error reading json', error));
   }, []);
-
-
+  const deleteFormCart=(id)=>{
+    const deleteCarts= cart.filter(c=>c.id!==id);
+    setcart(deleteCarts);
+  }
+  const addToCart = (pro, quantity) => {
+   
+    const itemsToAdd = Array.from({ length: quantity }, () => pro);
+  
+    
+    setcart([...cart, ...itemsToAdd]);
+  }
   useEffect(() => {
     fetch('/data/user.json')
       .then(response1 => response1.json())
@@ -196,20 +201,22 @@ const getUsersFromLocal = () => {
             noResults ? (
               <p className='no-results-message'>No Found Products</p>
             ) : (
-              <ProductList products={filterProduct} />
+              <ProductList products={filterProduct} addCart={addToCart} />
             )
             ) : (
               <Navigate to='/account' />
             )
           }
         />
-        <Route path="/lg" element={<LG lgProduct={lgProduct} />} />
-        <Route path="/panasonic" element={<Panasonic panasonicProduct={panasonicProduct} />} />
-        <Route path="/toshiba" element={<Toshiba toshibaProduct={toshibaProduct} />} />
-        <Route path="/contact" element={<Contact onAdd={handleAdd} />} />
-        <Route path='/products/:id' element={<ProductDentail productDentail={filterProduct} />} />
+       <Route path="/lg" element={<LG addCart={addToCart} lgProduct={lgProduct} />} />
+         <Route path="/panasonic" element={<Panasonic addCart={addToCart} panasonicProduct={panasonicProduct} />} />
+        <Route path="/toshiba" element={<Toshiba addCart={addToCart} toshibaProduct={toshibaProduct} />} />
+        <Route path="/contact" element={<Contact onAdd={handleAdd}  />} />
+        <Route path='/products/:id' element={<ProductDentail productDentail={filterProduct} addCart={addToCart} />} />
         <Route path='/account' element={<Login checkLogin={checkLogin} erroLogin={erroLogin} />} />
         <Route path="/register" element={<Register onRegister={handleRegister} />} />
+        <Route path='/cart' element={<Carlist carts={cart} deleteCart={deleteFormCart} />}/>
+        <Route path="/compare/:id*" element={<CompareProductsPage productDentail={products} addCart={addToCart} />} />
       </Routes>
       {/* <div>
         <Cursor />

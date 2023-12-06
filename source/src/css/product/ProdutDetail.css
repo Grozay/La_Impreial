@@ -11,9 +11,9 @@
 
 .selected-image-container {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 100%;
   padding-left: 10%;
-  width: 80%; 
+
   padding-right: 10px; 
 }
 .product-name{
@@ -22,14 +22,16 @@
     text-align: center;
 }
 .selected-image {
-  width: 50%; 
- 
+  width: 40%; 
+  height: 70%;
+object-fit: contain;
 }
 
 .thumbnail-container {
-  display: flex;
+display: flex;
 padding-top: 1%;
   width: 40%; 
+  
 }
 
 .thumbnail {
@@ -37,9 +39,127 @@ padding-top: 1%;
   margin-bottom: 10px;
   padding-left: 20%;
   cursor: pointer;
+  object-fit: contain;
 }
 
 .details-container {
   width: 100%;
   padding: 0 20px; 
+}
+.compare-products-container {
+ padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.selected-product,
+.similar-products {
+  text-align: center;
+  width: 50%;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+.link-button {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.link-button,
+.link-button:hover,
+.link-button:visited,
+.link-button:focus,
+.link-button:active {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.price.green {
+  color: green;
+  padding: 10px;
+}
+
+.price.red {
+  padding: 10px;
+  color: red;
+ 
+}
+.different-description {
+  background-color: green; 
+}
+.nextbutton{
+  height: 20%;
+}
+.backbutton{
+  height: 20%;
+}
+.upcoming-comparisons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.upcoming-products-container {
+  display: flex;
+}
+
+.upcoming-product {
+  margin: 0 10px;
+}
+
+.product-frame {
+  border: 2px solid #ddd;
+  
+  padding: 10px;
+  text-align: center;
+}
+
+.product-frame img {
+  cursor: pointer;
+  width: 200px;object-fit: contain;
+}
+
+.product-frame p {
+  margin: 8px 0;
+}
+.custom-similar-products-container {
+  margin-top: 20px;
+  margin-left: auto;
+}
+
+.custom-similar-products {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.custom-similar-product {
+  width: calc(33% - 5px); 
+}
+
+.custom-similar-product img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.custom-similar-product-name {
+  max-width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.Description{
+  text-align: left;
+}
+input[type="number"] {
+  width: 50px; /* Adjust the width as needed */
+  padding: 5px; /* Adjust the padding as needed */
+  text-align: center;
 }
