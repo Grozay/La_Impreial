@@ -22,7 +22,29 @@ const Register = ({ onRegister }) => {
     e.preventDefault();
     
     // Kiểm tra xác nhận mật khẩu
-    if (newPassword !== confirmPassword || newPassword === '' || confirmPassword === '') {
+    if(newUsername === '' ){
+      MainAlert.fire({
+        icon: "error",
+        timer: 1500,
+        title: "Username is required"
+      });
+      return;
+    }else if(email === ''){
+      MainAlert.fire({
+        icon: "error",
+        timer: 1500,
+        title: "Email is required"
+      });
+      return;
+    }else if(newPassword === ''){
+      MainAlert.fire({
+        icon: "error",
+        timer: 1500,
+        title: "Please fill the pasword"
+      });
+      return;
+    }
+    else if (newPassword !== confirmPassword ) {
       MainAlert.fire({
         icon: "error",
         timer: 1500,
@@ -30,6 +52,10 @@ const Register = ({ onRegister }) => {
       });
       return;
     }
+    
+    
+
+   
  
     const newUser = { username: newUsername, password: newPassword, email };
     onRegister(newUser);
@@ -43,7 +69,7 @@ const Register = ({ onRegister }) => {
     setEmail('');
     MainAlert.fire({
       icon: "success",
-      title: "Signed in successfully"
+      title: "Register  successfully"
     });
     navigate('/account/')
   };
