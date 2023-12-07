@@ -7,6 +7,10 @@
     
 }
 
+.navbar.active {
+  color: red; /* Màu bạn muốn chuyển khi trang được chọn */
+}
+
 #navbar.sticky {
   position: fixed;
   background-color: #fff;

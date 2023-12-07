@@ -83,3 +83,7 @@ position: sticky;
 .pagination button:hover {
   background-color: brown;
 }
+
+.nameproduct{
+  text-align: center;
+}

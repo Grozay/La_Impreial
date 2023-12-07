@@ -20,6 +20,10 @@
     color: #f73838;
     transition: 0.4s;
 }
+
+.active {
+    color: red; /* Màu bạn muốn chuyển khi trang được chọn */
+  }
 /* .header_navbar_email{
     color: black;
     text-decoration: none;

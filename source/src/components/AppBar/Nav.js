@@ -1,75 +1,40 @@
-import '../../css/Nav/NavBar.css';
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "../../css/Nav/NavBar.css";
 
-const Nav = () => {
-    // Sticky navbar
-    useEffect(() => {
-        const navbar = document.getElementById("navbar");
-        const sticky = navbar.offsetTop;
-
-        const handleScroll = () => {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky");
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        };
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
-    // Select brand
-    const [selectedBrand, setSelectedBrand] = useState("Selected Brand");
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsDropdownOpen(false); // Close dropdown on scroll
-        };
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
-    const handleBrandSelect = (brand) => {
-        setSelectedBrand(brand);
-        setIsDropdownOpen(false);
-    };
-
-    const toggleDropdown = () => {
-        setIsDropdownOpen(!isDropdownOpen);
-    };
-
+function Nav() {
     return (
         <div>
-            <nav id="navbar" className="nav">
+            <nav className="nav">
                 <div>
                     <div className="dropdown">
-                        <button className="dropbtn" onClick={toggleDropdown}>
-                            {selectedBrand} <i className={`fa-solid fa-caret-${isDropdownOpen ? "up" : "down"}`}></i>
+                        <button className="dropbtn">
+                            Selected Brand<i className="fa-solid fa-caret-down"></i>
                         </button>
-                        <div className={`dropdown-content ${isDropdownOpen ? "show" : ""}`}>
-                            <Link to="/panasonic" onClick={() => handleBrandSelect("Panasonic")}>Panasonic</Link>
-                            <Link to="/lg" onClick={() => handleBrandSelect("LG")}>LG</Link>
-                            <Link to="/toshiba" onClick={() => handleBrandSelect("Toshiba")}>Toshiba</Link>
+                        <div className="dropdown-content">
+                            <NavLink to="/panasonic" activeClassName="active">panasonic</NavLink>
+                            <NavLink to="/lg" activeClassName="active">LG</NavLink>
+                            <NavLink to="/toshiba" activeClassName="active">Toshiba</NavLink>
                         </div>
                     </div>
-                    <Link to='/' className="navbar">Home</Link>
-                    <Link to='/products' className="navbar">Products</Link>
+                    <NavLink to="/" className="navbar" activeClassName="active">
+                        Home
+                    </NavLink>
+                    <NavLink to="/products" className="navbar" activeClassName="active">
+                        Products
+                    </NavLink>
                 </div>
-                <div className='right'>
-                    <Link to="/contact" className="navbar">Contact Us</Link>
-                    <Link to="/Blog" className="navbar">Blog</Link>
+                <div className="right">
+                    <NavLink to="/contact" className="navbar" activeClassName="active">
+                        Contact Us
+                    </NavLink>
+                    <NavLink to="/Blog" className="navbar" activeClassName="active">
+                        Blog
+                    </NavLink>
                 </div>
             </nav>
         </div>
     );
-};
+}
 
 export default Nav;

@@ -197,15 +197,15 @@ function App() {
         <Route
           path="/products"
           element={
-            localStorage.getItem('username') ? (
-              noResults ? (
-                <p className='no-results-message'>No Found Products</p>
-              ) : (
-                <ProductList products={filterProduct} addCart={addToCart} />
-              )
+            // localStorage.getItem('username') ? (
+            noResults ? (
+              <p className='no-results-message'>No Found Products</p>
             ) : (
-              <Navigate to='/account' />
+              <ProductList products={filterProduct} addCart={addToCart} />
             )
+            // ) : (
+            //   <Navigate to='/account' />
+            // )
           }
         />
         <Route path="/lg" element={<LG addCart={addToCart} lgProduct={lgProduct} />} />
