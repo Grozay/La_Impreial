@@ -196,10 +196,8 @@ function App() {
     let sortedProducts;
 
     if (searchedProducts.length > 0) {
-      // Nếu có kết quả từ search, sử dụng searchedProducts
       sortedProducts = [...searchedProducts];
     } else {
-      // Nếu không có kết quả từ search, sử dụng products ban đầu
       sortedProducts = [...products];
     }
 
@@ -217,7 +215,6 @@ function App() {
         sortedProducts.sort((a, b) => b.price - a.price);
         break;
       default:
-        // Không cần phải thực hiện sort khi là tùy chọn "Mặc định"
         break;
     }
 
