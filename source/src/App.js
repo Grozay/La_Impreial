@@ -32,6 +32,7 @@ function App() {
   // const [searchValue, setSearchValue] = useState('');
   const [noResults, setNoResults] = useState(false);
   const [searchedProducts, setSearchedProducts] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
 
   const [cart, setcart] = useState([]);
   const [users, setUser] = useState([]);
@@ -159,13 +160,17 @@ function App() {
   //search name vs type
   const MySearchProduct = (searchInput, productType) => {
     setSearch({ value: searchInput, type: productType });
+
     let productSearch;
 
     if (!searchInput && productType !== null && productType !== undefined && productType !== '') {
       productSearch = products.filter((p) => p.type === productType);
     } else if (!searchInput && (!productType || productType === '')) {
       productSearch = products;
-    } else {
+    } else if (searchInput === '' && productType === '') {
+      setFilterProduct(products)
+    }
+    else {
       productSearch = products.filter(
         (p) =>
           p.name.toLowerCase().includes(searchInput.toLowerCase()) &&
@@ -173,11 +178,11 @@ function App() {
       );
     }
 
+    setIsSearching(searchInput !== '' || productType !== '');
     setFilterProduct(productSearch);
-    setSearchedProducts(productSearch)
+    setSearchedProducts(productSearch);
     setNoResults(productSearch.length === 0);
   };
-
 
   //search type
   const handleSearchType = (ProductType) => {
@@ -185,31 +190,41 @@ function App() {
     MySearchProduct(search.value, ProductType);
   };
 
+
   //sort product
   const MySortProduct = (sortOption) => {
     let sortedProducts;
 
+    if (searchedProducts.length > 0) {
+      // Nếu có kết quả từ search, sử dụng searchedProducts
+      sortedProducts = [...searchedProducts];
+    } else {
+      // Nếu không có kết quả từ search, sử dụng products ban đầu
+      sortedProducts = [...products];
+    }
+
     switch (sortOption) {
       case "nameAsc":
-        sortedProducts = [...searchedProducts].sort((a, b) => a.name.localeCompare(b.name));
+        sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
         break;
       case "nameDesc":
-        sortedProducts = [...searchedProducts].sort((a, b) => b.name.localeCompare(a.name));
+        sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
         break;
       case "priceAsc":
-        sortedProducts = [...searchedProducts].sort((a, b) => a.price - b.price);
+        sortedProducts.sort((a, b) => a.price - b.price);
         break;
       case "priceDesc":
-        sortedProducts = [...searchedProducts].sort((a, b) => b.price - a.price);
+        sortedProducts.sort((a, b) => b.price - a.price);
         break;
       default:
-        // Nếu là tùy chọn "Mặc định", sử dụng searchedProducts
-        sortedProducts = [...searchedProducts];
+        // Không cần phải thực hiện sort khi là tùy chọn "Mặc định"
         break;
     }
 
     setFilterProduct(sortedProducts);
   };
+
+
 
 
 

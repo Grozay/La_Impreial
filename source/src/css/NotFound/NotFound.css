@@ -1,0 +1,12 @@
+.notfound{
+    font-size: 70px;
+}
+
+.notfound_container{
+    text-align: center;
+}
+
+.notfound_under{
+    font-size: large;
+    margin-bottom: 5%;
+}
