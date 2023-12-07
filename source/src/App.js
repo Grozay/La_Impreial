@@ -16,6 +16,7 @@ import Register from './pages/Auth/Register';
 import Swal from 'sweetalert2';
 import Carlist from './cart/CartList';
 import CompareProductsPage from './components/Products/CompareProductsPage';
+import NotFound from './components/NotFound/NotFound'
 // import Cursor from './components/Cursor/Cursor'
 
 function App() {
@@ -175,12 +176,37 @@ function App() {
     setNoResults(productSearch.length === 0);
   };
 
+
   //search type
   const handleSearchType = (ProductType) => {
     setSearch({ value: search.value, type: ProductType });
     MySearchProduct(search.value, ProductType);
   };
 
+
+  const MySortProduct = (sortOption) => {
+    let sortedProducts = [...filterProduct];
+    console.log(sortOption)
+
+    switch (sortOption) {
+      case "nameAsc":
+        sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
+        break;
+      case "nameDesc":
+        sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
+        break;
+      case "priceAsc":
+        sortedProducts.sort((a, b) => a.price - b.price);
+        break;
+      case "priceDesc":
+        sortedProducts.sort((a, b) => b.price - a.price);
+        break;
+      default:
+        break;
+    }
+
+    setFilterProduct(sortedProducts);
+  };
 
 
 
@@ -197,15 +223,11 @@ function App() {
         <Route
           path="/products"
           element={
-            // localStorage.getItem('username') ? (
             noResults ? (
               <p className='no-results-message'>No Found Products</p>
             ) : (
-              <ProductList products={filterProduct} addCart={addToCart} />
+              <ProductList products={filterProduct} addCart={addToCart} onSort={MySortProduct} />
             )
-            // ) : (
-            //   <Navigate to='/account' />
-            // )
           }
         />
         <Route path="/lg" element={<LG addCart={addToCart} lgProduct={lgProduct} />} />
@@ -217,6 +239,7 @@ function App() {
         <Route path="/register" element={<Register onRegister={handleRegister} />} />
         <Route path='/cart' element={<Carlist carts={cart} deleteCart={deleteFormCart} />} />
         <Route path="/compare/:id*" element={<CompareProductsPage productDentail={products} addCart={addToCart} />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
       {/* <div>
         <Cursor />

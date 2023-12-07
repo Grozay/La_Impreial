@@ -87,3 +87,16 @@ position: sticky;
 .nameproduct{
   text-align: center;
 }
+
+.sort_container{
+  margin-left: 72%;
+  margin-top:2%;
+  margin-bottom: 2%;
+  font-size: 20px;
+}
+
+.sort_product{
+  width: 40%;
+  height: 30px;
+  font-size: 16px;
+}
