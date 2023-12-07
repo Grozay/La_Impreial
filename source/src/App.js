@@ -31,6 +31,7 @@ function App() {
   const [productQuality, setProductQuality] = useState([])
   // const [searchValue, setSearchValue] = useState('');
   const [noResults, setNoResults] = useState(false);
+  const [searchedProducts, setSearchedProducts] = useState([]);
 
   const [cart, setcart] = useState([]);
   const [users, setUser] = useState([]);
@@ -173,6 +174,7 @@ function App() {
     }
 
     setFilterProduct(productSearch);
+    setSearchedProducts(productSearch)
     setNoResults(productSearch.length === 0);
   };
 
@@ -183,25 +185,26 @@ function App() {
     MySearchProduct(search.value, ProductType);
   };
 
-
+  //sort product
   const MySortProduct = (sortOption) => {
-    let sortedProducts = [...filterProduct];
-    console.log(sortOption)
+    let sortedProducts;
 
     switch (sortOption) {
       case "nameAsc":
-        sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
+        sortedProducts = [...searchedProducts].sort((a, b) => a.name.localeCompare(b.name));
         break;
       case "nameDesc":
-        sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
+        sortedProducts = [...searchedProducts].sort((a, b) => b.name.localeCompare(a.name));
         break;
       case "priceAsc":
-        sortedProducts.sort((a, b) => a.price - b.price);
+        sortedProducts = [...searchedProducts].sort((a, b) => a.price - b.price);
         break;
       case "priceDesc":
-        sortedProducts.sort((a, b) => b.price - a.price);
+        sortedProducts = [...searchedProducts].sort((a, b) => b.price - a.price);
         break;
       default:
+        // Nếu là tùy chọn "Mặc định", sử dụng searchedProducts
+        sortedProducts = [...searchedProducts];
         break;
     }
 
