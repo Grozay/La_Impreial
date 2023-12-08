@@ -34,6 +34,7 @@ function App() {
   const [searchedProducts, setSearchedProducts] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
 
+
   const [cart, setcart] = useState([]);
   const [users, setUser] = useState([]);
   const homepage = useNavigate();
@@ -64,17 +65,31 @@ function App() {
       })
       .catch(error => console.log('error reading json', error));
   }, []);
+
+
   const deleteFormCart = (id) => {
     const deleteCarts = cart.filter(c => c.id !== id);
     setcart(deleteCarts);
   }
+
+
   const addToCart = (pro, quantity) => {
+    const existingItem = cart.find(item => item.id === pro.id);
 
-    const itemsToAdd = Array.from({ length: quantity }, () => pro);
-
-
-    setcart([...cart, ...itemsToAdd]);
+    if (existingItem) {
+      // Nếu sản phẩm đã có trong giỏ hàng, cập nhật số lượng
+      const updatedCart = cart.map(item =>
+        item.id === pro.id ? { ...item, quantity: item.quantity + quantity } : item
+      );
+      setcart(updatedCart);
+    } else {
+      // Nếu sản phẩm chưa có trong giỏ hàng, thêm vào giỏ hàng với số lượng mới
+      setcart([...cart, { ...pro, quantity }]);
+    }
   }
+
+
+
   useEffect(() => {
     fetch('/data/user.json')
       .then(response1 => response1.json())
@@ -229,7 +244,9 @@ function App() {
   return (
     <div className="App">
       <Heading />
-      <Search onSearch={MySearchProduct} ProductType={handleSearchType} searchValue={search.value} />
+      <Search onSearch={MySearchProduct} ProductType={handleSearchType} searchValue={search.value}
+        cart={cart} setCart={setcart}
+      />
       <nav>
         <NavBar />
       </nav>

@@ -3,11 +3,14 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import '../css/Search/Search.css';
 
-const Search = ({ onSearch }) => {
+const Search = ({ onSearch, cart }) => {
     const [searchInput, setSearchInput] = useState('');
     const [selectedType, setSelectedType] = useState('');
     const [showCartText, setShowCartText] = useState(false);
     const navigate = useNavigate();
+
+    const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+    console.log(cartCount)
 
     const handleInputChange = (e) => {
         const inputVal = e.target.value;
@@ -77,6 +80,7 @@ const Search = ({ onSearch }) => {
                             className='cart-container'
                         >
                             <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+                            <span className="cart-item-cartcount">{cartCount > 0 ? cartCount : 0}</span>
                             {showCartText && <div className='cart-label'>
                                 <div className='text'>
                                     Cart
