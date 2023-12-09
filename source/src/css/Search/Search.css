@@ -74,13 +74,13 @@
     position: absolute;
     text-align: center;
     color: #000000;
-    bottom: 10px;
+    bottom: 14px;
     left: 65%;
     background-color: #ffffff;
     width: 20px;
-    border: #000 solid 0.5px;
+    border: #000 solid 0.05px;
     border-radius: 30px;
-    height: 22px;
+    height: 95%;
 }
 
 
