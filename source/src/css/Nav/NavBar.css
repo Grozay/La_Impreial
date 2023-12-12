@@ -8,7 +8,10 @@
 }
 
 .navbar.active {
-  color: red; /* Màu bạn muốn chuyển khi trang được chọn */
+  color: red;
+  box-shadow: 0px 2px 0px  #f73838 ;
+  /* box-shadow: 0px 4px 0px rgba(247, 56, 56, 0.5); */
+
 }
 
 #navbar.sticky {

@@ -1,6 +1,23 @@
+// LG.js
+import React from 'react';
 import '../../css/Product/ProdutDetail.css';
 import { useNavigate } from "react-router-dom";
-const Panasonic = ({ panasonicProduct,addCart }) => {
+import '../../css/Product/Animation/AddToCart2.css'
+
+const LG = ({ panasonicProduct, addCart }) => {
+    const [isAnimating, setIsAnimating] = React.useState(false);
+    const [addedProductId, setAddedProductId] = React.useState(null);
+
+    const handleMouseDown = (productId) => {
+        setIsAnimating(true);
+        setAddedProductId(productId);
+        addCart(panasonicProduct, 1);
+        setTimeout(() => {
+            setIsAnimating(false);
+            setAddedProductId(null);
+        }, 1000);
+    };
+
     const detail = useNavigate();
     const limitString = (str, maxLength) => {
         if (str.length <= maxLength) {
@@ -10,19 +27,28 @@ const Panasonic = ({ panasonicProduct,addCart }) => {
     };
 
     return (
-        <div className='nameproduct'><h1>Product Of Panasonic</h1>
-        <div className='product-container'>
-            {panasonicProduct.map(pro => (
-                <div className="product" key={pro.id}>
-                    <img className="img" src={pro.image[0]} alt="img" onClick={() => detail(`/products/${pro.id}`)} />
-                    <div className="product-details">
-                        <h3 onClick={() => detail(`/products/${pro.id}`)}  className="name">{limitString(pro.name, 50)}</h3>
-                        <p className="price">{pro.price}$</p>
-                        <button onClick={() => addCart(pro,1)}>AddCart</button>
+        <div className='nameproduct'>
+            <h1>Product Of panasonicProduct</h1>
+            <div className='product-container'>
+                {panasonicProduct.map(pro => (
+                    <div className="product" key={pro.id}>
+                        <img className="img" src={pro.image[0]} alt="img" onClick={() => detail(`/products/${pro.id}`)} />
+                        <div className="product-details">
+                            <h3 onClick={() => detail(`/products/${pro.id}`)} className="name">{limitString(pro.name, 50)}</h3>
+                            <p className="price">{pro.price}$</p>
+                            <button
+                                onClick={() => handleMouseDown(pro.id)}
+                                className={`cart-item1 add-to-cart1 ${isAnimating && addedProductId === pro.id ? 'animating' : ''}`}
+                            >
+                                <i data-product-id={pro.id} className="fa-solid fa-cart-plus"></i>
+                            </button>
+                            <span className="cart-item1"></span>
+                        </div>
                     </div>
-                </div>
-            ))}
-        </div></div>
+                ))}
+            </div>
+        </div>
     );
 };
-export default Panasonic
+
+export default LG;

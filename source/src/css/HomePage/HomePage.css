@@ -8,6 +8,7 @@
     overflow-x: hidden;
     white-space: nowrap;
     margin: auto 100px;
+    margin-left: 12%;
 }
 
 .home-product-item {
@@ -67,6 +68,12 @@
 
 .title_home{
   margin-left: 8%;
+}
+
+
+.tilte_home{
+  margin-left: 11%;
+  margin-bottom: 3%;
 }
 
 @keyframes scaleAnimation {
