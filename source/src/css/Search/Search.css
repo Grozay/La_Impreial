@@ -31,8 +31,8 @@
 }
 
 .input_search{
-    width: 300px;
-    height: 41px;
+    width: 250px;
+    height: 35px;
 }
 
 .btn_search{
@@ -57,8 +57,8 @@
 }
 
 .search_select{
-    height: 41px;
-    width: 250px;   
+    width: 250px;
+    height: 35px;
 }
 
 .search_option{
@@ -69,6 +69,23 @@
     width: 200px;
 }
 
+.search_bar_price{
+    width: 250px;
+    height: 35px;
+}
+.search_bar_price_item{
+    /* margin-bottom: -50px; */
+    margin-bottom: 0;
+    width: 240px;
+    height: 5px;
+}
+
+.search_price_p{
+    margin-left: 10%;
+    margin-top: 15%;
+    bottom: 0;
+    font-size: 14px;
+}
 
 .cart-item-cartcount{
     position: absolute;

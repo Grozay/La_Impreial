@@ -174,7 +174,8 @@ function App() {
 
 
   //search name vs type
-  const MySearchProduct = (searchInput, productType) => {
+  const MySearchProduct = (searchInput, productType, priceRange) => {
+    console.log('Search Parameters:', searchInput, productType, priceRange);
     setSearch({ value: searchInput, type: productType });
 
     let productSearch;
@@ -183,18 +184,19 @@ function App() {
       productSearch = products.filter((p) => p.type === productType);
     } else if (!searchInput && (!productType || productType === '')) {
       productSearch = products;
-    } else if (searchInput === '' && productType === '') {
-      setFilterProduct(products)
-    }
-    else {
+    } else {
       productSearch = products.filter(
         (p) =>
           p.name.toLowerCase().includes(searchInput.toLowerCase()) &&
           (!productType || p.type === productType)
       );
     }
-
-    setIsSearching(searchInput !== '' || productType !== '');
+    if (priceRange && priceRange.length > 0) {
+      productSearch = productSearch.filter(
+        (p) => p.price >= priceRange[0] && p.price <= priceRange[1]
+      );
+    }
+    setIsSearching(searchInput !== '' || productType !== '' || (priceRange && priceRange.length > 0));
     setFilterProduct(productSearch);
     setSearchedProducts(productSearch);
     setNoResults(productSearch.length === 0);
@@ -207,35 +209,6 @@ function App() {
   };
 
 
-  //sort product
-  const MySortProduct = (sortOption) => {
-    let sortedProducts;
-
-    if (searchedProducts.length > 0) {
-      sortedProducts = [...searchedProducts];
-    } else {
-      sortedProducts = [...products];
-    }
-
-    switch (sortOption) {
-      case "nameAsc":
-        sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
-        break;
-      case "nameDesc":
-        sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
-        break;
-      case "priceAsc":
-        sortedProducts.sort((a, b) => a.price - b.price);
-        break;
-      case "priceDesc":
-        sortedProducts.sort((a, b) => b.price - a.price);
-        break;
-      default:
-        break;
-    }
-
-    setFilterProduct(sortedProducts);
-  };
 
 
 
@@ -259,7 +232,7 @@ function App() {
             noResults ? (
               <p className='no-results-message'>No Found Products</p>
             ) : (
-              <ProductList products={filterProduct} addCart={addToCart} onSort={MySortProduct} />
+              <ProductList products={filterProduct} addCart={addToCart} />
             )
           }
         />

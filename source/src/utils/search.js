@@ -7,6 +7,7 @@ const Search = ({ onSearch, cart }) => {
     const [searchInput, setSearchInput] = useState('');
     const [selectedType, setSelectedType] = useState('');
     const [showCartText, setShowCartText] = useState(false);
+    const [priceRange, setPriceRange] = useState([0, 1000]);
     const navigate = useNavigate();
 
     const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
@@ -30,6 +31,13 @@ const Search = ({ onSearch, cart }) => {
         onSearch(searchInput, selectedType);
     };
 
+    const handlePriceChange = (e) => {
+        const newPrice = parseInt(e.target.value);
+        // console.log('New Price Range:', [0, newPrice]);
+        setPriceRange([0, newPrice]);
+        onSearch(searchInput, selectedType, [0, newPrice]);
+    };
+
     return (
         <div className="search_bar">
             <div className="search_bar_list">
@@ -41,6 +49,22 @@ const Search = ({ onSearch, cart }) => {
                 </div>
             </div>
             <div className="search_bar_list">
+                <div className="search_bar_list_item search_item">
+
+
+                    <p className='search_price_p'>Search Price: 0$- {priceRange[1]}$</p>
+                    <div className="search_bar_price">
+                        <input
+                            type="range"
+                            min={1}
+                            max={1000}
+                            value={priceRange[1]}
+                            onChange={handlePriceChange}
+                            className='search_bar_price_item'
+                        />
+                    </div>
+                </div>
+
                 <div className="search_bar_list_item">
                     <select className="search_select" value={selectedType} onChange={handleSelectChange}>
                         <option className="search_option" value="">
@@ -79,7 +103,7 @@ const Search = ({ onSearch, cart }) => {
                             onMouseLeave={() => setShowCartText(false)}
                             className='cart-container'
                         >
-                            <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+                            <i className="fa-solid fa-cart-shopping fa-2xl"></i>
                             <span className="cart-item-cartcount">{cartCount > 0 ? cartCount : 0}</span>
                             {showCartText && <div className='cart-label'>
                                 <div className='text'>
