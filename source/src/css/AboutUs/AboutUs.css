@@ -1,0 +1,57 @@
+.aboutus{
+    margin: 3% 10%;
+    font-family: sans-serif;
+}
+
+.title_aboutus{
+    margin: 4% auto;
+    text-align: center;
+}
+hr{
+    height: 2px;
+    background-color: black;
+    margin-bottom: 3%;
+}
+
+span{
+    font-weight: 700;
+}
+
+/* phan1 */
+.img_p1{
+    width: 100%;
+    /* margin-left: 20%; */
+}
+.p_p1{
+    font-size: 18px;
+}
+
+/* phan2 */
+.about_list2{
+    margin: 3% auto;
+}
+.about_list2_1{
+    display: flex;
+    margin: 3% auto
+}
+.img_p2{
+    width: 95%;
+}
+
+.p_p2{
+    font-size: 18px;
+    line-height: 230%;
+}
+/* phan3 */
+.about_list3_1{
+    display: flex;
+}
+.about_list3{
+}
+
+
+.p_p3{
+    font-size: 18px;
+    line-height: 140%;
+
+}

@@ -17,6 +17,7 @@ import Swal from 'sweetalert2';
 import Carlist from './cart/CartList';
 import CompareProductsPage from './components/Products/CompareProductsPage';
 import NotFound from './components/NotFound/NotFound'
+import AboutUs from './components/AboutUs/AboutUs';
 // import Cursor from './components/Cursor/Cursor'
 
 function App() {
@@ -266,11 +267,12 @@ function App() {
         <Route path="/panasonic" element={<Panasonic addCart={addToCart} panasonicProduct={panasonicProduct} />} />
         <Route path="/toshiba" element={<Toshiba addCart={addToCart} toshibaProduct={toshibaProduct} />} />
         <Route path="/contact" element={<Contact onAdd={handleAdd} />} />
-        <Route path='/products/:id' element={<ProductDentail productDentail={filterProduct} addCart={addToCart} />} />
+        <Route path='/products/:id' element={<ProductDentail productDentail={products} addCart={addToCart} />} />
         <Route path='/account' element={<Login checkLogin={checkLogin} erroLogin={erroLogin} />} />
         <Route path="/register" element={<Register onRegister={handleRegister} />} />
         <Route path='/cart' element={<Carlist carts={cart} deleteCart={deleteFormCart} />} />
         <Route path="/compare/:id*" element={<CompareProductsPage productDentail={products} addCart={addToCart} />} />
+        <Route path='/about' element={<AboutUs />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       {/* <div>

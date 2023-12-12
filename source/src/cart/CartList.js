@@ -1,10 +1,12 @@
-import React, { useState, useEffect} from "react";
-import './Cart.css';
+import React, { useState, useEffect } from "react";
+import '../css/Cart/Cart.css';
+import { useNavigate, } from "react-router-dom";
 
-function Carlist({ carts, deleteCart  }) {
+function Carlist({ carts, deleteCart, updateCarts, addCart, deleteCartItem }) {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantity, setTotalQuantity] = useState(0);
   const [uniqueCarts, setUniqueCarts] = useState([]);
+  const navigate = useNavigate('');
   const calculateTotals = (updatedCarts) => {
     const newTotalPrice = updatedCarts.reduce((total, cartItem) => total + cartItem.price * cartItem.quantity, 0);
     const newTotalQuantity = updatedCarts.reduce((total, cartItem) => total + cartItem.quantity, 0);
@@ -39,7 +41,6 @@ function Carlist({ carts, deleteCart  }) {
         productMap.set(cartItem.id, { ...cartItem, quantity: 1 });
       }
     });
-
     // Convert the map values to an array to update state
     const updatedCarts = Array.from(productMap.values());
 
@@ -48,8 +49,26 @@ function Carlist({ carts, deleteCart  }) {
   }, [carts]);
 
   const handleCheckout = () => {
-    // Implement your checkout logic here
-    console.log("Checkout button clicked!");
+    // Gọi hàm xóa tất cả sản phẩm và truyền mảng rỗng
+    deleteAllCarts([]);
+
+    // Reset state
+    setUniqueCarts([]);
+    setTotalPrice(0);
+    setTotalQuantity(0);
+
+    // Chuyển hướng sang trang Register bằng navigate
+    navigate("/account");
+  };
+
+  const deleteAllCarts = (cartIds) => {
+    // Gọi hàm xóa tất cả sản phẩm
+    cartIds.forEach((cartId) => {
+      deleteCart(cartId);
+    });
+
+    // Truyền mảng rỗng ra ngoài để cập nhật giỏ hàng ở component cha
+    updateCarts([]);
   };
 
   return (
@@ -70,19 +89,21 @@ function Carlist({ carts, deleteCart  }) {
             <tr key={c.id}>
               <td>
                 <img src={`./${c.image[0]}`} alt={c.name} />
-              </td>
-              <td>{c.name}</td>
+              </td><td>{c.name}</td>
               <td>{c.price} $</td>
               <td>
-                <input
-                  type="number"
-                  min="1"
-                  value={c.quantity}
-                  onChange={(e) => handleQuantityChange(c.id, parseInt(e.target.value, 10))}
-                />
+
+                {c.quantity}
+
               </td>
               <td>
-                <button onClick={() => deleteCart(c.id)}>Delete</button>
+                <div>
+                  <button className="addToCartButton" onClick={() => addCart(c, 1)}>+</button>
+                  <button className="-button" onClick={() => deleteCart(c.id)}>-</button>
+                </div>
+                <span className="fa-stack" onClick={() => deleteCartItem(c.id)}>
+                  <i className="fas fa-trash-alt fa-stack-1x"></i>
+                </span>
               </td>
             </tr>
           ))}
@@ -102,5 +123,4 @@ function Carlist({ carts, deleteCart  }) {
     </div>
   );
 }
-
 export default Carlist;
