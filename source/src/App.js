@@ -18,6 +18,7 @@ import Carlist from './cart/CartList';
 import CompareProductsPage from './components/Products/CompareProductsPage';
 import NotFound from './components/NotFound/NotFound'
 import AboutUs from './components/AboutUs/AboutUs';
+import Pay from './components/Pay/Pay';
 // import Cursor from './components/Cursor/Cursor'
 
 function App() {
@@ -132,7 +133,7 @@ function App() {
         icon: "success",
         title: "Logging successfully"
       });
-      homepage('/products/')
+      homepage('/pay/')
     } else {
       MainAlert.fire({
         icon: "error",
@@ -266,6 +267,7 @@ function App() {
         <Route path='/cart' element={<Carlist carts={cart} deleteCart={deleteFormCart} updateCarts={handleUpdateCarts} addCart={addToCart} deleteCartItem={deleteCartItem} />} />
         <Route path="/compare/:id*" element={<CompareProductsPage productDentail={products} addCart={addToCart} />} />
         <Route path='/about' element={<AboutUs />} />
+        <Route path='/pay' element={<Pay />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       {/* <div>
