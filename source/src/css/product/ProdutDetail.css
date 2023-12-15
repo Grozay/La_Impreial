@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
 }
 .detailproduct {
   width: 100%;
@@ -90,13 +91,24 @@ padding-top: 1%;
  
 }
 .different-description {
-  background-color: green; 
+  color: red;
 }
 .nextbutton{
   height: 20%;
+  margin-left: 47.5%;
 }
 .backbutton{
   height: 20%;
+}
+
+.btn_detail{
+  width: 100px;
+  height: 30px;
+  border-radius: 7px;
+}
+
+button{
+  border-radius: 7px;
 }
 .upcoming-comparisons {
   display: flex;
@@ -131,12 +143,16 @@ padding-top: 1%;
 .custom-similar-products-container {
   margin-top: 20px;
   margin-left: auto;
+  transition: transform 0.3s ease-in-out;
 }
 
 .custom-similar-products {
   display: flex;
   flex-wrap: wrap;
-
+  transition: transform 1s ease-in-out;
+}
+.custom-similar-products :hover{
+  transform: scale(1.1);
 }
 
 .custom-similar-product {

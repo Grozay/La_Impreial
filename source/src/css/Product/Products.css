@@ -1,5 +1,5 @@
 .product-container{
-
+  margin-top: 50px;
   list-style-type: none;
   color:steelblue;
   display: grid;
@@ -9,15 +9,18 @@
   margin-right: 145px;
 }
 .product{
-margin:13px;
-  padding: 50px;
-  position: relative;
-  display: flex;
-  box-shadow: 0px 2px 5px ;
-  color:black;
-  align-items: center; 
-  transition: transform 0.3s ease-in-out;
-}
+    margin:13px;
+    padding: 50px;
+    position: relative;
+    display: flex;
+    box-shadow: 0px 2px 5px ;
+    color:black;
+    align-items: center; 
+    border-radius: 20px; /* Góc bo tròn */
+    border: 2px solid transparent; /* Border không màu */
+    transition: transform 0.3s ease-in-out;
+  }
+
 
 .product:hover{
   transform: scale(1.05);
@@ -33,7 +36,7 @@ margin:13px;
   margin-bottom: 0; 
 }
 .price{
-  height: 10%; 
+  
   text-align: center;
   margin-bottom: 5px; 
 }
@@ -48,31 +51,32 @@ margin:13px;
 }
 
 .pagination {
-position: sticky;
-  text-align: center;
-  align-items: center;
-  display: flex;
-  list-style: none;
- 
-  justify-content: center;
-}
-
-.pagination li {
-  margin: 0 5px;
-}
-
-.pagination button {
-  background-color:black ;
-  color: white;
-  border: none;
-  padding: 5px 5px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
+  position: sticky;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    list-style: none;
+   
+    justify-content: center;
+  }
+  
+  .pagination li {
+    margin: 0 5px;
+  }
+  
+  .pagination button {
+    background-color:white ;
+    color:black;
+    border: 1px solid black;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
 .abc{
   display: flex;
   text-align: center;
@@ -81,7 +85,7 @@ position: sticky;
   position: absolute;
 }
 .pagination button:hover {
-  background-color: brown;
+  background-color: #f73838;
 }
 
 .nameproduct{
@@ -100,3 +104,57 @@ position: sticky;
   height: 30px;
   font-size: 16px;
 }
+
+.compare-products-container {
+ 
+  border-radius: 5px; /* Độ cong của border (tùy chọn) */
+  overflow: hidden; /* Ẩn phần nội dung vượt ra khỏi border (nếu có) */
+  margin-left: 140px;
+  margin-right: 132px;
+  margin-top: 3%;
+}
+
+.selected-product,
+.similar-products {
+  float: left; /* Hiển thị các phần bên trong cùng 1 hàng ngang */
+  width: 50%; /* Chia đều không gian cho selected-product và similar-products */
+  box-sizing: border-box; /* Đảm bảo rằng padding và border không làm tăng kích thước thực của phần tử */
+  padding: 10px; /* Phân chia khoảng cách nội dung từ border (tùy chọn) */
+  box-shadow: 0px 2px 5px #aaa; /* Hiển thị shadow cho border (tùy chọn) */
+}
+
+.similar-products {
+  border-left: 1px solid #ccc; /* Tạo border giữa selected-product và similar-products */
+}.Description li {
+  border: 1px solid #ccc; /* Màu và độ rộng của border cho mỗi mục con */
+  border-radius: 5px; /* Độ cong của border (tùy chọn) */
+  padding: 8px; /* Phân chia khoảng cách nội dung từ border (tùy chọn) */
+  margin-bottom: 5px; /* Khoảng cách giữa các mục con (tùy chọn) */
+}
+
+.different-description {
+  background-color: #ffe6e6; /* Màu nền cho các mục khác biệt */
+}
+:root {
+  --primary-color: #f73838;
+  --secondary-color: #2980b9;
+  --accent-color: #ffe6e6;
+}
+button {
+  /* ... existing styles ... */
+  background-color: var(--primary-color);
+  color: white;
+  border: 2px solid var(--primary-color);
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  /* height: 30px;
+  width: 100px;
+  border-radius: 7px; */
+
+}
+
+button:hover {
+  background-color: white;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  color: black;
+  /* border: 1px solid black; */
+} 

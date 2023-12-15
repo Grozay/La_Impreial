@@ -35,7 +35,7 @@ const AboutUs = () => {
                     <div className='about_title_p2'>
                         <h2>La Imperial believes:</h2>
                     </div>
-                    <hr />
+                    <hr className='hr' />
                     <div className='p_p2'>
                         <li>
                             <span>Prestige:</span> We always put prestige first, always ensuring the quality of products and services to meet the trust
@@ -84,7 +84,7 @@ const AboutUs = () => {
                             To reach more customers and provide information about products quickly and conveniently,
                             in the era of strongly developing internet technology, La Imperial has officially launched its website.
                         </h2>
-                        <hr />
+                        <hr className='hr' />
                         <div className='about_list3_1'>
 
                             <div className='p_p3'>

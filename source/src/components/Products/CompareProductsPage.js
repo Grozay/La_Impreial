@@ -65,13 +65,12 @@ const CompareProductsPage = ({ productDentail, addCart }) => {
     setCurrentComparisonIndex(newIndex);
   };
   const handleUpcomingProductClick = (productId) => {
-    // Find the index of the clicked upcoming product in the similarProducts array
+
     const newIndex = similarProducts.findIndex((product) => product.id === productId);
 
-    // Đặt currentComparisonIndex thành chỉ số mới
+
     setCurrentComparisonIndex(newIndex);
 
-    // Cuộn lên đầu trang
     topRef.current.scrollIntoView({ behavior: 'smooth' });
   };
   const trimProductName = (name) => (name.length > 30 ? `${name.slice(0, 30)}...` : name);
@@ -79,11 +78,11 @@ const CompareProductsPage = ({ productDentail, addCart }) => {
     <div>
       <div ref={topRef}><div className="compare-products-container">
         <div className="selected-product">
-          <img onClick={() => detail(`/products/${selectedProduct.id}`)} height="150px" src={`../${selectedProduct.image[0]}`} alt={`${selectedProduct.name} 1`} />
+          <img onClick={() => detail(`/products/${selectedProduct.id}`)} height="100px" src={`../${selectedProduct.image[0]}`} alt={`${selectedProduct.name} 1`} />
           <h3>{trimName(selectedProduct.name)}</h3>
           <p className={`price ${selectedProduct.price < similarProducts[currentComparisonIndex]?.price ? 'green' : 'red'}`}>
             Price: ${selectedProduct.price}</p>
-          <button onClick={() => addCart(selectedProduct, 1)}>AddCart</button>
+          <button onClick={() => addCart(selectedProduct, 1)} >AddCart</button>
           <p>Brand: {selectedProduct.brand}</p>
           <h4 className='Description'>Description:</h4>
           <ul className='Description'>
@@ -96,7 +95,7 @@ const CompareProductsPage = ({ productDentail, addCart }) => {
         </div>
         <div className="similar-products">
           <div className="similar-product">
-            <img onClick={() => detail(`/products/${similarProducts[currentComparisonIndex].id}`)} height="150px" src={`../${similarProducts[currentComparisonIndex]?.image[0]}`} alt={`${similarProducts[currentComparisonIndex]?.name} 1`} />
+            <img onClick={() => detail(`/products/${similarProducts[currentComparisonIndex].id}`)} height="100px" src={`../${similarProducts[currentComparisonIndex]?.image[0]}`} alt={`${similarProducts[currentComparisonIndex]?.name} 1`} />
             <h3>{trimName(similarProducts[currentComparisonIndex]?.name)}</h3>
             <p className={`price ${similarProducts[currentComparisonIndex]?.price < selectedProduct.price ? 'green' : 'red'}`}>
               Price: ${similarProducts[currentComparisonIndex]?.price}</p>
@@ -112,16 +111,17 @@ const CompareProductsPage = ({ productDentail, addCart }) => {
             </ul>
           </div>
         </div>
+
+
+      </div>
         <button className='nextbutton' onClick={handleNext} disabled={similarProducts.length <= 1}>Next</button>
         <button className="backbutton" disabled={currentComparisonIndex === 0} onClick={handleBack}>
           Back
         </button>
-
-      </div>
         <div className="upcoming-comparisons">
           {similarProducts.length > 1 && (
             <div className="upcoming-products-container">
-              {/* Map over the upcoming set of similar products */}
+
               {similarProducts.slice(1).map((product, index) => (
                 <div key={index} className="upcoming-product">
                   <div className="product-frame">
@@ -138,7 +138,8 @@ const CompareProductsPage = ({ productDentail, addCart }) => {
               ))}
             </div>
           )}
-        </div></div>
+        </div>
+      </div>
     </div>
   );
 };
