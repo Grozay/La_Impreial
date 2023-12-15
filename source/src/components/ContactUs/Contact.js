@@ -57,11 +57,11 @@ function Contact({onAdd}){
             <div>
                       {/* Bệ Sườn trên */}
                       <h2>Contact Us</h2>
-                        <h5>La_Imperial (by Thieu Nu Group)</h5>
-                        <li className='header_bavbar_item'>
-                            <i class="fa-solid fa-phone" >Tel: 09123456789</i>
-                                  
-                        </li>
+                        <h5 style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif', fontWeight: 'normal' }}>La_Imperial (by Thieu Nu Group)</h5>
+                 
+                            <i  class="fa-solid fa-phone"  >Tel: 09123456789</i>
+                              
+                       
                         <p>
                             Email: 
                             <a href="mailto:thieunu@gmail.com" style={{textDecoration: "none"}}> thieunu@gmail.com</a>
@@ -83,23 +83,23 @@ function Contact({onAdd}){
                             <h2>Contact With Us</h2>
                         </div>
                         <div class="input">
-                          <h2>Your Name</h2>
+                          <h2 style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif', fontWeight: 'normal' }}>Your Name</h2>
                             <input type="text" placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
                         </div>
                         <div class="input">
-                          <h2>Your Email</h2>
+                          <h2 style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif', fontWeight: 'normal' }}>Your Email</h2>
                             <input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                         </div>
                         <div class="input">
-                          <h2>Your Contact:</h2>
+                          <h2 style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif', fontWeight: 'normal' }}>Your Contact:</h2>
                             <input type="text" placeholder="Your Contact" value={contact} onChange={(e) => setContact(e.target.value)} />
                         </div>
                         <div class="input">
-                          <h2>Subject</h2>
+                          <h2 style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif', fontWeight: 'normal' }}>Subject</h2>
                             <input type="text" placeholder="Subject" value={subject} onChange={(e) => setSubject(e.target.value)} />
                         </div>
                         <div class="input">
-                          <h2>Your message (optional)</h2>
+                          <h2 style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif', fontWeight: 'normal' }}>Your message (optional)</h2>
                           <textarea name="message"style={{ width: '585px ', height: '100px' }} value={message} onChange={(e) => setMessage(e.target.value)} />
                         </div>
                         {/* <div class="forget">
