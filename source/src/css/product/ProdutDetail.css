@@ -21,6 +21,7 @@
   margin-left: 160px;
     margin-right: 145px;
     text-align: center;
+    font-size: 27px;
 }
 .selected-image {
   width: 40%; 
@@ -107,9 +108,9 @@ padding-top: 1%;
   border-radius: 7px;
 }
 
-button{
+/* button{
   border-radius: 7px;
-}
+} */
 .upcoming-comparisons {
   display: flex;
   justify-content: center;
