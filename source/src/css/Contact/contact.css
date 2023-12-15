@@ -1,0 +1,87 @@
+/* Add this CSS code to your existing contact.css file */
+
+.container1 {
+    display: grid;
+   grid-template-columns: 40% 60%;
+   margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto; /* Center the form */
+  }
+  
+  .form {
+    width: 100%;
+  }
+  
+  .top {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    margin-bottom: 15px;
+  }
+  
+  input,
+  textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .submit input {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .submit input:hover {
+    background-color: #45a049;
+  }
+  
+  /* Additional styling for the website-specific look */
+  .container1 {
+    background-color: rgb(255, 252, 248);
+  }
+  
+  .container h2,
+  .container h5 {
+    color: #333;
+  }
+  
+  .container a {
+    color: #007bff;
+  }
+  
+  .container iframe {
+    border: 1px solid #dedddd;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  

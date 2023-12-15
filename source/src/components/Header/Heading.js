@@ -4,10 +4,10 @@ const Heading = () => {
     return (
         <>
             <nav className='header_navbar'>
-                <ul className='header_navbar_list'>
+                <ul className='header_navbar_list '>
                     <li className='header_bavbar_item'>
-                        <i class="fa-regular fa-envelope"></i>
-                        thieunu@gmail.com
+
+                        <a href="mailto:thieunu@gmail.com" className='header_bavbar_item_link header_bavbar_item_link1'><i class="fa-regular fa-envelope"></i>thieunu@gmail.com</a>
                     </li>
                     <li className='header_bavbar_item'>
 
@@ -32,4 +32,4 @@ const Heading = () => {
         </>
     )
 }
-export default Heading
+export default Heading;

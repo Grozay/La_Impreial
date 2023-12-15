@@ -15,9 +15,18 @@
 .header_bavbar_item{
     margin: 0 20px;
 }
-.header_bavbar_item_link1:hover{
+.header_bavbar_item_link1:hover
+{
     color: #f73838;
     transition: 0.4s;
 }
+/* .header_navbar_email{
+    color: black;
+    text-decoration: none;
+}
+.header_navbar_email:hover{
+    color: #f73838;
+    transition: 0.4s;
+} */
 
 

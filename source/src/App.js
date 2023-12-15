@@ -9,6 +9,7 @@ import Search from './utils/search';
 import LG from './Home/Brand/Lg';
 import Panasonic from './Home/Brand/Panasonic';
 import Toshiba from './Home/Brand/Toshiba';
+import Contact from './components/ContactUs/Contact';
 function App() {
   const [products, setProducts] = useState([]);
   const [filterProduct, setFilterProduct] = useState([]);
@@ -31,7 +32,10 @@ function App() {
       .catch(error => console.log('error reading json', error));
   }, []);
 
-
+  const handleAdd = (newProduct) => {
+    setProducts([...products, newProduct]);
+    setFilterProduct([...filterProduct, newProduct]);
+  }
 
 
 
@@ -51,6 +55,7 @@ function App() {
         <Route path='/lg' element={<LG lgProduct={lgProduct} />} />
         <Route path='/panasonic' element={<Panasonic panasonicProduct={panasonicProduct} />} />
         <Route path='/toshiba' element={<Toshiba toshibaProduct={toshibaProduct} />} />
+        <Route path='/contact' element={<Contact onAdd={handleAdd}  />} />
       </Routes>
     </div>
   );
