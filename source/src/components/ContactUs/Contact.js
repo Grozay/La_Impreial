@@ -59,7 +59,7 @@ function Contact({onAdd}){
                       <h2>Contact Us</h2>
                         <h5 style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif', fontWeight: 'normal' }}>La_Imperial (by Thieu Nu Group)</h5>
                  
-                            <i  class="fa-solid fa-phone"  >Tel: 09123456789</i>
+                            <i  class="fa-solid fa-phone"  ></i>Tel: 09123456789 
                               
                        
                         <p>
