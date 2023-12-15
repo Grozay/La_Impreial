@@ -1,0 +1,108 @@
+/* Trong file CSS (Pay.css hoặc một file CSS khác) */
+.rowPay {
+    /* display: flex;
+    margin-top: 50px;
+    margin-left: 145px;
+    margin-right: auto;
+  */
+
+  display: grid;
+  grid-template-columns: 40% 40%;
+  column-gap: 100px;
+  margin-top: 50px;
+    
+    margin-right: auto;
+  }
+  
+  .rowPay .col-55{
+    display: grid;
+    column-gap: 50px;
+    
+  }
+
+
+
+  .col-50,
+  .col-75 {
+    
+    padding: 0 15px;
+  }
+  
+ .col-50 {
+    width: 100%;
+    
+  }
+  
+  .col-75 {
+    width: 50%;
+  }
+  
+  .containerPay {
+    background-color: rgb(255, 252, 248);;
+    padding: 10px 20px;
+    
+    width: 1160px;
+    margin-left: 145px;
+  }
+  
+  .rowPay .col-50 h3 {
+    text-align: center;
+  }
+  
+  .rowPay .col-50 input[type="text"] {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .rowPay label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .rowPay .icon-container {
+    margin-bottom: 15px;
+    padding: 5px 0;
+    text-align: center;
+  }
+  
+  .rowPay .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .rowPay .btn:hover {
+    background-color: #45a049;
+  }
+  
+  .rowPay span.price {
+    float: right;
+    color: grey;
+  }
+  
+  
+  .rowPay .Register_error{
+    color: rgb(165, 0, 52);
+  }
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media (max-width: 800px) {
+    .rowPay {
+      grid-template-columns: 1fr; /* Hiển thị một cột khi màn hình nhỏ hơn 800px */
+    }
+  
+    .col-50,
+    .col-75 {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
