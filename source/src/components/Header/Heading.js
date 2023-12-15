@@ -54,8 +54,10 @@ const Heading = () => {
                         {/* <Link to="/register" style={{textDecoration: "none"}}>Register</Link> */}
                         {localStorage.getItem('username') ?
                             (<span className='avatar'>
+                               <span style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif', fontWeight: 'normal' }}>
                                 welcome {localStorage.getItem('username')},
-                                <NavLink to="/account" onClick={() => deleLocalStorage()} className='header_bavbar_item_link header_bavbar_item_link1'  >Logout</NavLink></span>
+                                </span>
+                                <NavLink to="/account" onClick={() => deleLocalStorage()} className='header_bavbar_item_link header_bavbar_item_link1' style={{fontWeight: 'normal'}}  >Logout</NavLink></span>
 
                             ) :
                             (<NavLink to="/account" className='header_bavbar_item_link header_bavbar_item_link1' activeClassName="active">My Account</NavLink>)
