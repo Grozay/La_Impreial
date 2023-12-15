@@ -36,6 +36,7 @@ function App() {
   const [isSearching, setIsSearching] = useState(false);
 
 
+
   const [cart, setcart] = useState([]);
   const [users, setUser] = useState([]);
   const homepage = useNavigate();
@@ -68,28 +69,47 @@ function App() {
   }, []);
 
 
+  const deleteCartItem = (id) => {
+    const updatedCart = cart.filter(item => item.id !== id);
+    setcart(updatedCart);
+  };
   const deleteFormCart = (id) => {
-    const deleteCarts = cart.filter(c => c.id !== id);
-    setcart(deleteCarts);
-  }
+    const index = cart.findIndex(item => item.id === id);
 
-
-  const addToCart = (pro, quantity) => {
-    const existingItem = cart.find(item => item.id === pro.id);
-
-    if (existingItem) {
-      // Nếu sản phẩm đã có trong giỏ hàng, cập nhật số lượng
-      const updatedCart = cart.map(item =>
-        item.id === pro.id ? { ...item, quantity: item.quantity + quantity } : item
-      );
+    // Nếu tìm thấy sản phẩm trong giỏ hàng, thực hiện xóa
+    if (index !== -1) {
+      const updatedCart = [...cart.slice(0, index), ...cart.slice(index + 1)];
       setcart(updatedCart);
-    } else {
-      // Nếu sản phẩm chưa có trong giỏ hàng, thêm vào giỏ hàng với số lượng mới
-      setcart([...cart, { ...pro, quantity }]);
     }
   }
 
+  // const addToCart = (pro, quantity) => {
+  //   const existingItem = cart.find(item => item.id === pro.id);
 
+  //   if (existingItem) {
+  //     // Nếu sản phẩm đã có trong giỏ hàng, cập nhật số lượng
+  //     const updatedCart = cart.map(item =>
+  //       item.id === pro.id ? { ...item, quantity: item.quantity + quantity } : item
+  //     );
+  //     setcart(updatedCart);
+  //   } else {
+  //     // Nếu sản phẩm chưa có trong giỏ hàng, thêm vào giỏ hàng với số lượng mới
+  //     setcart([...cart, { ...pro, quantity }]);
+  //   }
+  // }
+
+  const addToCart = (pro, quantity) => {
+
+    const itemsToAdd = Array.from({ length: quantity }, () => pro);
+
+
+    setcart([...cart, ...itemsToAdd]);
+  }
+
+  const handleUpdateCarts = (updatedCarts) => {
+    // Hàm callback để cập nhật trạng thái carts ở component cha
+    setcart(updatedCarts);
+  };
 
   useEffect(() => {
     fetch('/data/user.json')
@@ -243,7 +263,7 @@ function App() {
         <Route path='/products/:id' element={<ProductDentail productDentail={products} addCart={addToCart} />} />
         <Route path='/account' element={<Login checkLogin={checkLogin} erroLogin={erroLogin} />} />
         <Route path="/register" element={<Register onRegister={handleRegister} />} />
-        <Route path='/cart' element={<Carlist carts={cart} deleteCart={deleteFormCart} />} />
+        <Route path='/cart' element={<Carlist carts={cart} deleteCart={deleteFormCart} updateCarts={handleUpdateCarts} addCart={addToCart} deleteCartItem={deleteCartItem} />} />
         <Route path="/compare/:id*" element={<CompareProductsPage productDentail={products} addCart={addToCart} />} />
         <Route path='/about' element={<AboutUs />} />
         <Route path='*' element={<NotFound />} />

@@ -104,7 +104,9 @@ const Search = ({ onSearch, cart }) => {
                             className='cart-container'
                         >
                             <i className="fa-solid fa-cart-shopping fa-2xl"></i>
-                            <span className="cart-item-cartcount">{cartCount > 0 ? cartCount : 0}</span>
+                            {/* <span className="cart-item-cartcount">{cartCount > 0 ? cartCount : 0}</span> */}
+                            <span className="cart-item-cartcount">{cart.length}</span>
+
                             {showCartText && <div className='cart-label'>
                                 <div className='text'>
                                     Cart

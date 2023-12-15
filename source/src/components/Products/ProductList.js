@@ -6,7 +6,7 @@ import '../../css/Product/Products.css';
 const ProductList = ({ products, addCart, onSort }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(6);
-  const [selectedSort, setSelectedSort] = useState('');
+  // const [selectedSort, setSelectedSort] = useState('');
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -21,17 +21,17 @@ const ProductList = ({ products, addCart, onSort }) => {
       setCurrentPage(pageNumber);
     }
   };
-  const handleSelectChange = (e) => {
-    const sortOption = e.target.value;
-    setSelectedSort(sortOption);
-    onSort(sortOption);
-  };
+  // const handleSelectChange = (e) => {
+  //   const sortOption = e.target.value;
+  //   setSelectedSort(sortOption);
+  //   onSort(sortOption);
+  // };
   // console.log(selectedSort)
 
 
   return (
     <>
-      <div className='sort_container'>
+      {/* <div className='sort_container'>
         <label>Sorted by: </label>
         <select value={selectedSort} onChange={handleSelectChange} className='sort_product'>
           <option value="default" className='sort_optiton'>default</option>
@@ -40,7 +40,7 @@ const ProductList = ({ products, addCart, onSort }) => {
           <option value="priceAsc" className='sort_optiton'>Price (Low to High)</option>
           <option value="priceDesc" className='sort_optiton'>Price (High to low)</option>
         </select>
-      </div>
+      </div> */}
 
       <div className="product-container">
         {productsList}

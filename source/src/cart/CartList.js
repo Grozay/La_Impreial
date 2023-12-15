@@ -89,7 +89,8 @@ function Carlist({ carts, deleteCart, updateCarts, addCart, deleteCartItem }) {
             <tr key={c.id}>
               <td>
                 <img src={`./${c.image[0]}`} alt={c.name} />
-              </td><td>{c.name}</td>
+              </td>
+              <td>{c.name}</td>
               <td>{c.price} $</td>
               <td>
 
