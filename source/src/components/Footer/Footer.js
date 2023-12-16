@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className='footer_location'>
                     <p>Contact Information</p>
                     <p>La Imperial</p>
-                    <p>location</p>
+                    <p>391A Nam Ky Khoi Nghia, district  3.</p>
                     <p>tel:(84) 123456789</p>
                     <p>
                         email: <Link to="mailto:thieunu@gmail.com" className='contact_footer_link'>thieunu@gmail.com</Link>
