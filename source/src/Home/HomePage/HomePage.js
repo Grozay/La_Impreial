@@ -17,8 +17,6 @@ const HomePage = ({ productNew, productHot, productQuality, product }) => {
         }
     };
 
-
-
     return (
         <>
             <div>
@@ -41,7 +39,7 @@ const HomePage = ({ productNew, productHot, productQuality, product }) => {
                                 <div className="product-image">
                                     <img src={p.image[0]} alt='img' />
                                 </div>
-                                <div className="product-name">{truncateString(p.name, 10)}</div>
+                                <div className="product-name1">{truncateString(p.name, 10)}</div>
                             </div>
                         ))}
                     </div>
@@ -50,48 +48,44 @@ const HomePage = ({ productNew, productHot, productQuality, product }) => {
                 <div>
                     <h2 className="tilte_home">New Products</h2>
                     <div className="home-container">
-                        <div className="home_list">
-                            {productNew.map((p) => (
-                                <li
-                                    key={p.id}
-                                    className="home-product-item"
-                                    onClick={() => {
-                                        if (!isSwiping) {
-                                            navigate(`/products/${p.id}`);
-                                        }
-                                    }}
-                                >
-                                    <div className="product-image">
-                                        <img src={p.image[0]} alt='img' />
-                                    </div>
-                                    <div className="product-name">{truncateString(p.name, 10)}</div>
-                                </li>
-                            ))}
-                        </div>
+                        {productNew.map((p) => (
+                            <div
+                                key={p.id}
+                                className="home-product-item"
+                                onClick={() => {
+                                    if (!isSwiping) {
+                                        navigate(`/products/${p.id}`);
+                                    }
+                                }}
+                            >
+                                <div className="product-image">
+                                    <img src={p.image[0]} alt='img' />
+                                </div>
+                                <div className="product-name1">{truncateString(p.name, 10)}</div>
+                            </div>
+                        ))}
                     </div>
                 </div>
 
                 <div>
                     <h2 className="tilte_home">Quality Products</h2>
                     <div className="home-container">
-                        <div className="home_list">
-                            {productQuality.map((p) => (
-                                <li
-                                    key={p.id}
-                                    className="home-product-item"
-                                    onClick={() => {
-                                        if (!isSwiping) {
-                                            navigate(`/products/${p.id}`);
-                                        }
-                                    }}
-                                >
-                                    <div className="product-image">
-                                        <img src={p.image[0]} alt='img' />
-                                    </div>
-                                    <div className="product-name">{truncateString(p.name, 10)}</div>
-                                </li>
-                            ))}
-                        </div>
+                        {productQuality.map((p) => (
+                            <div
+                                key={p.id}
+                                className="home-product-item"
+                                onClick={() => {
+                                    if (!isSwiping) {
+                                        navigate(`/products/${p.id}`);
+                                    }
+                                }}
+                            >
+                                <div className="product-image">
+                                    <img src={p.image[0]} alt='img' />
+                                </div>
+                                <div className="product-name1">{truncateString(p.name, 10)}</div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

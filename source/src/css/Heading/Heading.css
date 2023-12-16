@@ -24,13 +24,19 @@
 .active {
     color: red; /* Màu bạn muốn chuyển khi trang được chọn */
   }
-/* .header_navbar_email{
-    color: black;
+.heading_account{
     text-decoration: none;
+    color: black;
+    display: flex;
+    margin-top: 3px;
+    margin-left: 92%;
 }
-.header_navbar_email:hover{
-    color: #f73838;
-    transition: 0.4s;
-} */
+.heading_account_logout{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    margin-top: 3px;
+    margin-left: 92%;
+}
 
 

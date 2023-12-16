@@ -59,11 +59,11 @@ function App() {
         setLgProduct(data.filter(p => p.brand === 'LG').slice(0, 20));
         setPanasonicProduct(data.filter(p => p.brand === 'Panasonic').slice(0, 20));
         setToshibaProduct(data.filter(p => p.brand === 'toshiba').slice(0, 20));
-        const evenIdProducts = (data.filter(p => p.id % 2 === 0).slice(0, 3));
+        const evenIdProducts = (data.filter(p => p.id % 2 === 0).slice(0, 4));
         setProductHot(evenIdProducts)
-        const oddIdProducts = (data.filter(p => p.id % 2 !== 0).slice(0, 3));
+        const oddIdProducts = (data.filter(p => p.id % 2 !== 0).slice(0, 4));
         setProductNew(oddIdProducts)
-        const qualityIdProducts = (data.filter(p => p.id <= 15).slice(0, 3));
+        const qualityIdProducts = (data.filter(p => p.id <= 15).slice(0, 4));
         setProductQuality(qualityIdProducts)  // Fix typo here
       })
       .catch(error => console.log('error reading json', error));
@@ -239,6 +239,7 @@ function App() {
   return (
     <div className="App">
       <Heading />
+
       <Search onSearch={MySearchProduct} ProductType={handleSearchType} searchValue={search.value}
         cart={cart} setCart={setcart}
       />
