@@ -52,3 +52,60 @@ span{
     line-height: 140%;
 
 }
+
+@media only screen and (min-width: 430px) and (max-width: 932px){
+    .aboutus{
+        margin: 5% 5%;
+        font-family: sans-serif;
+    }
+    
+    .title_aboutus{
+        margin: 4% auto;
+        text-align: center;
+    }
+    
+    span{
+        font-weight: 700;
+    }
+    
+    /* phan1 */ 
+    .img_p1{
+        width: 100%;
+        /* margin-left: 20%; */
+    }
+    .p_p1{
+        font-size: 18px;
+    }
+    
+    /* phan2 */
+    .about_list2{
+        margin: 4% auto;
+    }
+    .about_list2_1{
+        margin: 7% auto;
+        display: grid;
+        
+    }
+    .img_p2{
+        width: 95%;
+    }
+    
+    .p_p2{
+        font-size: 18px;
+        line-height: 130%;
+    }
+    /* phan3 */
+    .about_list3_1{
+        display: grid;
+    }
+
+    .img_p3{
+        width: 95%;
+    }
+    
+    .p_p3{
+        font-size: 18px;
+        line-height: 140%;
+    
+    }
+}

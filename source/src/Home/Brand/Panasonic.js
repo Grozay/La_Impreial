@@ -28,7 +28,7 @@ const LG = ({ panasonicProduct, addCart }) => {
 
     return (
         <div className='nameproduct'>
-            <h1>Product Of panasonicProduct</h1>
+            <h1>Product Of panasonic</h1>
             <div className='product-container'>
                 {panasonicProduct.map(pro => (
                     <div className="product" key={pro.id}>

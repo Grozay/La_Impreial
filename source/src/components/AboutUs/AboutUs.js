@@ -117,8 +117,6 @@ const AboutUs = () => {
                                 </p>
                                 <p>
                                     <span></span>
-
-                                    Thank you for your interest in La Imperial!
                                 </p>
                             </div>
                             <div>

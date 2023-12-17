@@ -65,3 +65,78 @@
     margin-left: 170px;
     margin-top: 30px;
 }
+
+
+
+
+
+
+@media only screen and (min-width: 430px) and (max-width: 932px){
+    .banner-container {
+        position: relative;
+        width: 100%;
+    }
+    
+    .slick-arrow {
+        font-size: 2em;
+        color: rgb(109, 109, 109);
+        cursor: pointer;
+        user-select: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1; /* Đảm bảo nút "prev" và "next" nằm trên ảnh */
+    }
+    
+    
+    .custom-prev-arrow {
+        margin-top: 3%;
+        left: 5%;
+    }
+    
+    .custom-next-arrow {
+        margin-top: 3%;
+        right: 5%;
+    }
+    
+    .slick-dots {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        z-index: 1; /* Đảm bảo dấu chấm trắng nằm trên ảnh */
+    }
+    
+    .slick-dots li {
+        margin: 0 4px;
+    }
+    
+    .slick-dots button {
+        font-size: 10px;
+        border: none;
+        background-color: #bbb;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .slick-dots button:hover,
+    .slick-dots button.slick-active {
+        background-color: #fff;
+    }
+    
+    .img_banner {
+        width: 90%;
+        height: auto;
+        margin-left: 5%;
+        margin-top: 3%;
+    } 
+}
