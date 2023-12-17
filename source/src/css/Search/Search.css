@@ -158,4 +158,73 @@
     /* position: relative; */
 }
 
+@media only screen and (min-width: 430px) and (max-width: 932px) {
+    .search_bar{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .name_shop{
+        text-decoration: none;
+        color: #f73838;
+        font-size: 14px;
+    }
+
+    .name_shop_descripton{
+        font-size: 12px;
+    }
+    
+
+    .input_search{
+        width: 120px;
+        height: 25px;
+    }
+
+    .btn_cart{
+        width: 130px;
+        height: 25px;
+        background-color: #f73838;
+        border: none;
+    }
+    
+    .btn_cart_icon{
+        color: #f73838;
+        position: relative;
+        font-size: 12px;
+    }
+
+    .search_select{
+        width: 100px;
+        height: 25px;
+    }
+    
+    .search_option{
+        font-size: 10px;
+    }
+    
+    .logo_nav{
+        margin-top: 25%;
+        width: 110px;
+    }
+    
+    /* .search_bar_price{
+        width: 200px;
+        height: 35px;
+    } */
+
+    /* .search_bar_price_item{
+        margin-bottom: 0;
+        width: 240px;
+        height: 5px;
+    } */
+    
+    .search_price_p{
+        margin-left: 10%;
+        margin-bottom: 20%;
+        font-size: 13.5px;
+        position: absolute;
+    }
+}
+
 
