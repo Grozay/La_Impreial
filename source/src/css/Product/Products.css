@@ -132,8 +132,7 @@
   margin-bottom: 5px; /* Khoảng cách giữa các mục con (tùy chọn) */
 }
 
-.different-description {
-  background-color: #ffe6e6; /* Màu nền cho các mục khác biệt */
+.different-description {background-color: #ffe6e6; /* Màu nền cho các mục khác biệt */
 }
 :root {
   --primary-color: #f73838;
@@ -158,3 +157,95 @@ button:hover {
   color: black;
   /* border: 1px solid black; */
 } 
+@media only screen and (min-width: 430px) and (max-width: 932px){
+  .product-details {
+    flex: 1;
+    margin-left: 10px; 
+    display: flex;
+    flex-direction: column;
+  }
+  .product-container{
+   
+    list-style-type: none;
+    color:steelblue;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 7px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .product{
+  
+    margin-top: 10px;
+    width: 160px;
+    margin:10px;
+   padding: 2px;
+    position: relative;
+    display: flex;
+    box-shadow: 0px 2px 5px ;
+    color:black;
+    align-items: center; 
+    border-radius: 20px; /* Góc bo tròn */
+    border: 2px solid transparent; /* Border không màu */
+    transition: transform 0.3s ease-in-out;
+  }
+
+
+  .img {
+    width: 40px; /* Adjust this according to your needs */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .pagination {
+    margin-left: 1px ;
+    font-size: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    justify-content: center;
+    padding: 2px ;
+  }
+
+  .sort_container {
+    margin-left: 5px; /* Adjust this according to your needs */
+    margin-right: 5px; /* Adjust this according to your needs */
+    font-size: 14px; /* Adjust this according to your needs */
+  }
+
+  .sort_product {
+    width: 100%; /* Adjust this according to your needs */
+    height: 30px;
+    font-size: 12px; /* Adjust this according to your needs */
+  }
+
+  .compare-products-container {
+    margin-left: 5px; /* Adjust this according to your needs */
+    margin-right: 5px; /* Adjust this according to your needs */
+    margin-top: 3%;
+  }
+
+  .selected-product,
+  .similar-products {
+    width: 100%; /* Adjust this according to your needs */
+  }
+  .price{
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 5px; 
+  }
+  .name{
+   font-size: 7px;
+   
+  }
+  button {
+    font-size: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    /* height: 30px;
+    width: 100px;
+    border-radius: 7px; */
+  
+  }
+}

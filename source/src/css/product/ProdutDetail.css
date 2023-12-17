@@ -179,3 +179,88 @@ input[type="number"] {
   padding: 5px; /* Adjust the padding as needed */
   text-align: center;
 }
+
+@media only screen and (min-width: 430px) and (max-width: 932px){
+  .product-detail-container {
+    width: 100%; /* Adjust the width as needed */
+    padding: 0 10px; /* Adjust the padding as needed */
+  }
+
+  .detailproduct {
+    width: 100%;
+    display: flex;
+flex-direction: column;
+    align-items: center;
+  }
+
+  .product-name {
+    margin-left: 2px;
+    margin-right: 10px; /* Adjust the right margin as needed */
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .selected-image-container {
+    display: flex;
+    flex-direction: column; /* Adjust the flex direction as needed */
+    align-items: center;
+    padding: 0; /* Adjust padding as needed */
+  }
+
+  .selected-image {
+    width: 50%; /* Adjust width as needed */
+    height: auto; /* Keep the aspect ratio */
+    max-width: 50%; /* Ensure it doesn't exceed the container width */
+  }
+
+  .thumbnail-container {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure thumbnails don't wrap to the next line */
+    overflow-x: auto; /* Add horizontal scrollbar if thumbnails exceed container */
+    width:60%; /* Adjust width as needed */
+  }
+
+  .thumbnail {
+    width: 10%;
+    margin-right: 5px; /* Adjust margin between thumbnails as needed */
+    cursor: pointer;
+    object-fit: contain;
+  }
+
+  .price {
+    font-size: 14px; /* Adjust font size as needed */
+  }
+
+  .Description {
+    font-size: 14px; /* Adjust font size as needed */
+  }
+
+  .nextbutton,
+  .backbutton {
+    margin-left: 0; /* Reset margin-left for the buttons */
+  }
+  .compare-products-container {
+    flex-direction: column;
+  }
+  
+  .selected-product,
+  .similar-products {
+    width: 100%;
+    padding-left: 0;
+  }
+  
+  .nextbutton,
+  .backbutton {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .upcoming-products-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .upcoming-product {
+    margin: 10px 0;
+  }
+}
