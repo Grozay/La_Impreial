@@ -16,7 +16,7 @@
   
   .rowPay .col-55{
     display: grid;
-    column-gap: 50px;
+    column-gap: 10px;
     
   }
 
@@ -96,13 +96,24 @@
   /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
   @media (max-width: 800px) {
     .rowPay {
-      grid-template-columns: 1fr; /* Hiển thị một cột khi màn hình nhỏ hơn 800px */
+        grid-template-columns: 1fr;
     }
-  
-    .col-50,
-    .col-75 {
-      width: 100%;
-      padding: 0;
+
+    .rowPay .col-55 {
+        grid-template-columns: 1fr;
+        column-gap: 0;
     }
-  }
+
+    .containerPay {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .rowPay .col-50,
+    .rowPay .col-75 {
+        width: 100%;
+        padding: 0;
+    }
+}
   
