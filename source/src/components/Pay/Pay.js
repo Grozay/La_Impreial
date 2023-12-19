@@ -42,7 +42,7 @@ function Pay({onAdd}) {
   function handleVatlidation(e){ 
     e.preventDefault();
     if(!firstname){
-        setErrorFirstName('Email is required');
+        setErrorFirstName('First Name is required');
     }
     else if(firstname){
         setErrorFirstName('');
