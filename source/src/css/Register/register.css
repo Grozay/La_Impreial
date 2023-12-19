@@ -1,45 +1,17 @@
-/* Thêm vào CSS để tùy chỉnh modal */
-/* .modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: 0.3s;
-  }
-  
-  .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-  } */
-
-  
-  /* register.css */
+/* register.css */
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  min-height: 100vh; /* Use viewport height for full screen height */
   margin-top: 5px;
   background-color: rgb(255, 252, 248);
 }
 
 .content {
-  width: 400px;
+  width: 100%; /* Use full width */
+  max-width: 400px; /* Limit maximum width */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -74,35 +46,10 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* Modal styles */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
+/* Media Query for responsiveness on smaller screens */
+@media only screen and (min-width: 430px) and (max-width: 932px) {
+ .container{
+  margin-top: 1rem;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+ }
 }
