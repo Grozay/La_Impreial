@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
+// import "../../css/Blog/Blog.css"
 // import 'bootstrap/dist/css/bootstrap.css';
-// import "../../css/Blog/BlogDetail.css";
+import "../../css/Blog/BlogDetail.css";
 import React from 'react';
 function BlogDetail({ blogs }) {
     const { id } = useParams();
@@ -8,7 +9,8 @@ function BlogDetail({ blogs }) {
     console.log(blog);
     return (
         <div className="blogdetail_page_container">
-            <div className="py-7 flex justify-center">
+            {/* py-7 flex justify-center */}
+            <div className="hinh">
                 <div >
                     <img src={"../" + blog.image[1]} alt='' />
                 </div>
