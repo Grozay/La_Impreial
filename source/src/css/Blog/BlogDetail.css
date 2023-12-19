@@ -14,6 +14,8 @@
 .blogdetail_page_container {
   margin-top: 60px;
   margin-left: 100px;
+  text-align: center;
+  
 }
 
 /* .blogdetail_banner {
@@ -84,6 +86,10 @@
   .blogdetail_page_container {
     margin-top: 60px;
     margin-left: 50px;
+  }
+  .blogdetail_page_container .hinh img{
+    width: 95%;
+    height: auto;
   }
 
   /* .blogdetail_banner {
