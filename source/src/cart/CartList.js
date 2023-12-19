@@ -58,7 +58,7 @@ function Carlist({ carts, deleteCart, updateCarts, addCart, deleteCartItem }) {
     setTotalQuantity(0);
 
     // Chuyển hướng sang trang Register bằng navigate
-    navigate("/account");
+    navigate("/pay");
   };
 
   const deleteAllCarts = (cartIds) => {

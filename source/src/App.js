@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import './App.css'
 import ProductList from './components/Products/ProductList';
@@ -39,7 +40,7 @@ function App() {
   const [isSearching, setIsSearching] = useState(false);
   const [blogs, setBlogs] = useState([]);
   const [filterblogs, setFilterBlogs] = useState([]);
-
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const [cart, setcart] = useState([]);
   const [users, setUser] = useState([]);
@@ -154,7 +155,8 @@ function App() {
         icon: "success",
         title: "Logging successfully"
       });
-      homepage('/pay/')
+      setIsLoggedIn(true); // Đặt trạng thái đăng nhập thành true
+      homepage('/pay/');
     } else {
       MainAlert.fire({
         icon: "error",
@@ -289,8 +291,17 @@ function App() {
         <Route path='/cart' element={<Carlist carts={cart} deleteCart={deleteFormCart} updateCarts={handleUpdateCarts} addCart={addToCart} deleteCartItem={deleteCartItem} />} />
         <Route path="/compare/:id*" element={<CompareProductsPage productDentail={products} addCart={addToCart} />} />
         <Route path='/about' element={<AboutUs />} />
-        <Route path='/pay' element={<Pay />} />
-        <Route path='/blog' element={<Blog blogs={blogs}/>} />
+        <Route
+          path="/pay"
+          element={
+            isLoggedIn ? (
+              <Pay />
+            ) : (
+              <Navigate to="/account" />
+            )
+          }
+        />
+        <Route path='/blog' element={<Blog blogs={blogs} />} />
         <Route path="/blogdetail/:id" element={<BlogDetail blogs={blogs} />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
@@ -302,3 +313,4 @@ function App() {
 }
 
 export default App;
+// Đang hiển thị 3172500192301070096.
