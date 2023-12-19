@@ -4,8 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom';
+
 import Footer from './components/Footer/Footer';
 import UnderFooter from './components/Footer/UnderFooter';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
