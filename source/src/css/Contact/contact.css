@@ -1,5 +1,8 @@
 /* Add this CSS code to your existing contact.css file */
 
+ .Register_error{
+  color: rgb(165, 0, 52);
+}
 .container1 {
     display: grid;
    grid-template-columns: 40% 60%;
@@ -85,4 +88,44 @@
     border-radius: 4px;
     margin-top: 10px;
   }
+  @media only screen and (max-width: 600px) {
+    .container1 {
+      grid-template-columns: 100%; /* Use full width on small screens */
+    }
   
+    .container2 {
+      max-width: 100%; /* Full width on small screens */
+    }
+  
+    .input,
+    textarea {
+      width: 100%; /* Full width on small screens */
+    }
+  
+    .submit input {
+      width: 100%; /* Full width on small screens */
+    }
+  
+    /* You may need additional styling adjustments for mobile layout */
+  }
+  
+  /* Additional styling for the website-specific look */
+  .container1 {
+    background-color: rgb(255, 252, 248);
+    margin-top: 2px;
+  }
+  
+  .container2 h2,
+  .container2 h5 {
+    color: #333;
+  }
+  
+  .container a {
+    color: #007bff;
+  }
+  
+  .container2 iframe {
+    border: 1px solid #dedddd;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
