@@ -2,7 +2,7 @@
 import BlogItem from './BlogItem';
 // import { Pagination } from "react-bootstrap";
 // import { useState } from 'react';
-// import "../../css/Blog/Blog.css";
+import "../../css/Blog/Blog.css";
 
 function Blog({ blogs }) {
 
