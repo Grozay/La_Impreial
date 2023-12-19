@@ -1,0 +1,45 @@
+[
+    {
+    "id": 1,
+    "name": "Will agility and adaptability be the make or break for complex supply chains?",
+    "category": "",
+    "content": [
+      "Welcome to part 2 of our 3-part series on how the events of 2020 have affected those in the supply chain industry, and how they can improve their processes to strengthen their competitive position through the use of connected technologies, including practical mobility solutions, innovative semi-automation improvements, and transport insights. Be sure to follow Panasonic Australia on LinkedIn to stay up to date with our latest news and blog posts.",
+      "As the events of 2020 continue to develop, it seems people are beginning to accept the fact that certain things they used to take for granted may not be the same for the foreseeable future. They are coming to terms with the notion that we’ll be in this new normal for the short to medium term, and the only thing left to do is to be adaptable, understanding and open to change",
+      "The global COVID-19 pandemic has caused significant losses in some of the industries that we all thought were reasonably steady. Hospitality, travel, entertainment and retail have all faced major setbacks as their customers have been encouraged to reduce social interactions and in some cases are still restricted in their movements.",
+      "Conversely, industries that make self-isolation a more practical or pleasant experience are surging in popularity. Video conferencing apps like Zoom and entertainment and streaming platforms like Netflix and Amazon Prime Video have seen a significant rise in popularity.",
+      "Expectedly, online shopping and food delivery services have also experienced a major surge. Companies like Uber Eats and Deliveroo were primed to fulfil the flood of demand from foodies that were no longer able to eat at their favourite local restaurants.."
+    ],
+    "image": ["img/blog1.jpg", "img/blog2.jpg"]
+    
+    },
+    {
+        "id": 2,
+        "name": "Quad Door Fridge Review & Keep",
+        "category": "",
+        "content": [
+          "Welcome to part 2 of our 3-part series on how the events of 2020 have affected those in the supply chain industry, and how they can improve their processes to strengthen their competitive position through the use of connected technologies, including practical mobility solutions, innovative semi-automation improvements, and transport insights. Be sure to follow Panasonic Australia on LinkedIn to stay up to date with our latest news and blog posts.",
+          "As the events of 2020 continue to develop, it seems people are beginning to accept the fact that certain things they used to take for granted may not be the same for the foreseeable future. They are coming to terms with the notion that we’ll be in this new normal for the short to medium term, and the only thing left to do is to be adaptable, understanding and open to change",
+          "The global COVID-19 pandemic has caused significant losses in some of the industries that we all thought were reasonably steady. Hospitality, travel, entertainment and retail have all faced major setbacks as their customers have been encouraged to reduce social interactions and in some cases are still restricted in their movements.",
+          "Conversely, industries that make self-isolation a more practical or pleasant experience are surging in popularity. Video conferencing apps like Zoom and entertainment and streaming platforms like Netflix and Amazon Prime Video have seen a significant rise in popularity.",
+          "Expectedly, online shopping and food delivery services have also experienced a major surge. Companies like Uber Eats and Deliveroo were primed to fulfil the flood of demand from foodies that were no longer able to eat at their favourite local restaurants.."
+        ],
+        "image": ["img/blog3.jpg", "img/blog3.jpg"]
+        
+        },
+        {
+            "id": 3,
+            "name": "SR-CN188 Rice Cooker Giveaway",
+            "category": "",
+            "content": [
+              "Welcome to part 2 of our 3-part series on how the events of 2020 have affected those in the supply chain industry, and how they can improve their processes to strengthen their competitive position through the use of connected technologies, including practical mobility solutions, innovative semi-automation improvements, and transport insights. Be sure to follow Panasonic Australia on LinkedIn to stay up to date with our latest news and blog posts.",
+              "As the events of 2020 continue to develop, it seems people are beginning to accept the fact that certain things they used to take for granted may not be the same for the foreseeable future. They are coming to terms with the notion that we’ll be in this new normal for the short to medium term, and the only thing left to do is to be adaptable, understanding and open to change",
+              "The global COVID-19 pandemic has caused significant losses in some of the industries that we all thought were reasonably steady. Hospitality, travel, entertainment and retail have all faced major setbacks as their customers have been encouraged to reduce social interactions and in some cases are still restricted in their movements.",
+              "Conversely, industries that make self-isolation a more practical or pleasant experience are surging in popularity. Video conferencing apps like Zoom and entertainment and streaming platforms like Netflix and Amazon Prime Video have seen a significant rise in popularity.",
+              "Expectedly, online shopping and food delivery services have also experienced a major surge. Companies like Uber Eats and Deliveroo were primed to fulfil the flood of demand from foodies that were no longer able to eat at their favourite local restaurants.."
+            ],
+            "image": ["img/blog4.jpg", "img/blog4.jpg"]
+            
+            }
+ 
+]
