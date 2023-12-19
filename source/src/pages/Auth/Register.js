@@ -8,7 +8,7 @@ const Register = ({ onRegister }) => {
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [email, setEmail] = useState('');
-  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const navigate = useNavigate('');
   const MainAlert = Swal.mixin({
     showConfirmButton: false,
@@ -74,9 +74,7 @@ const Register = ({ onRegister }) => {
     navigate('/account/')
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+
 
   return (
     <div className="container">
