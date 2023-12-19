@@ -1,6 +1,13 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+
 /* .bloglist_pagination {
     margin-left: 40%;
   } */
+
+  
   .bloglist_page_container{
     width: 1200px;
     margin-top: 1px;
@@ -8,7 +15,7 @@
    margin-left: 160px;
   }
 
-  
+
 
 /* Responsive layout - adjust as needed */
 @media only screen and (min-width: 430px) and (max-width: 932px) {
