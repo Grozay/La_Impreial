@@ -19,6 +19,8 @@ import CompareProductsPage from './components/Products/CompareProductsPage';
 import NotFound from './components/NotFound/NotFound'
 import AboutUs from './components/AboutUs/AboutUs';
 import Pay from './components/Pay/Pay';
+import Blog from './components/Blog/Blog';
+import BlogDetail from './components/Blog/BlogDetails';
 // import Cursor from './components/Cursor/Cursor'
 
 function App() {
@@ -35,7 +37,8 @@ function App() {
   const [noResults, setNoResults] = useState(false);
   const [searchedProducts, setSearchedProducts] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
-
+  const [blogs, setBlogs] = useState([]);
+  const [filterblogs, setFilterBlogs] = useState([]);
 
 
   const [cart, setcart] = useState([]);
@@ -67,6 +70,24 @@ function App() {
         setProductQuality(qualityIdProducts)  // Fix typo here
       })
       .catch(error => console.log('error reading json', error));
+  }, []);
+
+
+
+  //DATA BLOG
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const blogsJson = await fetch('/data/blog.json');
+        const blogsData = await blogsJson.json();
+        setBlogs(blogsData);
+        setFilterBlogs(blogsData);
+        console.log(blogs);
+      } catch (error) {
+        console.log('error reading json');
+      }
+    };
+    fetchData();
   }, []);
 
 
@@ -269,6 +290,8 @@ function App() {
         <Route path="/compare/:id*" element={<CompareProductsPage productDentail={products} addCart={addToCart} />} />
         <Route path='/about' element={<AboutUs />} />
         <Route path='/pay' element={<Pay />} />
+        <Route path='/blog' element={<Blog blogs={blogs}/>} />
+        <Route path="/blogdetail/:id" element={<BlogDetail blogs={blogs} />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       {/* <div>
