@@ -18,7 +18,7 @@
 #navbar.sticky {
   position: fixed;
   background-color: #fff;
-  top: 0;
+  top: -31px;
   width: 1210px;
   margin-left: 155px;
   z-index: 1000;
