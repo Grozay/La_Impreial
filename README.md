@@ -20,10 +20,6 @@ eProject documentation at https://github.com/Grozay/La_Impreial/tree/main/docume
 
 ============================
 
-eProject published at
-
-============================
-
 eProject video at https://drive.google.com/file/d/1borSfNpxjw3cZ2ZfGXmudzbzfcR6-31n/view?usp=sharing
 
 ============================
