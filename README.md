@@ -20,7 +20,7 @@ eProject documentation at https://github.com/Grozay/La_Impreial/tree/main/docume
 
 ============================
 
-eProject published at https://lnnhi1310.github.io/Kitchen-Appliances/index.html
+eProject published at
 
 ============================
 
